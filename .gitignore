@@ -10,3 +10,4 @@ win/setup/Niuniu_NSIS_SetupSkin/FilesToInstall/
 win/bin/cim_core.lib
 win/bin/cim_core.dll
 win/bin/cim_base.lib
+win/.vs/
