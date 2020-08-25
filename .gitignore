@@ -1,0 +1,12 @@
+win/tmp/
+win/bin/cef_temp/
+win/bin/resources/themes/default/backup/
+*.user
+win/setup/Niuniu_NSIS_SetupSkin/FilesToInstall/
+*.pdb
+*.exp
+*.ilk
+*.exe
+win/bin/cim_core.lib
+win/bin/cim_core.dll
+win/bin/cim_base.lib
