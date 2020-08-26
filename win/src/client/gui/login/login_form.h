@@ -35,6 +35,9 @@ class LoginForm : public ui::WindowImplBase {
     virtual LRESULT OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
     static const std::wstring kClassName;
+
+  private:
+    bool onLoginClick(ui::EventArgs* msg);
 };
 
 

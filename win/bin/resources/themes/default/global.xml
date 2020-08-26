@@ -58,7 +58,7 @@
     <TextColor name="bk_main_wnd_title" value="#ff238efa"/>
     <TextColor name="bk_main_wnd_search" value="#ff1e7ad7"/>
     <TextColor name="bk_wnd_darkcolor" value="#fff0f2f5"/>
-    <TextColor name="bk_wnd_lightcolor" value="#ffffffff"/>
+    <TextColor name="bk_wnd_lightcolor" value="#fff4f5f4"/>
     <TextColor name="bk_menuitem_hovered" value="#ffe1e6eb"/>
     <TextColor name="bk_menuitem_selected" value="#ffced4db"/>
     <TextColor name="bk_listitem_hovered" value="#fff0f2f5"/>

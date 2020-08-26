@@ -14,8 +14,8 @@
             <Button class="btn_wnd_close" name="closebtn"/>
           </HBox>
           <!--头像-->
-          <Box margin="0,10,0,0" mouse="false" width="80" height="80" halign="center">
-            <Control width="auto" height="auto" halign="center" valign="center" bkimage="logo.png"/>
+          <Box margin="0,10,0,0" mouse="false" width="100" height="100" halign="center">
+            <Control width="80" height="80" halign="center" valign="center" bkimage="logo.png"/>
             <!-- <Button name="headicon" width="106" height="106" borderround="106,106,106,106" halign="center" valign="center" mouse="false" fadealpha="true"/> -->
             <!-- <Control width="auto" height="auto" bkimage="mask.png" halign="center" valign="center" mouse="false"/> -->
           </Box>
@@ -46,7 +46,7 @@
         <Label name="login_error_tip" margin="20,20,20,0" font="system_12" normaltextcolor="obvious_tip" visible="false"/>
         <!--登录和取消按钮-->
         <Box width="240" height="40" margin="20,20,20,20">
-          <Button class="btn_global_blue_80x30" name="btn_login" width="240" height="40" font="system_bold_16" text="登录"/>
+          <Button class="btn_global_white_80x30" name="btn_login" width="240" height="40" font="system_bold_16" text="登录"/>
           <Button class="btn_global_blue_80x30" name="btn_register" width="240" height="40" font="system_bold_16" text="注册" visible="false"/>
           <Button class="btn_global_red_80x30" name="btn_cancel" width="240" height="40" font="system_bold_16" text="取消登录" visible="false"/>
         </Box>
