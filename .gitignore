@@ -11,3 +11,7 @@ win/bin/cim_core.lib
 win/bin/cim_core.dll
 win/bin/cim_base.lib
 win/.vs/
+win/cim/cim_core_unit_test/cmake-build-debug/
+win/cim/core/cmake-build-debug/
+win/cim/core/.idea/
+win/cim/cim_core_unit_test/.idea/

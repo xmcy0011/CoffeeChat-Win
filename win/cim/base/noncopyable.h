@@ -7,12 +7,14 @@
 #ifndef _NONCOPYABLE_377FD72A_191C_4A10_805E_E43301C78BDC_
 #define _NONCOPYABLE_377FD72A_191C_4A10_805E_E43301C78BDC_
 
+#include "cim_dll.h"
+
 namespace cim {
-    class noncopyable {
+    class CIM_DLL_API noncopyable {
       public:
-        // ½ûÓÃ¿½±´¹¹Ôì
+        // ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         noncopyable(const noncopyable&) = delete;
-        // ½ûÓÃ¸³Öµ
+        // ï¿½ï¿½ï¿½Ã¸ï¿½Öµ
         void operator=(const noncopyable&) = delete;
 
       protected:

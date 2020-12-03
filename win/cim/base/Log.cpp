@@ -1,7 +1,7 @@
 #include "Log.h"
 
-cim::ZLogger m_instance;
 cim::ZLogger& GetInstance() {
+    static cim::ZLogger m_instance;
     return m_instance;
 }
 

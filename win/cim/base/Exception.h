@@ -10,10 +10,12 @@
 #include <string>
 #include <exception>
 
+#include "cim_dll.h"
+
 using std::string;
 
 namespace cim {
-    class Exception : public std::exception {
+    class CIM_DLL_API Exception : public std::exception {
       public:
         Exception(string what);
         ~Exception() noexcept override = default;
