@@ -1,0 +1,3 @@
+[submodule "win/third_party/NIM_Duilib_Framework"]
+	path = win/third_party/NIM_Duilib_Framework
+	url = https://github.com/xmcy0011/NIM_Duilib_Framework
