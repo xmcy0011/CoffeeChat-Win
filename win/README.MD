@@ -10,9 +10,12 @@
    $ bootstrap-vcpkg.bat
    $ vcpkg integrate install
    ```
-3. 安装asio网络库（非boost版）
+3. 三方库安装
    ```bash
-   $ vcpkg install asio # 安装
+   $ vcpkg install spdlog   # 安装
+   $ vcpkg install protobuf # 3.13.0
+   $ vcpkg install evpp     # c++跨平台通信库
+   $ vcpkg install jsoncpp  # json解析库
    ```
 
 ## 编译

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cim", "cim", "{B58FA989-B547-4B99-A5EE-7C06BA4E3ABF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{31F23DA8-F38E-4C6F-9685-082E6E9C45E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdparty", "3rdparty", "{D5BFAFF5-8137-479E-8EAC-012B1B3E0E09}"
@@ -19,7 +17,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "src\client\client
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcef_dll_wrapper", "third_party\NIM_Duilib_Framework\third_party\cef_wrapper\libcef_dll_wrapper.vcxproj", "{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cim", "cim\cim_core.vcxproj", "{065B0295-07EB-42DD-A6A3-6211BBA2E259}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sdk", "sdk", "{3A12B708-1971-40DE-8180-D95DD5A7E3C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chatkit", "src\chatkit\chatkit.vcxproj", "{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,14 +69,14 @@ Global
 		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}.Release|x64.Build.0 = Release|x64
 		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}.Release|x86.ActiveCfg = Release|Win32
 		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}.Release|x86.Build.0 = Release|Win32
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Debug|x64.ActiveCfg = Debug|x64
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Debug|x64.Build.0 = Debug|x64
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Debug|x86.ActiveCfg = Debug|Win32
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Debug|x86.Build.0 = Debug|Win32
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Release|x64.ActiveCfg = Release|x64
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Release|x64.Build.0 = Release|x64
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Release|x86.ActiveCfg = Release|Win32
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259}.Release|x86.Build.0 = Release|Win32
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Debug|x64.ActiveCfg = Debug|x64
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Debug|x64.Build.0 = Debug|x64
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Debug|x86.ActiveCfg = Debug|Win32
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Debug|x86.Build.0 = Debug|Win32
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x64.ActiveCfg = Release|x64
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x64.Build.0 = Release|x64
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x86.ActiveCfg = Release|Win32
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,7 +87,7 @@ Global
 		{0149BA6E-3C0A-426D-AA0A-0B9EC7742F19} = {D5BFAFF5-8137-479E-8EAC-012B1B3E0E09}
 		{F1A9371F-9A34-45A0-98EB-83FF371F067F} = {31F23DA8-F38E-4C6F-9685-082E6E9C45E5}
 		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9} = {D5BFAFF5-8137-479E-8EAC-012B1B3E0E09}
-		{065B0295-07EB-42DD-A6A3-6211BBA2E259} = {B58FA989-B547-4B99-A5EE-7C06BA4E3ABF}
+		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D} = {3A12B708-1971-40DE-8180-D95DD5A7E3C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {854C0D93-9D52-4AE7-B9AF-BB643DAFB456}

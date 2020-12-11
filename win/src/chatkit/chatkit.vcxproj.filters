@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="base\Exception.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\Log.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.Def.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.Group.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.List.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.Login.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.Message.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CIM.Voip.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="core\client.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="cim.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cim_dll.h" />
+    <ClInclude Include="cim_def.h" />
+    <ClInclude Include="cim.h" />
+    <ClInclude Include="base\Exception.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\Log.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\noncopyable.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.Def.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.Group.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.List.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.Login.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.Message.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CIM.Voip.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="core\client.h">
+      <Filter>core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{07d5a5a8-7a99-404a-be2f-b111f76c292b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{bfa7c3e9-6bff-412c-b388-42aad4280aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{a098dc41-c7d6-40c1-b606-8e9cdc49c90a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pb">
+      <UniqueIdentifier>{139e0b81-36ac-4d6e-abe5-a4e03f197deb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

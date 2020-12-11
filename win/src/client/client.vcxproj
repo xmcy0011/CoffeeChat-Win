@@ -204,9 +204,6 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\bin\resources.zip" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\cim\base\base.vcxproj">
       <Project>{875d772c-952f-4c69-95b6-7d0f43e9226a}</Project>
     </ProjectReference>

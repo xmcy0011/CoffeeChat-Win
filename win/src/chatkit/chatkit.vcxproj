@@ -18,43 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="base\Exception.h" />
-    <ClInclude Include="base\Log.h" />
-    <ClInclude Include="base\noncopyable.h" />
-    <ClInclude Include="cim.h" />
-    <ClInclude Include="cim_def.h" />
-    <ClInclude Include="cim_dll.h" />
-    <ClInclude Include="core\cim_conn_base.h" />
-    <ClInclude Include="core\event_loop.h" />
-    <ClInclude Include="core\pb\CIM.Def.pb.h" />
-    <ClInclude Include="core\pb\CIM.Group.pb.h" />
-    <ClInclude Include="core\pb\CIM.List.pb.h" />
-    <ClInclude Include="core\pb\CIM.Login.pb.h" />
-    <ClInclude Include="core\pb\CIM.Message.pb.h" />
-    <ClInclude Include="core\pb\CIM.Voip.pb.h" />
-    <ClInclude Include="core\tcp_client.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="base\Exception.cpp" />
-    <ClCompile Include="base\Log.cpp" />
-    <ClCompile Include="core\event_loop.cpp" />
-    <ClCompile Include="core\pb\CIM.Def.pb.cc" />
-    <ClCompile Include="core\pb\CIM.Group.pb.cc" />
-    <ClCompile Include="core\pb\CIM.List.pb.cc" />
-    <ClCompile Include="core\pb\CIM.Login.pb.cc" />
-    <ClCompile Include="core\pb\CIM.Message.pb.cc" />
-    <ClCompile Include="core\pb\CIM.Voip.pb.cc" />
-    <ClCompile Include="core\tcp_client.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{065B0295-07EB-42DD-A6A3-6211BBA2E259}</ProjectGuid>
+    <ProjectGuid>{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>core3</RootNamespace>
+    <RootNamespace>chatkit</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>cim</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -103,14 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>.;..\third_party\asio-1.18.0\include;..\third_party\protobuf\include;..\third_party\spdlog\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\third_party\protobuf\lib\win32\Debug;..\third_party\spdlog\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\bin\</OutDir>
+    <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -121,7 +92,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;CIM_DLL_EXPORTS;_WINDOWS;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CIM_DLL_EXPORTS;_CONSOLE;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -129,7 +100,6 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>libprotobufd.lib;spdlogd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,7 +108,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;CORE3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -156,7 +126,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;CORE3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -176,7 +146,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;CORE3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -188,6 +158,35 @@
       <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="base\Exception.cpp" />
+    <ClCompile Include="base\Log.cpp" />
+    <ClCompile Include="cim.cpp" />
+    <ClCompile Include="core\client.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pb\CIM.Def.pb.cc" />
+    <ClCompile Include="pb\CIM.Group.pb.cc" />
+    <ClCompile Include="pb\CIM.List.pb.cc" />
+    <ClCompile Include="pb\CIM.Login.pb.cc" />
+    <ClCompile Include="pb\CIM.Message.pb.cc" />
+    <ClCompile Include="pb\CIM.Voip.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\Exception.h" />
+    <ClInclude Include="base\Log.h" />
+    <ClInclude Include="base\noncopyable.h" />
+    <ClInclude Include="cim.h" />
+    <ClInclude Include="cim_def.h" />
+    <ClInclude Include="cim_dll.h" />
+    <ClInclude Include="core\client.h" />
+    <ClInclude Include="pb\CIM.Def.pb.h" />
+    <ClInclude Include="pb\CIM.Group.pb.h" />
+    <ClInclude Include="pb\CIM.List.pb.h" />
+    <ClInclude Include="pb\CIM.Login.pb.h" />
+    <ClInclude Include="pb\CIM.Message.pb.h" />
+    <ClInclude Include="pb\CIM.Voip.pb.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

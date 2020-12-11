@@ -15,3 +15,9 @@ win/cim/cim_core_unit_test/cmake-build-debug/
 win/cim/core/cmake-build-debug/
 win/cim/core/.idea/
 win/cim/cim_core_unit_test/.idea/
+win/bin/libprotobuf-lited.dll
+win/bin/glog.dll
+win/bin/gflags_debug.dll
+win/bin/fmtd.dll
+win/bin/event.dll
+win/bin/chatkit.lib
