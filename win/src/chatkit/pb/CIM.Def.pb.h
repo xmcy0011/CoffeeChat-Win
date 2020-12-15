@@ -103,12 +103,31 @@ enum CIMCmdID : int {
   kCIM_CID_VOIP_BYE_REQ = 1029,
   kCIM_CID_VOIP_BYE_RSP = 1030,
   kCIM_CID_VOIP_BYE_NOTIFY = 1031,
+  kCIM_CID_GROUP_CREATE_DEFAULT_REQ = 1281,
+  kCIM_CID_GROUP_CREATE_DEFAULT_RSP = 1282,
+  kCIM_CID_GROUP_DISBINGDING_REQ = 1283,
+  kCIM_CID_GROUP_DISBINGDING_RSP = 1284,
+  kCIM_CID_GROUP_EXIT_REQ = 1285,
+  kCIM_CID_GROUP_EXIT_RSP = 1286,
+  kCIM_CID_GROUP_LIST_REQ = 1287,
+  kCIM_CID_GROUP_LIST_RSP = 1288,
+  kCIM_CID_GROUP_INFO_REQ = 1289,
+  kCIM_CID_GROUP_INFO_RSP = 1296,
+  kCIM_CID_GROUP_INVITE_MEMBER_REQ = 1297,
+  kCIM_CID_GROUP_INVITE_MEMBER_RSP = 1298,
+  kCIM_CID_GROUP_KICK_OUT_MEMBER_REQ = 1299,
+  kCIM_CID_GROUP_KICK_OUT_MEMBER_RSP = 1300,
+  kCIM_CID_GROUP_MEMBER_CHANGED_NOTIFY = 1301,
+  kCIM_CID_GROUP_LIST_MEMBER_REQ = 1302,
+  kCIM_CID_GROUP_LIST_MEMBER_RSP = 1303,
+  kCIM_CID_FRIEND_QUERY_USER_LIST_REQ = 1537,
+  kCIM_CID_FRIEND_QUERY_USER_LIST_RSP = 1538,
   CIMCmdID_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   CIMCmdID_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool CIMCmdID_IsValid(int value);
 constexpr CIMCmdID CIMCmdID_MIN = kCIM_CID_UNKNOWN;
-constexpr CIMCmdID CIMCmdID_MAX = kCIM_CID_VOIP_BYE_NOTIFY;
+constexpr CIMCmdID CIMCmdID_MAX = kCIM_CID_FRIEND_QUERY_USER_LIST_RSP;
 constexpr int CIMCmdID_ARRAYSIZE = CIMCmdID_MAX + 1;
 
 const std::string& CIMCmdID_Name(CIMCmdID value);
@@ -177,12 +196,15 @@ enum CIMClientType : int {
   kCIM_CLIENT_TYPE_ANDROID = 1,
   kCIM_CLIENT_TYPE_IOS = 2,
   kCIM_CLIENT_TYPE_WEB = 3,
+  kCIM_CLIENT_TYPE_REST_API = 4,
+  kCIM_CLIENT_TYPE_PC_WINDOWS = 5,
+  kCIM_CLIENT_TYPE_MAC_OS = 6,
   CIMClientType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   CIMClientType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool CIMClientType_IsValid(int value);
 constexpr CIMClientType CIMClientType_MIN = kCIM_CLIENT_TYPE_DEFAULT;
-constexpr CIMClientType CIMClientType_MAX = kCIM_CLIENT_TYPE_WEB;
+constexpr CIMClientType CIMClientType_MAX = kCIM_CLIENT_TYPE_MAC_OS;
 constexpr int CIMClientType_ARRAYSIZE = CIMClientType_MAX + 1;
 
 const std::string& CIMClientType_Name(CIMClientType value);
@@ -277,6 +299,32 @@ inline const std::string& CIMMsgStatus_Name(T enum_t_value) {
 }
 bool CIMMsgStatus_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMMsgStatus* value);
+enum CIMMsgNotificationType : int {
+  kCIM_MSG_NOTIFICATION_UNKNOWN = 0,
+  kCIM_MSG_NOTIFICATION_GROUP_CREATE = 1,
+  kCIM_MSG_NOTIFICATION_GROUP_BE_INVITE = 2,
+  kCIM_MSG_NOTIFICATION_GROUP_KICK = 3,
+  kCIM_MSG_NOTIFICATION_GROUP_LEAVE = 4,
+  kCIM_MSG_NOTIFICATION_GROUP_UPDATE = 5,
+  kCIM_MSG_NOTIFICATION_GROUP_DISMISS = 6,
+  CIMMsgNotificationType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMMsgNotificationType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMMsgNotificationType_IsValid(int value);
+constexpr CIMMsgNotificationType CIMMsgNotificationType_MIN = kCIM_MSG_NOTIFICATION_UNKNOWN;
+constexpr CIMMsgNotificationType CIMMsgNotificationType_MAX = kCIM_MSG_NOTIFICATION_GROUP_DISMISS;
+constexpr int CIMMsgNotificationType_ARRAYSIZE = CIMMsgNotificationType_MAX + 1;
+
+const std::string& CIMMsgNotificationType_Name(CIMMsgNotificationType value);
+template<typename T>
+inline const std::string& CIMMsgNotificationType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMMsgNotificationType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMMsgNotificationType_Name.");
+  return CIMMsgNotificationType_Name(static_cast<CIMMsgNotificationType>(enum_t_value));
+}
+bool CIMMsgNotificationType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMMsgNotificationType* value);
 enum CIMSessionStatusType : int {
   kCIM_SESSION_STATUS_UNKNOWN = 0,
   kCIM_SESSION_STATUS_OK = 1,
@@ -512,6 +560,9 @@ class CIMUserInfo PROTOBUF_FINAL :
 
   enum : int {
     kNickNameFieldNumber = 2,
+    kNickNameSpellFieldNumber = 3,
+    kPhoneFieldNumber = 9,
+    kAvatarUrlFieldNumber = 10,
     kAttachInfoFieldNumber = 11,
     kUserIdFieldNumber = 1,
   };
@@ -529,6 +580,54 @@ class CIMUserInfo PROTOBUF_FINAL :
   const std::string& _internal_nick_name() const;
   void _internal_set_nick_name(const std::string& value);
   std::string* _internal_mutable_nick_name();
+  public:
+
+  // string nick_name_spell = 3;
+  void clear_nick_name_spell();
+  const std::string& nick_name_spell() const;
+  void set_nick_name_spell(const std::string& value);
+  void set_nick_name_spell(std::string&& value);
+  void set_nick_name_spell(const char* value);
+  void set_nick_name_spell(const char* value, size_t size);
+  std::string* mutable_nick_name_spell();
+  std::string* release_nick_name_spell();
+  void set_allocated_nick_name_spell(std::string* nick_name_spell);
+  private:
+  const std::string& _internal_nick_name_spell() const;
+  void _internal_set_nick_name_spell(const std::string& value);
+  std::string* _internal_mutable_nick_name_spell();
+  public:
+
+  // string phone = 9;
+  void clear_phone();
+  const std::string& phone() const;
+  void set_phone(const std::string& value);
+  void set_phone(std::string&& value);
+  void set_phone(const char* value);
+  void set_phone(const char* value, size_t size);
+  std::string* mutable_phone();
+  std::string* release_phone();
+  void set_allocated_phone(std::string* phone);
+  private:
+  const std::string& _internal_phone() const;
+  void _internal_set_phone(const std::string& value);
+  std::string* _internal_mutable_phone();
+  public:
+
+  // string avatar_url = 10;
+  void clear_avatar_url();
+  const std::string& avatar_url() const;
+  void set_avatar_url(const std::string& value);
+  void set_avatar_url(std::string&& value);
+  void set_avatar_url(const char* value);
+  void set_avatar_url(const char* value, size_t size);
+  std::string* mutable_avatar_url();
+  std::string* release_avatar_url();
+  void set_allocated_avatar_url(std::string* avatar_url);
+  private:
+  const std::string& _internal_avatar_url() const;
+  void _internal_set_avatar_url(const std::string& value);
+  std::string* _internal_mutable_avatar_url();
   public:
 
   // string attach_info = 11;
@@ -564,6 +663,9 @@ class CIMUserInfo PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nick_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nick_name_spell_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr phone_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr avatar_url_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_info_;
   ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1397,6 +1499,192 @@ inline void CIMUserInfo::set_allocated_nick_name(std::string* nick_name) {
   nick_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), nick_name,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:CIM.Def.CIMUserInfo.nick_name)
+}
+
+// string nick_name_spell = 3;
+inline void CIMUserInfo::clear_nick_name_spell() {
+  nick_name_spell_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMUserInfo::nick_name_spell() const {
+  // @@protoc_insertion_point(field_get:CIM.Def.CIMUserInfo.nick_name_spell)
+  return _internal_nick_name_spell();
+}
+inline void CIMUserInfo::set_nick_name_spell(const std::string& value) {
+  _internal_set_nick_name_spell(value);
+  // @@protoc_insertion_point(field_set:CIM.Def.CIMUserInfo.nick_name_spell)
+}
+inline std::string* CIMUserInfo::mutable_nick_name_spell() {
+  // @@protoc_insertion_point(field_mutable:CIM.Def.CIMUserInfo.nick_name_spell)
+  return _internal_mutable_nick_name_spell();
+}
+inline const std::string& CIMUserInfo::_internal_nick_name_spell() const {
+  return nick_name_spell_.Get();
+}
+inline void CIMUserInfo::_internal_set_nick_name_spell(const std::string& value) {
+  
+  nick_name_spell_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMUserInfo::set_nick_name_spell(std::string&& value) {
+  
+  nick_name_spell_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Def.CIMUserInfo.nick_name_spell)
+}
+inline void CIMUserInfo::set_nick_name_spell(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  nick_name_spell_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Def.CIMUserInfo.nick_name_spell)
+}
+inline void CIMUserInfo::set_nick_name_spell(const char* value,
+    size_t size) {
+  
+  nick_name_spell_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Def.CIMUserInfo.nick_name_spell)
+}
+inline std::string* CIMUserInfo::_internal_mutable_nick_name_spell() {
+  
+  return nick_name_spell_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMUserInfo::release_nick_name_spell() {
+  // @@protoc_insertion_point(field_release:CIM.Def.CIMUserInfo.nick_name_spell)
+  return nick_name_spell_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMUserInfo::set_allocated_nick_name_spell(std::string* nick_name_spell) {
+  if (nick_name_spell != nullptr) {
+    
+  } else {
+    
+  }
+  nick_name_spell_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), nick_name_spell,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Def.CIMUserInfo.nick_name_spell)
+}
+
+// string phone = 9;
+inline void CIMUserInfo::clear_phone() {
+  phone_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMUserInfo::phone() const {
+  // @@protoc_insertion_point(field_get:CIM.Def.CIMUserInfo.phone)
+  return _internal_phone();
+}
+inline void CIMUserInfo::set_phone(const std::string& value) {
+  _internal_set_phone(value);
+  // @@protoc_insertion_point(field_set:CIM.Def.CIMUserInfo.phone)
+}
+inline std::string* CIMUserInfo::mutable_phone() {
+  // @@protoc_insertion_point(field_mutable:CIM.Def.CIMUserInfo.phone)
+  return _internal_mutable_phone();
+}
+inline const std::string& CIMUserInfo::_internal_phone() const {
+  return phone_.Get();
+}
+inline void CIMUserInfo::_internal_set_phone(const std::string& value) {
+  
+  phone_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMUserInfo::set_phone(std::string&& value) {
+  
+  phone_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Def.CIMUserInfo.phone)
+}
+inline void CIMUserInfo::set_phone(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  phone_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Def.CIMUserInfo.phone)
+}
+inline void CIMUserInfo::set_phone(const char* value,
+    size_t size) {
+  
+  phone_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Def.CIMUserInfo.phone)
+}
+inline std::string* CIMUserInfo::_internal_mutable_phone() {
+  
+  return phone_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMUserInfo::release_phone() {
+  // @@protoc_insertion_point(field_release:CIM.Def.CIMUserInfo.phone)
+  return phone_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMUserInfo::set_allocated_phone(std::string* phone) {
+  if (phone != nullptr) {
+    
+  } else {
+    
+  }
+  phone_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), phone,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Def.CIMUserInfo.phone)
+}
+
+// string avatar_url = 10;
+inline void CIMUserInfo::clear_avatar_url() {
+  avatar_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMUserInfo::avatar_url() const {
+  // @@protoc_insertion_point(field_get:CIM.Def.CIMUserInfo.avatar_url)
+  return _internal_avatar_url();
+}
+inline void CIMUserInfo::set_avatar_url(const std::string& value) {
+  _internal_set_avatar_url(value);
+  // @@protoc_insertion_point(field_set:CIM.Def.CIMUserInfo.avatar_url)
+}
+inline std::string* CIMUserInfo::mutable_avatar_url() {
+  // @@protoc_insertion_point(field_mutable:CIM.Def.CIMUserInfo.avatar_url)
+  return _internal_mutable_avatar_url();
+}
+inline const std::string& CIMUserInfo::_internal_avatar_url() const {
+  return avatar_url_.Get();
+}
+inline void CIMUserInfo::_internal_set_avatar_url(const std::string& value) {
+  
+  avatar_url_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMUserInfo::set_avatar_url(std::string&& value) {
+  
+  avatar_url_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Def.CIMUserInfo.avatar_url)
+}
+inline void CIMUserInfo::set_avatar_url(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  avatar_url_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Def.CIMUserInfo.avatar_url)
+}
+inline void CIMUserInfo::set_avatar_url(const char* value,
+    size_t size) {
+  
+  avatar_url_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Def.CIMUserInfo.avatar_url)
+}
+inline std::string* CIMUserInfo::_internal_mutable_avatar_url() {
+  
+  return avatar_url_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMUserInfo::release_avatar_url() {
+  // @@protoc_insertion_point(field_release:CIM.Def.CIMUserInfo.avatar_url)
+  return avatar_url_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMUserInfo::set_allocated_avatar_url(std::string* avatar_url) {
+  if (avatar_url != nullptr) {
+    
+  } else {
+    
+  }
+  avatar_url_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), avatar_url,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Def.CIMUserInfo.avatar_url)
 }
 
 // string attach_info = 11;
@@ -2495,6 +2783,7 @@ template <> struct is_proto_enum< ::CIM::Def::CIMClientType> : ::std::true_type 
 template <> struct is_proto_enum< ::CIM::Def::CIMSessionType> : ::std::true_type {};
 template <> struct is_proto_enum< ::CIM::Def::CIMMsgType> : ::std::true_type {};
 template <> struct is_proto_enum< ::CIM::Def::CIMMsgStatus> : ::std::true_type {};
+template <> struct is_proto_enum< ::CIM::Def::CIMMsgNotificationType> : ::std::true_type {};
 template <> struct is_proto_enum< ::CIM::Def::CIMSessionStatusType> : ::std::true_type {};
 template <> struct is_proto_enum< ::CIM::Def::CIMMsgFeature> : ::std::true_type {};
 template <> struct is_proto_enum< ::CIM::Def::CIMVoipInviteType> : ::std::true_type {};

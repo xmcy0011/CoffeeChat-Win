@@ -15,6 +15,7 @@
 #include "cim.h"
 #include "cim_def.h"
 #include "pb/CIM.Def.pb.h"
+#include "pb/cim.Login.pb.h"
 #include "base/noncopyable.h"
 
 #include <google/protobuf/message_lite.h>
@@ -39,6 +40,8 @@ namespace cim {
         };
         typedef std::function<void(const ConnectStatus& status)> ConnectionCallback;
         typedef std::function<void(IMHeader&, evpp::Buffer* data)> MessageCallback;
+        typedef std::function<void(const CIM::Login::CIMAuthTokenRsp& rsp)> LoginCallback;
+        typedef std::function<void()> TimeoutCallback;
 
         class CIM_DLL_API Client : public cim::noncopyable {
           public:
@@ -54,7 +57,7 @@ namespace cim {
               * @param
               * @return
               */
-            void login(std::string user_name, std::string pwd, string ip, uint16_t port);
+            void login(std::string user_name, std::string pwd, string ip, uint16_t port, const LoginCallback& cb, const TimeoutCallback& timeout_cb);
             void setConnectionCallback(const ConnectionCallback& cb);
             void logout();
 
@@ -69,7 +72,10 @@ namespace cim {
           private:
             void onConnectionStatusChanged(const evpp::TCPConnPtr& conn);
             void onMessage(const evpp::TCPConnPtr& conn, evpp::Buffer* buffer);
+            void onHandleData(const IMHeader* header, evpp::Buffer* buffer);
             uint16_t getSeq();
+
+            void onHandleAuthRsp(const IMHeader* header, evpp::Buffer* buffer);
 
           protected:
             Client();
@@ -80,9 +86,14 @@ namespace cim {
             std::unique_ptr<evpp::EventLoopThread> loop_;
 
             ConnectStatus conn_status_;
+            LoginCallback login_cb_;
+            TimeoutCallback login_timeout_cb_;
+            atomic<bool> is_login_;
+
+            uint64_t user_id_;
+            std::string user_token_;
 
             ConnectionCallback connection_cb_;
-            uint64_t user_id_;
             atomic<uint16_t> seq_;
         };
     }

@@ -27,9 +27,10 @@
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/inlined_string_field.h>
 #include <google/protobuf/metadata_lite.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include "CIM.Def.pb.h"
+#include <google/protobuf/generated_enum_util.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_CIM_2eGroup_2eproto
@@ -45,20 +46,3340 @@ struct TableStruct_CIM_2eGroup_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[20]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
+namespace CIM {
+namespace Group {
+class CIMGroupCreateReq;
+class CIMGroupCreateReqDefaultTypeInternal;
+extern CIMGroupCreateReqDefaultTypeInternal _CIMGroupCreateReq_default_instance_;
+class CIMGroupCreateRsp;
+class CIMGroupCreateRspDefaultTypeInternal;
+extern CIMGroupCreateRspDefaultTypeInternal _CIMGroupCreateRsp_default_instance_;
+class CIMGroupDisbandingReq;
+class CIMGroupDisbandingReqDefaultTypeInternal;
+extern CIMGroupDisbandingReqDefaultTypeInternal _CIMGroupDisbandingReq_default_instance_;
+class CIMGroupDisbandingRsp;
+class CIMGroupDisbandingRspDefaultTypeInternal;
+extern CIMGroupDisbandingRspDefaultTypeInternal _CIMGroupDisbandingRsp_default_instance_;
+class CIMGroupExitReq;
+class CIMGroupExitReqDefaultTypeInternal;
+extern CIMGroupExitReqDefaultTypeInternal _CIMGroupExitReq_default_instance_;
+class CIMGroupExitRsp;
+class CIMGroupExitRspDefaultTypeInternal;
+extern CIMGroupExitRspDefaultTypeInternal _CIMGroupExitRsp_default_instance_;
+class CIMGroupInfo;
+class CIMGroupInfoDefaultTypeInternal;
+extern CIMGroupInfoDefaultTypeInternal _CIMGroupInfo_default_instance_;
+class CIMGroupInfoReq;
+class CIMGroupInfoReqDefaultTypeInternal;
+extern CIMGroupInfoReqDefaultTypeInternal _CIMGroupInfoReq_default_instance_;
+class CIMGroupInfoRsp;
+class CIMGroupInfoRspDefaultTypeInternal;
+extern CIMGroupInfoRspDefaultTypeInternal _CIMGroupInfoRsp_default_instance_;
+class CIMGroupInviteMemberReq;
+class CIMGroupInviteMemberReqDefaultTypeInternal;
+extern CIMGroupInviteMemberReqDefaultTypeInternal _CIMGroupInviteMemberReq_default_instance_;
+class CIMGroupInviteMemberRsp;
+class CIMGroupInviteMemberRspDefaultTypeInternal;
+extern CIMGroupInviteMemberRspDefaultTypeInternal _CIMGroupInviteMemberRsp_default_instance_;
+class CIMGroupKickOutMemberReq;
+class CIMGroupKickOutMemberReqDefaultTypeInternal;
+extern CIMGroupKickOutMemberReqDefaultTypeInternal _CIMGroupKickOutMemberReq_default_instance_;
+class CIMGroupKickOutMemberRsp;
+class CIMGroupKickOutMemberRspDefaultTypeInternal;
+extern CIMGroupKickOutMemberRspDefaultTypeInternal _CIMGroupKickOutMemberRsp_default_instance_;
+class CIMGroupListReq;
+class CIMGroupListReqDefaultTypeInternal;
+extern CIMGroupListReqDefaultTypeInternal _CIMGroupListReq_default_instance_;
+class CIMGroupListRsp;
+class CIMGroupListRspDefaultTypeInternal;
+extern CIMGroupListRspDefaultTypeInternal _CIMGroupListRsp_default_instance_;
+class CIMGroupMemberChangedInfo;
+class CIMGroupMemberChangedInfoDefaultTypeInternal;
+extern CIMGroupMemberChangedInfoDefaultTypeInternal _CIMGroupMemberChangedInfo_default_instance_;
+class CIMGroupMemberChangedNotify;
+class CIMGroupMemberChangedNotifyDefaultTypeInternal;
+extern CIMGroupMemberChangedNotifyDefaultTypeInternal _CIMGroupMemberChangedNotify_default_instance_;
+class CIMGroupMemberListReq;
+class CIMGroupMemberListReqDefaultTypeInternal;
+extern CIMGroupMemberListReqDefaultTypeInternal _CIMGroupMemberListReq_default_instance_;
+class CIMGroupMemberListRsp;
+class CIMGroupMemberListRspDefaultTypeInternal;
+extern CIMGroupMemberListRspDefaultTypeInternal _CIMGroupMemberListRsp_default_instance_;
+class CIMGroupVersionInfo;
+class CIMGroupVersionInfoDefaultTypeInternal;
+extern CIMGroupVersionInfoDefaultTypeInternal _CIMGroupVersionInfo_default_instance_;
+}  // namespace Group
+}  // namespace CIM
 PROTOBUF_NAMESPACE_OPEN
+template<> ::CIM::Group::CIMGroupCreateReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupCreateReq>(Arena*);
+template<> ::CIM::Group::CIMGroupCreateRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupCreateRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupDisbandingReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupDisbandingReq>(Arena*);
+template<> ::CIM::Group::CIMGroupDisbandingRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupDisbandingRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupExitReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupExitReq>(Arena*);
+template<> ::CIM::Group::CIMGroupExitRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupExitRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupInfo* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupInfo>(Arena*);
+template<> ::CIM::Group::CIMGroupInfoReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupInfoReq>(Arena*);
+template<> ::CIM::Group::CIMGroupInfoRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupInfoRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupInviteMemberReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupInviteMemberReq>(Arena*);
+template<> ::CIM::Group::CIMGroupInviteMemberRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupInviteMemberRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupKickOutMemberReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupKickOutMemberReq>(Arena*);
+template<> ::CIM::Group::CIMGroupKickOutMemberRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupKickOutMemberRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupListReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupListReq>(Arena*);
+template<> ::CIM::Group::CIMGroupListRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupListRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupMemberChangedInfo* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupMemberChangedInfo>(Arena*);
+template<> ::CIM::Group::CIMGroupMemberChangedNotify* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupMemberChangedNotify>(Arena*);
+template<> ::CIM::Group::CIMGroupMemberListReq* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupMemberListReq>(Arena*);
+template<> ::CIM::Group::CIMGroupMemberListRsp* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupMemberListRsp>(Arena*);
+template<> ::CIM::Group::CIMGroupVersionInfo* Arena::CreateMaybeMessage<::CIM::Group::CIMGroupVersionInfo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace CIM {
 namespace Group {
 
+enum CIMGroupMemberChangedType : int {
+  kCIM_GROUP_MEMBER_CHANGED_TYPE_DEFAULT = 0,
+  kCIM_GROUP_MEMBER_CHANGED_TYPE_ADD = 1,
+  kCIM_GROUP_MEMBER_CHANGED_TYPE_DEL = 2,
+  CIMGroupMemberChangedType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMGroupMemberChangedType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMGroupMemberChangedType_IsValid(int value);
+constexpr CIMGroupMemberChangedType CIMGroupMemberChangedType_MIN = kCIM_GROUP_MEMBER_CHANGED_TYPE_DEFAULT;
+constexpr CIMGroupMemberChangedType CIMGroupMemberChangedType_MAX = kCIM_GROUP_MEMBER_CHANGED_TYPE_DEL;
+constexpr int CIMGroupMemberChangedType_ARRAYSIZE = CIMGroupMemberChangedType_MAX + 1;
+
+const std::string& CIMGroupMemberChangedType_Name(CIMGroupMemberChangedType value);
+template<typename T>
+inline const std::string& CIMGroupMemberChangedType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMGroupMemberChangedType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMGroupMemberChangedType_Name.");
+  return CIMGroupMemberChangedType_Name(static_cast<CIMGroupMemberChangedType>(enum_t_value));
+}
+bool CIMGroupMemberChangedType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMGroupMemberChangedType* value);
+enum CIMGroupType : int {
+  kCIM_GROUP_TYPE_UNKNOWN = 0,
+  kCIM_GROUP_TYPE_GROUP_NORMAL = 1,
+  kCIM_GROUP_TYPE_GROUP_SUPER = 2,
+  CIMGroupType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMGroupType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMGroupType_IsValid(int value);
+constexpr CIMGroupType CIMGroupType_MIN = kCIM_GROUP_TYPE_UNKNOWN;
+constexpr CIMGroupType CIMGroupType_MAX = kCIM_GROUP_TYPE_GROUP_SUPER;
+constexpr int CIMGroupType_ARRAYSIZE = CIMGroupType_MAX + 1;
+
+const std::string& CIMGroupType_Name(CIMGroupType value);
+template<typename T>
+inline const std::string& CIMGroupType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMGroupType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMGroupType_Name.");
+  return CIMGroupType_Name(static_cast<CIMGroupType>(enum_t_value));
+}
+bool CIMGroupType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMGroupType* value);
+enum CIMGroupJoinModel : int {
+  kCIM_GROUP_JOIN_MODEL_DEFAULT = 0,
+  kCIM_GROUP_JOIN_MODEL_NEED_AUTH = 1,
+  kCIM_GROUP_JOIN_MODEL_REJECT = 2,
+  CIMGroupJoinModel_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMGroupJoinModel_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMGroupJoinModel_IsValid(int value);
+constexpr CIMGroupJoinModel CIMGroupJoinModel_MIN = kCIM_GROUP_JOIN_MODEL_DEFAULT;
+constexpr CIMGroupJoinModel CIMGroupJoinModel_MAX = kCIM_GROUP_JOIN_MODEL_REJECT;
+constexpr int CIMGroupJoinModel_ARRAYSIZE = CIMGroupJoinModel_MAX + 1;
+
+const std::string& CIMGroupJoinModel_Name(CIMGroupJoinModel value);
+template<typename T>
+inline const std::string& CIMGroupJoinModel_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMGroupJoinModel>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMGroupJoinModel_Name.");
+  return CIMGroupJoinModel_Name(static_cast<CIMGroupJoinModel>(enum_t_value));
+}
+bool CIMGroupJoinModel_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMGroupJoinModel* value);
+enum CIMGroupBeInviteMode : int {
+  kCIM_GROUP_BE_INVITE_MODEL_DEFAULT = 0,
+  kCIM_GROUP_BE_INVITE_MODEL_NEED_AGREE = 1,
+  CIMGroupBeInviteMode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMGroupBeInviteMode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMGroupBeInviteMode_IsValid(int value);
+constexpr CIMGroupBeInviteMode CIMGroupBeInviteMode_MIN = kCIM_GROUP_BE_INVITE_MODEL_DEFAULT;
+constexpr CIMGroupBeInviteMode CIMGroupBeInviteMode_MAX = kCIM_GROUP_BE_INVITE_MODEL_NEED_AGREE;
+constexpr int CIMGroupBeInviteMode_ARRAYSIZE = CIMGroupBeInviteMode_MAX + 1;
+
+const std::string& CIMGroupBeInviteMode_Name(CIMGroupBeInviteMode value);
+template<typename T>
+inline const std::string& CIMGroupBeInviteMode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMGroupBeInviteMode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMGroupBeInviteMode_Name.");
+  return CIMGroupBeInviteMode_Name(static_cast<CIMGroupBeInviteMode>(enum_t_value));
+}
+bool CIMGroupBeInviteMode_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMGroupBeInviteMode* value);
+enum CIMGroupMuteModel : int {
+  kCIM_GROUP_MUTE_MODEL_DEFAULT = 0,
+  kCIM_GROUP_MUTE_MODEL_ALL = 1,
+  CIMGroupMuteModel_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  CIMGroupMuteModel_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool CIMGroupMuteModel_IsValid(int value);
+constexpr CIMGroupMuteModel CIMGroupMuteModel_MIN = kCIM_GROUP_MUTE_MODEL_DEFAULT;
+constexpr CIMGroupMuteModel CIMGroupMuteModel_MAX = kCIM_GROUP_MUTE_MODEL_ALL;
+constexpr int CIMGroupMuteModel_ARRAYSIZE = CIMGroupMuteModel_MAX + 1;
+
+const std::string& CIMGroupMuteModel_Name(CIMGroupMuteModel value);
+template<typename T>
+inline const std::string& CIMGroupMuteModel_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, CIMGroupMuteModel>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function CIMGroupMuteModel_Name.");
+  return CIMGroupMuteModel_Name(static_cast<CIMGroupMuteModel>(enum_t_value));
+}
+bool CIMGroupMuteModel_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CIMGroupMuteModel* value);
 // ===================================================================
 
+class CIMGroupCreateReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupCreateReq) */ {
+ public:
+  inline CIMGroupCreateReq() : CIMGroupCreateReq(nullptr) {}
+  virtual ~CIMGroupCreateReq();
 
+  CIMGroupCreateReq(const CIMGroupCreateReq& from);
+  CIMGroupCreateReq(CIMGroupCreateReq&& from) noexcept
+    : CIMGroupCreateReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupCreateReq& operator=(const CIMGroupCreateReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupCreateReq& operator=(CIMGroupCreateReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupCreateReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupCreateReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupCreateReq*>(
+               &_CIMGroupCreateReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(CIMGroupCreateReq& a, CIMGroupCreateReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupCreateReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupCreateReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupCreateReq* New() const final {
+    return CreateMaybeMessage<CIMGroupCreateReq>(nullptr);
+  }
+
+  CIMGroupCreateReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupCreateReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupCreateReq& from);
+  void MergeFrom(const CIMGroupCreateReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupCreateReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupCreateReq";
+  }
+  protected:
+  explicit CIMGroupCreateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdListFieldNumber = 3,
+    kGroupNameFieldNumber = 2,
+    kUserIdFieldNumber = 1,
+  };
+  // repeated uint64 member_id_list = 3;
+  int member_id_list_size() const;
+  private:
+  int _internal_member_id_list_size() const;
+  public:
+  void clear_member_id_list();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_member_id_list(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_member_id_list() const;
+  void _internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_member_id_list();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 member_id_list(int index) const;
+  void set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      member_id_list() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_member_id_list();
+
+  // string group_name = 2;
+  void clear_group_name();
+  const std::string& group_name() const;
+  void set_group_name(const std::string& value);
+  void set_group_name(std::string&& value);
+  void set_group_name(const char* value);
+  void set_group_name(const char* value, size_t size);
+  std::string* mutable_group_name();
+  std::string* release_group_name();
+  void set_allocated_group_name(std::string* group_name);
+  private:
+  const std::string& _internal_group_name() const;
+  void _internal_set_group_name(const std::string& value);
+  std::string* _internal_mutable_group_name();
+  public:
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupCreateReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > member_id_list_;
+  mutable std::atomic<int> _member_id_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_name_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupCreateRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupCreateRsp) */ {
+ public:
+  inline CIMGroupCreateRsp() : CIMGroupCreateRsp(nullptr) {}
+  virtual ~CIMGroupCreateRsp();
+
+  CIMGroupCreateRsp(const CIMGroupCreateRsp& from);
+  CIMGroupCreateRsp(CIMGroupCreateRsp&& from) noexcept
+    : CIMGroupCreateRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupCreateRsp& operator=(const CIMGroupCreateRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupCreateRsp& operator=(CIMGroupCreateRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupCreateRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupCreateRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupCreateRsp*>(
+               &_CIMGroupCreateRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(CIMGroupCreateRsp& a, CIMGroupCreateRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupCreateRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupCreateRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupCreateRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupCreateRsp>(nullptr);
+  }
+
+  CIMGroupCreateRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupCreateRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupCreateRsp& from);
+  void MergeFrom(const CIMGroupCreateRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupCreateRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupCreateRsp";
+  }
+  protected:
+  explicit CIMGroupCreateRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdListFieldNumber = 4,
+    kAttachNotificatinoMsgFieldNumber = 10,
+    kGroupInfoFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kResultCodeFieldNumber = 2,
+  };
+  // repeated uint64 member_id_list = 4;
+  int member_id_list_size() const;
+  private:
+  int _internal_member_id_list_size() const;
+  public:
+  void clear_member_id_list();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_member_id_list(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_member_id_list() const;
+  void _internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_member_id_list();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 member_id_list(int index) const;
+  void set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      member_id_list() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_member_id_list();
+
+  // bytes attach_notificatino_msg = 10;
+  void clear_attach_notificatino_msg();
+  const std::string& attach_notificatino_msg() const;
+  void set_attach_notificatino_msg(const std::string& value);
+  void set_attach_notificatino_msg(std::string&& value);
+  void set_attach_notificatino_msg(const char* value);
+  void set_attach_notificatino_msg(const void* value, size_t size);
+  std::string* mutable_attach_notificatino_msg();
+  std::string* release_attach_notificatino_msg();
+  void set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg);
+  private:
+  const std::string& _internal_attach_notificatino_msg() const;
+  void _internal_set_attach_notificatino_msg(const std::string& value);
+  std::string* _internal_mutable_attach_notificatino_msg();
+  public:
+
+  // .CIM.Group.CIMGroupInfo group_info = 3;
+  bool has_group_info() const;
+  private:
+  bool _internal_has_group_info() const;
+  public:
+  void clear_group_info();
+  const ::CIM::Group::CIMGroupInfo& group_info() const;
+  ::CIM::Group::CIMGroupInfo* release_group_info();
+  ::CIM::Group::CIMGroupInfo* mutable_group_info();
+  void set_allocated_group_info(::CIM::Group::CIMGroupInfo* group_info);
+  private:
+  const ::CIM::Group::CIMGroupInfo& _internal_group_info() const;
+  ::CIM::Group::CIMGroupInfo* _internal_mutable_group_info();
+  public:
+  void unsafe_arena_set_allocated_group_info(
+      ::CIM::Group::CIMGroupInfo* group_info);
+  ::CIM::Group::CIMGroupInfo* unsafe_arena_release_group_info();
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 2;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupCreateRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > member_id_list_;
+  mutable std::atomic<int> _member_id_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_notificatino_msg_;
+  ::CIM::Group::CIMGroupInfo* group_info_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupDisbandingReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupDisbandingReq) */ {
+ public:
+  inline CIMGroupDisbandingReq() : CIMGroupDisbandingReq(nullptr) {}
+  virtual ~CIMGroupDisbandingReq();
+
+  CIMGroupDisbandingReq(const CIMGroupDisbandingReq& from);
+  CIMGroupDisbandingReq(CIMGroupDisbandingReq&& from) noexcept
+    : CIMGroupDisbandingReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupDisbandingReq& operator=(const CIMGroupDisbandingReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupDisbandingReq& operator=(CIMGroupDisbandingReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupDisbandingReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupDisbandingReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupDisbandingReq*>(
+               &_CIMGroupDisbandingReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(CIMGroupDisbandingReq& a, CIMGroupDisbandingReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupDisbandingReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupDisbandingReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupDisbandingReq* New() const final {
+    return CreateMaybeMessage<CIMGroupDisbandingReq>(nullptr);
+  }
+
+  CIMGroupDisbandingReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupDisbandingReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupDisbandingReq& from);
+  void MergeFrom(const CIMGroupDisbandingReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupDisbandingReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupDisbandingReq";
+  }
+  protected:
+  explicit CIMGroupDisbandingReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupDisbandingReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupDisbandingRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupDisbandingRsp) */ {
+ public:
+  inline CIMGroupDisbandingRsp() : CIMGroupDisbandingRsp(nullptr) {}
+  virtual ~CIMGroupDisbandingRsp();
+
+  CIMGroupDisbandingRsp(const CIMGroupDisbandingRsp& from);
+  CIMGroupDisbandingRsp(CIMGroupDisbandingRsp&& from) noexcept
+    : CIMGroupDisbandingRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupDisbandingRsp& operator=(const CIMGroupDisbandingRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupDisbandingRsp& operator=(CIMGroupDisbandingRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupDisbandingRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupDisbandingRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupDisbandingRsp*>(
+               &_CIMGroupDisbandingRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(CIMGroupDisbandingRsp& a, CIMGroupDisbandingRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupDisbandingRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupDisbandingRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupDisbandingRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupDisbandingRsp>(nullptr);
+  }
+
+  CIMGroupDisbandingRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupDisbandingRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupDisbandingRsp& from);
+  void MergeFrom(const CIMGroupDisbandingRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupDisbandingRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupDisbandingRsp";
+  }
+  protected:
+  explicit CIMGroupDisbandingRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAttachNotificatinoMsgFieldNumber = 10,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+    kResultCodeFieldNumber = 3,
+  };
+  // bytes attach_notificatino_msg = 10;
+  void clear_attach_notificatino_msg();
+  const std::string& attach_notificatino_msg() const;
+  void set_attach_notificatino_msg(const std::string& value);
+  void set_attach_notificatino_msg(std::string&& value);
+  void set_attach_notificatino_msg(const char* value);
+  void set_attach_notificatino_msg(const void* value, size_t size);
+  std::string* mutable_attach_notificatino_msg();
+  std::string* release_attach_notificatino_msg();
+  void set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg);
+  private:
+  const std::string& _internal_attach_notificatino_msg() const;
+  void _internal_set_attach_notificatino_msg(const std::string& value);
+  std::string* _internal_mutable_attach_notificatino_msg();
+  public:
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 3;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupDisbandingRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_notificatino_msg_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupExitReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupExitReq) */ {
+ public:
+  inline CIMGroupExitReq() : CIMGroupExitReq(nullptr) {}
+  virtual ~CIMGroupExitReq();
+
+  CIMGroupExitReq(const CIMGroupExitReq& from);
+  CIMGroupExitReq(CIMGroupExitReq&& from) noexcept
+    : CIMGroupExitReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupExitReq& operator=(const CIMGroupExitReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupExitReq& operator=(CIMGroupExitReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupExitReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupExitReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupExitReq*>(
+               &_CIMGroupExitReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(CIMGroupExitReq& a, CIMGroupExitReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupExitReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupExitReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupExitReq* New() const final {
+    return CreateMaybeMessage<CIMGroupExitReq>(nullptr);
+  }
+
+  CIMGroupExitReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupExitReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupExitReq& from);
+  void MergeFrom(const CIMGroupExitReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupExitReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupExitReq";
+  }
+  protected:
+  explicit CIMGroupExitReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupExitReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupExitRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupExitRsp) */ {
+ public:
+  inline CIMGroupExitRsp() : CIMGroupExitRsp(nullptr) {}
+  virtual ~CIMGroupExitRsp();
+
+  CIMGroupExitRsp(const CIMGroupExitRsp& from);
+  CIMGroupExitRsp(CIMGroupExitRsp&& from) noexcept
+    : CIMGroupExitRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupExitRsp& operator=(const CIMGroupExitRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupExitRsp& operator=(CIMGroupExitRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupExitRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupExitRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupExitRsp*>(
+               &_CIMGroupExitRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(CIMGroupExitRsp& a, CIMGroupExitRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupExitRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupExitRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupExitRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupExitRsp>(nullptr);
+  }
+
+  CIMGroupExitRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupExitRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupExitRsp& from);
+  void MergeFrom(const CIMGroupExitRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupExitRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupExitRsp";
+  }
+  protected:
+  explicit CIMGroupExitRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAttachNotificatinoMsgFieldNumber = 10,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+    kResultCodeFieldNumber = 3,
+  };
+  // bytes attach_notificatino_msg = 10;
+  void clear_attach_notificatino_msg();
+  const std::string& attach_notificatino_msg() const;
+  void set_attach_notificatino_msg(const std::string& value);
+  void set_attach_notificatino_msg(std::string&& value);
+  void set_attach_notificatino_msg(const char* value);
+  void set_attach_notificatino_msg(const void* value, size_t size);
+  std::string* mutable_attach_notificatino_msg();
+  std::string* release_attach_notificatino_msg();
+  void set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg);
+  private:
+  const std::string& _internal_attach_notificatino_msg() const;
+  void _internal_set_attach_notificatino_msg(const std::string& value);
+  std::string* _internal_mutable_attach_notificatino_msg();
+  public:
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 3;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupExitRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_notificatino_msg_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupListReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupListReq) */ {
+ public:
+  inline CIMGroupListReq() : CIMGroupListReq(nullptr) {}
+  virtual ~CIMGroupListReq();
+
+  CIMGroupListReq(const CIMGroupListReq& from);
+  CIMGroupListReq(CIMGroupListReq&& from) noexcept
+    : CIMGroupListReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupListReq& operator=(const CIMGroupListReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupListReq& operator=(CIMGroupListReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupListReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupListReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupListReq*>(
+               &_CIMGroupListReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(CIMGroupListReq& a, CIMGroupListReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupListReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupListReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupListReq* New() const final {
+    return CreateMaybeMessage<CIMGroupListReq>(nullptr);
+  }
+
+  CIMGroupListReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupListReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupListReq& from);
+  void MergeFrom(const CIMGroupListReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupListReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupListReq";
+  }
+  protected:
+  explicit CIMGroupListReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+  };
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupListReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupListRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupListRsp) */ {
+ public:
+  inline CIMGroupListRsp() : CIMGroupListRsp(nullptr) {}
+  virtual ~CIMGroupListRsp();
+
+  CIMGroupListRsp(const CIMGroupListRsp& from);
+  CIMGroupListRsp(CIMGroupListRsp&& from) noexcept
+    : CIMGroupListRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupListRsp& operator=(const CIMGroupListRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupListRsp& operator=(CIMGroupListRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupListRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupListRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupListRsp*>(
+               &_CIMGroupListRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(CIMGroupListRsp& a, CIMGroupListRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupListRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupListRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupListRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupListRsp>(nullptr);
+  }
+
+  CIMGroupListRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupListRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupListRsp& from);
+  void MergeFrom(const CIMGroupListRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupListRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupListRsp";
+  }
+  protected:
+  explicit CIMGroupListRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupVersionListFieldNumber = 2,
+    kUserIdFieldNumber = 1,
+  };
+  // repeated .CIM.Group.CIMGroupVersionInfo group_version_list = 2;
+  int group_version_list_size() const;
+  private:
+  int _internal_group_version_list_size() const;
+  public:
+  void clear_group_version_list();
+  ::CIM::Group::CIMGroupVersionInfo* mutable_group_version_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >*
+      mutable_group_version_list();
+  private:
+  const ::CIM::Group::CIMGroupVersionInfo& _internal_group_version_list(int index) const;
+  ::CIM::Group::CIMGroupVersionInfo* _internal_add_group_version_list();
+  public:
+  const ::CIM::Group::CIMGroupVersionInfo& group_version_list(int index) const;
+  ::CIM::Group::CIMGroupVersionInfo* add_group_version_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >&
+      group_version_list() const;
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupListRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo > group_version_list_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupInfoReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupInfoReq) */ {
+ public:
+  inline CIMGroupInfoReq() : CIMGroupInfoReq(nullptr) {}
+  virtual ~CIMGroupInfoReq();
+
+  CIMGroupInfoReq(const CIMGroupInfoReq& from);
+  CIMGroupInfoReq(CIMGroupInfoReq&& from) noexcept
+    : CIMGroupInfoReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupInfoReq& operator=(const CIMGroupInfoReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupInfoReq& operator=(CIMGroupInfoReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupInfoReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupInfoReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupInfoReq*>(
+               &_CIMGroupInfoReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(CIMGroupInfoReq& a, CIMGroupInfoReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupInfoReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupInfoReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupInfoReq* New() const final {
+    return CreateMaybeMessage<CIMGroupInfoReq>(nullptr);
+  }
+
+  CIMGroupInfoReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupInfoReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupInfoReq& from);
+  void MergeFrom(const CIMGroupInfoReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupInfoReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupInfoReq";
+  }
+  protected:
+  explicit CIMGroupInfoReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupVersionListFieldNumber = 2,
+    kUserIdFieldNumber = 1,
+  };
+  // repeated .CIM.Group.CIMGroupVersionInfo group_version_list = 2;
+  int group_version_list_size() const;
+  private:
+  int _internal_group_version_list_size() const;
+  public:
+  void clear_group_version_list();
+  ::CIM::Group::CIMGroupVersionInfo* mutable_group_version_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >*
+      mutable_group_version_list();
+  private:
+  const ::CIM::Group::CIMGroupVersionInfo& _internal_group_version_list(int index) const;
+  ::CIM::Group::CIMGroupVersionInfo* _internal_add_group_version_list();
+  public:
+  const ::CIM::Group::CIMGroupVersionInfo& group_version_list(int index) const;
+  ::CIM::Group::CIMGroupVersionInfo* add_group_version_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >&
+      group_version_list() const;
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupInfoReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo > group_version_list_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupInfoRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupInfoRsp) */ {
+ public:
+  inline CIMGroupInfoRsp() : CIMGroupInfoRsp(nullptr) {}
+  virtual ~CIMGroupInfoRsp();
+
+  CIMGroupInfoRsp(const CIMGroupInfoRsp& from);
+  CIMGroupInfoRsp(CIMGroupInfoRsp&& from) noexcept
+    : CIMGroupInfoRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupInfoRsp& operator=(const CIMGroupInfoRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupInfoRsp& operator=(CIMGroupInfoRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupInfoRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupInfoRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupInfoRsp*>(
+               &_CIMGroupInfoRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(CIMGroupInfoRsp& a, CIMGroupInfoRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupInfoRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupInfoRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupInfoRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupInfoRsp>(nullptr);
+  }
+
+  CIMGroupInfoRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupInfoRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupInfoRsp& from);
+  void MergeFrom(const CIMGroupInfoRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupInfoRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupInfoRsp";
+  }
+  protected:
+  explicit CIMGroupInfoRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupInfoListFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kResultCodeFieldNumber = 2,
+  };
+  // repeated .CIM.Group.CIMGroupInfo group_info_list = 3;
+  int group_info_list_size() const;
+  private:
+  int _internal_group_info_list_size() const;
+  public:
+  void clear_group_info_list();
+  ::CIM::Group::CIMGroupInfo* mutable_group_info_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupInfo >*
+      mutable_group_info_list();
+  private:
+  const ::CIM::Group::CIMGroupInfo& _internal_group_info_list(int index) const;
+  ::CIM::Group::CIMGroupInfo* _internal_add_group_info_list();
+  public:
+  const ::CIM::Group::CIMGroupInfo& group_info_list(int index) const;
+  ::CIM::Group::CIMGroupInfo* add_group_info_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupInfo >&
+      group_info_list() const;
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 2;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupInfoRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupInfo > group_info_list_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupInviteMemberReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupInviteMemberReq) */ {
+ public:
+  inline CIMGroupInviteMemberReq() : CIMGroupInviteMemberReq(nullptr) {}
+  virtual ~CIMGroupInviteMemberReq();
+
+  CIMGroupInviteMemberReq(const CIMGroupInviteMemberReq& from);
+  CIMGroupInviteMemberReq(CIMGroupInviteMemberReq&& from) noexcept
+    : CIMGroupInviteMemberReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupInviteMemberReq& operator=(const CIMGroupInviteMemberReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupInviteMemberReq& operator=(CIMGroupInviteMemberReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupInviteMemberReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupInviteMemberReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupInviteMemberReq*>(
+               &_CIMGroupInviteMemberReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(CIMGroupInviteMemberReq& a, CIMGroupInviteMemberReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupInviteMemberReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupInviteMemberReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupInviteMemberReq* New() const final {
+    return CreateMaybeMessage<CIMGroupInviteMemberReq>(nullptr);
+  }
+
+  CIMGroupInviteMemberReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupInviteMemberReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupInviteMemberReq& from);
+  void MergeFrom(const CIMGroupInviteMemberReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupInviteMemberReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupInviteMemberReq";
+  }
+  protected:
+  explicit CIMGroupInviteMemberReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdListFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // repeated uint64 member_id_list = 3;
+  int member_id_list_size() const;
+  private:
+  int _internal_member_id_list_size() const;
+  public:
+  void clear_member_id_list();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_member_id_list(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_member_id_list() const;
+  void _internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_member_id_list();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 member_id_list(int index) const;
+  void set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      member_id_list() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_member_id_list();
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupInviteMemberReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > member_id_list_;
+  mutable std::atomic<int> _member_id_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupInviteMemberRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupInviteMemberRsp) */ {
+ public:
+  inline CIMGroupInviteMemberRsp() : CIMGroupInviteMemberRsp(nullptr) {}
+  virtual ~CIMGroupInviteMemberRsp();
+
+  CIMGroupInviteMemberRsp(const CIMGroupInviteMemberRsp& from);
+  CIMGroupInviteMemberRsp(CIMGroupInviteMemberRsp&& from) noexcept
+    : CIMGroupInviteMemberRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupInviteMemberRsp& operator=(const CIMGroupInviteMemberRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupInviteMemberRsp& operator=(CIMGroupInviteMemberRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupInviteMemberRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupInviteMemberRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupInviteMemberRsp*>(
+               &_CIMGroupInviteMemberRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  friend void swap(CIMGroupInviteMemberRsp& a, CIMGroupInviteMemberRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupInviteMemberRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupInviteMemberRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupInviteMemberRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupInviteMemberRsp>(nullptr);
+  }
+
+  CIMGroupInviteMemberRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupInviteMemberRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupInviteMemberRsp& from);
+  void MergeFrom(const CIMGroupInviteMemberRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupInviteMemberRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupInviteMemberRsp";
+  }
+  protected:
+  explicit CIMGroupInviteMemberRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAttachNotificatinoMsgFieldNumber = 10,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+    kResultCodeFieldNumber = 3,
+  };
+  // bytes attach_notificatino_msg = 10;
+  void clear_attach_notificatino_msg();
+  const std::string& attach_notificatino_msg() const;
+  void set_attach_notificatino_msg(const std::string& value);
+  void set_attach_notificatino_msg(std::string&& value);
+  void set_attach_notificatino_msg(const char* value);
+  void set_attach_notificatino_msg(const void* value, size_t size);
+  std::string* mutable_attach_notificatino_msg();
+  std::string* release_attach_notificatino_msg();
+  void set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg);
+  private:
+  const std::string& _internal_attach_notificatino_msg() const;
+  void _internal_set_attach_notificatino_msg(const std::string& value);
+  std::string* _internal_mutable_attach_notificatino_msg();
+  public:
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 3;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupInviteMemberRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_notificatino_msg_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupKickOutMemberReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupKickOutMemberReq) */ {
+ public:
+  inline CIMGroupKickOutMemberReq() : CIMGroupKickOutMemberReq(nullptr) {}
+  virtual ~CIMGroupKickOutMemberReq();
+
+  CIMGroupKickOutMemberReq(const CIMGroupKickOutMemberReq& from);
+  CIMGroupKickOutMemberReq(CIMGroupKickOutMemberReq&& from) noexcept
+    : CIMGroupKickOutMemberReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupKickOutMemberReq& operator=(const CIMGroupKickOutMemberReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupKickOutMemberReq& operator=(CIMGroupKickOutMemberReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupKickOutMemberReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupKickOutMemberReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupKickOutMemberReq*>(
+               &_CIMGroupKickOutMemberReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(CIMGroupKickOutMemberReq& a, CIMGroupKickOutMemberReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupKickOutMemberReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupKickOutMemberReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupKickOutMemberReq* New() const final {
+    return CreateMaybeMessage<CIMGroupKickOutMemberReq>(nullptr);
+  }
+
+  CIMGroupKickOutMemberReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupKickOutMemberReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupKickOutMemberReq& from);
+  void MergeFrom(const CIMGroupKickOutMemberReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupKickOutMemberReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupKickOutMemberReq";
+  }
+  protected:
+  explicit CIMGroupKickOutMemberReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdListFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // repeated uint64 member_id_list = 3;
+  int member_id_list_size() const;
+  private:
+  int _internal_member_id_list_size() const;
+  public:
+  void clear_member_id_list();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_member_id_list(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_member_id_list() const;
+  void _internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_member_id_list();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 member_id_list(int index) const;
+  void set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      member_id_list() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_member_id_list();
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupKickOutMemberReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > member_id_list_;
+  mutable std::atomic<int> _member_id_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupKickOutMemberRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupKickOutMemberRsp) */ {
+ public:
+  inline CIMGroupKickOutMemberRsp() : CIMGroupKickOutMemberRsp(nullptr) {}
+  virtual ~CIMGroupKickOutMemberRsp();
+
+  CIMGroupKickOutMemberRsp(const CIMGroupKickOutMemberRsp& from);
+  CIMGroupKickOutMemberRsp(CIMGroupKickOutMemberRsp&& from) noexcept
+    : CIMGroupKickOutMemberRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupKickOutMemberRsp& operator=(const CIMGroupKickOutMemberRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupKickOutMemberRsp& operator=(CIMGroupKickOutMemberRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupKickOutMemberRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupKickOutMemberRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupKickOutMemberRsp*>(
+               &_CIMGroupKickOutMemberRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  friend void swap(CIMGroupKickOutMemberRsp& a, CIMGroupKickOutMemberRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupKickOutMemberRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupKickOutMemberRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupKickOutMemberRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupKickOutMemberRsp>(nullptr);
+  }
+
+  CIMGroupKickOutMemberRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupKickOutMemberRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupKickOutMemberRsp& from);
+  void MergeFrom(const CIMGroupKickOutMemberRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupKickOutMemberRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupKickOutMemberRsp";
+  }
+  protected:
+  explicit CIMGroupKickOutMemberRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAttachNotificatinoMsgFieldNumber = 10,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+    kResultCodeFieldNumber = 3,
+  };
+  // bytes attach_notificatino_msg = 10;
+  void clear_attach_notificatino_msg();
+  const std::string& attach_notificatino_msg() const;
+  void set_attach_notificatino_msg(const std::string& value);
+  void set_attach_notificatino_msg(std::string&& value);
+  void set_attach_notificatino_msg(const char* value);
+  void set_attach_notificatino_msg(const void* value, size_t size);
+  std::string* mutable_attach_notificatino_msg();
+  std::string* release_attach_notificatino_msg();
+  void set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg);
+  private:
+  const std::string& _internal_attach_notificatino_msg() const;
+  void _internal_set_attach_notificatino_msg(const std::string& value);
+  std::string* _internal_mutable_attach_notificatino_msg();
+  public:
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 result_code = 3;
+  void clear_result_code();
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code() const;
+  void set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_result_code() const;
+  void _internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupKickOutMemberRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attach_notificatino_msg_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 result_code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupMemberListReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupMemberListReq) */ {
+ public:
+  inline CIMGroupMemberListReq() : CIMGroupMemberListReq(nullptr) {}
+  virtual ~CIMGroupMemberListReq();
+
+  CIMGroupMemberListReq(const CIMGroupMemberListReq& from);
+  CIMGroupMemberListReq(CIMGroupMemberListReq&& from) noexcept
+    : CIMGroupMemberListReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupMemberListReq& operator=(const CIMGroupMemberListReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupMemberListReq& operator=(CIMGroupMemberListReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupMemberListReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupMemberListReq* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupMemberListReq*>(
+               &_CIMGroupMemberListReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  friend void swap(CIMGroupMemberListReq& a, CIMGroupMemberListReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupMemberListReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupMemberListReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupMemberListReq* New() const final {
+    return CreateMaybeMessage<CIMGroupMemberListReq>(nullptr);
+  }
+
+  CIMGroupMemberListReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupMemberListReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupMemberListReq& from);
+  void MergeFrom(const CIMGroupMemberListReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupMemberListReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupMemberListReq";
+  }
+  protected:
+  explicit CIMGroupMemberListReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupMemberListReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupMemberListRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupMemberListRsp) */ {
+ public:
+  inline CIMGroupMemberListRsp() : CIMGroupMemberListRsp(nullptr) {}
+  virtual ~CIMGroupMemberListRsp();
+
+  CIMGroupMemberListRsp(const CIMGroupMemberListRsp& from);
+  CIMGroupMemberListRsp(CIMGroupMemberListRsp&& from) noexcept
+    : CIMGroupMemberListRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupMemberListRsp& operator=(const CIMGroupMemberListRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupMemberListRsp& operator=(CIMGroupMemberListRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupMemberListRsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupMemberListRsp* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupMemberListRsp*>(
+               &_CIMGroupMemberListRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  friend void swap(CIMGroupMemberListRsp& a, CIMGroupMemberListRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupMemberListRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupMemberListRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupMemberListRsp* New() const final {
+    return CreateMaybeMessage<CIMGroupMemberListRsp>(nullptr);
+  }
+
+  CIMGroupMemberListRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupMemberListRsp>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupMemberListRsp& from);
+  void MergeFrom(const CIMGroupMemberListRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupMemberListRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupMemberListRsp";
+  }
+  protected:
+  explicit CIMGroupMemberListRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMemberIdListFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // repeated uint64 member_id_list = 3;
+  int member_id_list_size() const;
+  private:
+  int _internal_member_id_list_size() const;
+  public:
+  void clear_member_id_list();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_member_id_list(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_member_id_list() const;
+  void _internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_member_id_list();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 member_id_list(int index) const;
+  void set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      member_id_list() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_member_id_list();
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupMemberListRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > member_id_list_;
+  mutable std::atomic<int> _member_id_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupMemberChangedNotify PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupMemberChangedNotify) */ {
+ public:
+  inline CIMGroupMemberChangedNotify() : CIMGroupMemberChangedNotify(nullptr) {}
+  virtual ~CIMGroupMemberChangedNotify();
+
+  CIMGroupMemberChangedNotify(const CIMGroupMemberChangedNotify& from);
+  CIMGroupMemberChangedNotify(CIMGroupMemberChangedNotify&& from) noexcept
+    : CIMGroupMemberChangedNotify() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupMemberChangedNotify& operator=(const CIMGroupMemberChangedNotify& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupMemberChangedNotify& operator=(CIMGroupMemberChangedNotify&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupMemberChangedNotify& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupMemberChangedNotify* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupMemberChangedNotify*>(
+               &_CIMGroupMemberChangedNotify_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(CIMGroupMemberChangedNotify& a, CIMGroupMemberChangedNotify& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupMemberChangedNotify* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupMemberChangedNotify* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupMemberChangedNotify* New() const final {
+    return CreateMaybeMessage<CIMGroupMemberChangedNotify>(nullptr);
+  }
+
+  CIMGroupMemberChangedNotify* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupMemberChangedNotify>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupMemberChangedNotify& from);
+  void MergeFrom(const CIMGroupMemberChangedNotify& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupMemberChangedNotify* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupMemberChangedNotify";
+  }
+  protected:
+  explicit CIMGroupMemberChangedNotify(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kChangedListFieldNumber = 3,
+    kUserIdFieldNumber = 1,
+    kGroupIdFieldNumber = 2,
+  };
+  // repeated .CIM.Group.CIMGroupMemberChangedInfo changed_list = 3;
+  int changed_list_size() const;
+  private:
+  int _internal_changed_list_size() const;
+  public:
+  void clear_changed_list();
+  ::CIM::Group::CIMGroupMemberChangedInfo* mutable_changed_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupMemberChangedInfo >*
+      mutable_changed_list();
+  private:
+  const ::CIM::Group::CIMGroupMemberChangedInfo& _internal_changed_list(int index) const;
+  ::CIM::Group::CIMGroupMemberChangedInfo* _internal_add_changed_list();
+  public:
+  const ::CIM::Group::CIMGroupMemberChangedInfo& changed_list(int index) const;
+  ::CIM::Group::CIMGroupMemberChangedInfo* add_changed_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupMemberChangedInfo >&
+      changed_list() const;
+
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint64 group_id = 2;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupMemberChangedNotify)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupMemberChangedInfo > changed_list_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupMemberChangedInfo PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupMemberChangedInfo) */ {
+ public:
+  inline CIMGroupMemberChangedInfo() : CIMGroupMemberChangedInfo(nullptr) {}
+  virtual ~CIMGroupMemberChangedInfo();
+
+  CIMGroupMemberChangedInfo(const CIMGroupMemberChangedInfo& from);
+  CIMGroupMemberChangedInfo(CIMGroupMemberChangedInfo&& from) noexcept
+    : CIMGroupMemberChangedInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupMemberChangedInfo& operator=(const CIMGroupMemberChangedInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupMemberChangedInfo& operator=(CIMGroupMemberChangedInfo&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupMemberChangedInfo& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupMemberChangedInfo* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupMemberChangedInfo*>(
+               &_CIMGroupMemberChangedInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(CIMGroupMemberChangedInfo& a, CIMGroupMemberChangedInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupMemberChangedInfo* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupMemberChangedInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupMemberChangedInfo* New() const final {
+    return CreateMaybeMessage<CIMGroupMemberChangedInfo>(nullptr);
+  }
+
+  CIMGroupMemberChangedInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupMemberChangedInfo>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupMemberChangedInfo& from);
+  void MergeFrom(const CIMGroupMemberChangedInfo& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupMemberChangedInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupMemberChangedInfo";
+  }
+  protected:
+  explicit CIMGroupMemberChangedInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kTypeFieldNumber = 2,
+  };
+  // uint64 user_id = 1;
+  void clear_user_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id() const;
+  void set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_user_id() const;
+  void _internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // .CIM.Group.CIMGroupMemberChangedType type = 2;
+  void clear_type();
+  ::CIM::Group::CIMGroupMemberChangedType type() const;
+  void set_type(::CIM::Group::CIMGroupMemberChangedType value);
+  private:
+  ::CIM::Group::CIMGroupMemberChangedType _internal_type() const;
+  void _internal_set_type(::CIM::Group::CIMGroupMemberChangedType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupMemberChangedInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 user_id_;
+  int type_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupInfo PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupInfo) */ {
+ public:
+  inline CIMGroupInfo() : CIMGroupInfo(nullptr) {}
+  virtual ~CIMGroupInfo();
+
+  CIMGroupInfo(const CIMGroupInfo& from);
+  CIMGroupInfo(CIMGroupInfo&& from) noexcept
+    : CIMGroupInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupInfo& operator=(const CIMGroupInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupInfo& operator=(CIMGroupInfo&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupInfo& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupInfo* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupInfo*>(
+               &_CIMGroupInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  friend void swap(CIMGroupInfo& a, CIMGroupInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupInfo* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupInfo* New() const final {
+    return CreateMaybeMessage<CIMGroupInfo>(nullptr);
+  }
+
+  CIMGroupInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupInfo>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupInfo& from);
+  void MergeFrom(const CIMGroupInfo& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupInfo";
+  }
+  protected:
+  explicit CIMGroupInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupNameFieldNumber = 2,
+    kGroupIntroFieldNumber = 10,
+    kAnnouncementFieldNumber = 11,
+    kGroupAvatarFieldNumber = 12,
+    kGroupIdFieldNumber = 1,
+    kGroupTypeFieldNumber = 3,
+    kJoinModelFieldNumber = 4,
+    kBeInviteModelFieldNumber = 5,
+    kMuteModelFieldNumber = 6,
+    kGroupOwnerIdFieldNumber = 7,
+    kCreateTimeFieldNumber = 8,
+    kUpdateTimeFieldNumber = 9,
+  };
+  // string group_name = 2;
+  void clear_group_name();
+  const std::string& group_name() const;
+  void set_group_name(const std::string& value);
+  void set_group_name(std::string&& value);
+  void set_group_name(const char* value);
+  void set_group_name(const char* value, size_t size);
+  std::string* mutable_group_name();
+  std::string* release_group_name();
+  void set_allocated_group_name(std::string* group_name);
+  private:
+  const std::string& _internal_group_name() const;
+  void _internal_set_group_name(const std::string& value);
+  std::string* _internal_mutable_group_name();
+  public:
+
+  // string group_intro = 10;
+  void clear_group_intro();
+  const std::string& group_intro() const;
+  void set_group_intro(const std::string& value);
+  void set_group_intro(std::string&& value);
+  void set_group_intro(const char* value);
+  void set_group_intro(const char* value, size_t size);
+  std::string* mutable_group_intro();
+  std::string* release_group_intro();
+  void set_allocated_group_intro(std::string* group_intro);
+  private:
+  const std::string& _internal_group_intro() const;
+  void _internal_set_group_intro(const std::string& value);
+  std::string* _internal_mutable_group_intro();
+  public:
+
+  // string announcement = 11;
+  void clear_announcement();
+  const std::string& announcement() const;
+  void set_announcement(const std::string& value);
+  void set_announcement(std::string&& value);
+  void set_announcement(const char* value);
+  void set_announcement(const char* value, size_t size);
+  std::string* mutable_announcement();
+  std::string* release_announcement();
+  void set_allocated_announcement(std::string* announcement);
+  private:
+  const std::string& _internal_announcement() const;
+  void _internal_set_announcement(const std::string& value);
+  std::string* _internal_mutable_announcement();
+  public:
+
+  // string group_avatar = 12;
+  void clear_group_avatar();
+  const std::string& group_avatar() const;
+  void set_group_avatar(const std::string& value);
+  void set_group_avatar(std::string&& value);
+  void set_group_avatar(const char* value);
+  void set_group_avatar(const char* value, size_t size);
+  std::string* mutable_group_avatar();
+  std::string* release_group_avatar();
+  void set_allocated_group_avatar(std::string* group_avatar);
+  private:
+  const std::string& _internal_group_avatar() const;
+  void _internal_set_group_avatar(const std::string& value);
+  std::string* _internal_mutable_group_avatar();
+  public:
+
+  // uint64 group_id = 1;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // .CIM.Group.CIMGroupType group_type = 3;
+  void clear_group_type();
+  ::CIM::Group::CIMGroupType group_type() const;
+  void set_group_type(::CIM::Group::CIMGroupType value);
+  private:
+  ::CIM::Group::CIMGroupType _internal_group_type() const;
+  void _internal_set_group_type(::CIM::Group::CIMGroupType value);
+  public:
+
+  // .CIM.Group.CIMGroupJoinModel join_model = 4;
+  void clear_join_model();
+  ::CIM::Group::CIMGroupJoinModel join_model() const;
+  void set_join_model(::CIM::Group::CIMGroupJoinModel value);
+  private:
+  ::CIM::Group::CIMGroupJoinModel _internal_join_model() const;
+  void _internal_set_join_model(::CIM::Group::CIMGroupJoinModel value);
+  public:
+
+  // .CIM.Group.CIMGroupBeInviteMode be_invite_model = 5;
+  void clear_be_invite_model();
+  ::CIM::Group::CIMGroupBeInviteMode be_invite_model() const;
+  void set_be_invite_model(::CIM::Group::CIMGroupBeInviteMode value);
+  private:
+  ::CIM::Group::CIMGroupBeInviteMode _internal_be_invite_model() const;
+  void _internal_set_be_invite_model(::CIM::Group::CIMGroupBeInviteMode value);
+  public:
+
+  // .CIM.Group.CIMGroupMuteModel mute_model = 6;
+  void clear_mute_model();
+  ::CIM::Group::CIMGroupMuteModel mute_model() const;
+  void set_mute_model(::CIM::Group::CIMGroupMuteModel value);
+  private:
+  ::CIM::Group::CIMGroupMuteModel _internal_mute_model() const;
+  void _internal_set_mute_model(::CIM::Group::CIMGroupMuteModel value);
+  public:
+
+  // uint64 group_owner_id = 7;
+  void clear_group_owner_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_owner_id() const;
+  void set_group_owner_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_owner_id() const;
+  void _internal_set_group_owner_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 create_time = 8;
+  void clear_create_time();
+  ::PROTOBUF_NAMESPACE_ID::uint32 create_time() const;
+  void set_create_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_create_time() const;
+  void _internal_set_create_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 update_time = 9;
+  void clear_update_time();
+  ::PROTOBUF_NAMESPACE_ID::uint32 update_time() const;
+  void set_update_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_update_time() const;
+  void _internal_set_update_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_intro_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr announcement_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_avatar_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  int group_type_;
+  int join_model_;
+  int be_invite_model_;
+  int mute_model_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_owner_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 create_time_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 update_time_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CIMGroupVersionInfo PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Group.CIMGroupVersionInfo) */ {
+ public:
+  inline CIMGroupVersionInfo() : CIMGroupVersionInfo(nullptr) {}
+  virtual ~CIMGroupVersionInfo();
+
+  CIMGroupVersionInfo(const CIMGroupVersionInfo& from);
+  CIMGroupVersionInfo(CIMGroupVersionInfo&& from) noexcept
+    : CIMGroupVersionInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMGroupVersionInfo& operator=(const CIMGroupVersionInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMGroupVersionInfo& operator=(CIMGroupVersionInfo&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMGroupVersionInfo& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CIMGroupVersionInfo* internal_default_instance() {
+    return reinterpret_cast<const CIMGroupVersionInfo*>(
+               &_CIMGroupVersionInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  friend void swap(CIMGroupVersionInfo& a, CIMGroupVersionInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMGroupVersionInfo* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMGroupVersionInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMGroupVersionInfo* New() const final {
+    return CreateMaybeMessage<CIMGroupVersionInfo>(nullptr);
+  }
+
+  CIMGroupVersionInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMGroupVersionInfo>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMGroupVersionInfo& from);
+  void MergeFrom(const CIMGroupVersionInfo& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMGroupVersionInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Group.CIMGroupVersionInfo";
+  }
+  protected:
+  explicit CIMGroupVersionInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGroupIdFieldNumber = 1,
+    kGroupVersionFieldNumber = 2,
+  };
+  // uint64 group_id = 1;
+  void clear_group_id();
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id() const;
+  void set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_group_id() const;
+  void _internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // uint32 group_version = 2;
+  void clear_group_version();
+  ::PROTOBUF_NAMESPACE_ID::uint32 group_version() const;
+  void set_group_version(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_group_version() const;
+  void _internal_set_group_version(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Group.CIMGroupVersionInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 group_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 group_version_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eGroup_2eproto;
+};
 // ===================================================================
 
 
@@ -68,14 +3389,2154 @@ namespace Group {
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// CIMGroupCreateReq
+
+// uint64 user_id = 1;
+inline void CIMGroupCreateReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupCreateReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupCreateReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateReq.user_id)
+}
+
+// string group_name = 2;
+inline void CIMGroupCreateReq::clear_group_name() {
+  group_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupCreateReq::group_name() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateReq.group_name)
+  return _internal_group_name();
+}
+inline void CIMGroupCreateReq::set_group_name(const std::string& value) {
+  _internal_set_group_name(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateReq.group_name)
+}
+inline std::string* CIMGroupCreateReq::mutable_group_name() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupCreateReq.group_name)
+  return _internal_mutable_group_name();
+}
+inline const std::string& CIMGroupCreateReq::_internal_group_name() const {
+  return group_name_.Get();
+}
+inline void CIMGroupCreateReq::_internal_set_group_name(const std::string& value) {
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupCreateReq::set_group_name(std::string&& value) {
+  
+  group_name_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupCreateReq.group_name)
+}
+inline void CIMGroupCreateReq::set_group_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupCreateReq.group_name)
+}
+inline void CIMGroupCreateReq::set_group_name(const char* value,
+    size_t size) {
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupCreateReq.group_name)
+}
+inline std::string* CIMGroupCreateReq::_internal_mutable_group_name() {
+  
+  return group_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupCreateReq::release_group_name() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupCreateReq.group_name)
+  return group_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupCreateReq::set_allocated_group_name(std::string* group_name) {
+  if (group_name != nullptr) {
+    
+  } else {
+    
+  }
+  group_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), group_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupCreateReq.group_name)
+}
+
+// repeated uint64 member_id_list = 3;
+inline int CIMGroupCreateReq::_internal_member_id_list_size() const {
+  return member_id_list_.size();
+}
+inline int CIMGroupCreateReq::member_id_list_size() const {
+  return _internal_member_id_list_size();
+}
+inline void CIMGroupCreateReq::clear_member_id_list() {
+  member_id_list_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateReq::_internal_member_id_list(int index) const {
+  return member_id_list_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateReq::member_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateReq.member_id_list)
+  return _internal_member_id_list(index);
+}
+inline void CIMGroupCreateReq::set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateReq.member_id_list)
+}
+inline void CIMGroupCreateReq::_internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Add(value);
+}
+inline void CIMGroupCreateReq::add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_member_id_list(value);
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupCreateReq.member_id_list)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupCreateReq::_internal_member_id_list() const {
+  return member_id_list_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupCreateReq::member_id_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupCreateReq.member_id_list)
+  return _internal_member_id_list();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupCreateReq::_internal_mutable_member_id_list() {
+  return &member_id_list_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupCreateReq::mutable_member_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupCreateReq.member_id_list)
+  return _internal_mutable_member_id_list();
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupCreateRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupCreateRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupCreateRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupCreateRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateRsp.user_id)
+}
+
+// uint32 result_code = 2;
+inline void CIMGroupCreateRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupCreateRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupCreateRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupCreateRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupCreateRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateRsp.result_code)
+}
+
+// .CIM.Group.CIMGroupInfo group_info = 3;
+inline bool CIMGroupCreateRsp::_internal_has_group_info() const {
+  return this != internal_default_instance() && group_info_ != nullptr;
+}
+inline bool CIMGroupCreateRsp::has_group_info() const {
+  return _internal_has_group_info();
+}
+inline void CIMGroupCreateRsp::clear_group_info() {
+  if (GetArena() == nullptr && group_info_ != nullptr) {
+    delete group_info_;
+  }
+  group_info_ = nullptr;
+}
+inline const ::CIM::Group::CIMGroupInfo& CIMGroupCreateRsp::_internal_group_info() const {
+  const ::CIM::Group::CIMGroupInfo* p = group_info_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::CIM::Group::CIMGroupInfo*>(
+      &::CIM::Group::_CIMGroupInfo_default_instance_);
+}
+inline const ::CIM::Group::CIMGroupInfo& CIMGroupCreateRsp::group_info() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateRsp.group_info)
+  return _internal_group_info();
+}
+inline void CIMGroupCreateRsp::unsafe_arena_set_allocated_group_info(
+    ::CIM::Group::CIMGroupInfo* group_info) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(group_info_);
+  }
+  group_info_ = group_info;
+  if (group_info) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:CIM.Group.CIMGroupCreateRsp.group_info)
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupCreateRsp::release_group_info() {
+  
+  ::CIM::Group::CIMGroupInfo* temp = group_info_;
+  group_info_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupCreateRsp::unsafe_arena_release_group_info() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupCreateRsp.group_info)
+  
+  ::CIM::Group::CIMGroupInfo* temp = group_info_;
+  group_info_ = nullptr;
+  return temp;
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupCreateRsp::_internal_mutable_group_info() {
+  
+  if (group_info_ == nullptr) {
+    auto* p = CreateMaybeMessage<::CIM::Group::CIMGroupInfo>(GetArena());
+    group_info_ = p;
+  }
+  return group_info_;
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupCreateRsp::mutable_group_info() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupCreateRsp.group_info)
+  return _internal_mutable_group_info();
+}
+inline void CIMGroupCreateRsp::set_allocated_group_info(::CIM::Group::CIMGroupInfo* group_info) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete group_info_;
+  }
+  if (group_info) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(group_info);
+    if (message_arena != submessage_arena) {
+      group_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, group_info, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  group_info_ = group_info;
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupCreateRsp.group_info)
+}
+
+// repeated uint64 member_id_list = 4;
+inline int CIMGroupCreateRsp::_internal_member_id_list_size() const {
+  return member_id_list_.size();
+}
+inline int CIMGroupCreateRsp::member_id_list_size() const {
+  return _internal_member_id_list_size();
+}
+inline void CIMGroupCreateRsp::clear_member_id_list() {
+  member_id_list_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateRsp::_internal_member_id_list(int index) const {
+  return member_id_list_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupCreateRsp::member_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateRsp.member_id_list)
+  return _internal_member_id_list(index);
+}
+inline void CIMGroupCreateRsp::set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateRsp.member_id_list)
+}
+inline void CIMGroupCreateRsp::_internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Add(value);
+}
+inline void CIMGroupCreateRsp::add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_member_id_list(value);
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupCreateRsp.member_id_list)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupCreateRsp::_internal_member_id_list() const {
+  return member_id_list_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupCreateRsp::member_id_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupCreateRsp.member_id_list)
+  return _internal_member_id_list();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupCreateRsp::_internal_mutable_member_id_list() {
+  return &member_id_list_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupCreateRsp::mutable_member_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupCreateRsp.member_id_list)
+  return _internal_mutable_member_id_list();
+}
+
+// bytes attach_notificatino_msg = 10;
+inline void CIMGroupCreateRsp::clear_attach_notificatino_msg() {
+  attach_notificatino_msg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupCreateRsp::attach_notificatino_msg() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+  return _internal_attach_notificatino_msg();
+}
+inline void CIMGroupCreateRsp::set_attach_notificatino_msg(const std::string& value) {
+  _internal_set_attach_notificatino_msg(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupCreateRsp::mutable_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+  return _internal_mutable_attach_notificatino_msg();
+}
+inline const std::string& CIMGroupCreateRsp::_internal_attach_notificatino_msg() const {
+  return attach_notificatino_msg_.Get();
+}
+inline void CIMGroupCreateRsp::_internal_set_attach_notificatino_msg(const std::string& value) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupCreateRsp::set_attach_notificatino_msg(std::string&& value) {
+  
+  attach_notificatino_msg_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+}
+inline void CIMGroupCreateRsp::set_attach_notificatino_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+}
+inline void CIMGroupCreateRsp::set_attach_notificatino_msg(const void* value,
+    size_t size) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupCreateRsp::_internal_mutable_attach_notificatino_msg() {
+  
+  return attach_notificatino_msg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupCreateRsp::release_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+  return attach_notificatino_msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupCreateRsp::set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg) {
+  if (attach_notificatino_msg != nullptr) {
+    
+  } else {
+    
+  }
+  attach_notificatino_msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), attach_notificatino_msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupCreateRsp.attach_notificatino_msg)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupDisbandingReq
+
+// uint64 user_id = 1;
+inline void CIMGroupDisbandingReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupDisbandingReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupDisbandingReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingReq.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupDisbandingReq::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingReq::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingReq::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingReq.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupDisbandingReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupDisbandingReq::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingReq.group_id)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupDisbandingRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupDisbandingRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupDisbandingRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupDisbandingRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingRsp.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupDisbandingRsp::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingRsp::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupDisbandingRsp::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingRsp.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupDisbandingRsp::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupDisbandingRsp::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingRsp.group_id)
+}
+
+// uint32 result_code = 3;
+inline void CIMGroupDisbandingRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupDisbandingRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupDisbandingRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupDisbandingRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupDisbandingRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingRsp.result_code)
+}
+
+// bytes attach_notificatino_msg = 10;
+inline void CIMGroupDisbandingRsp::clear_attach_notificatino_msg() {
+  attach_notificatino_msg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupDisbandingRsp::attach_notificatino_msg() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+  return _internal_attach_notificatino_msg();
+}
+inline void CIMGroupDisbandingRsp::set_attach_notificatino_msg(const std::string& value) {
+  _internal_set_attach_notificatino_msg(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupDisbandingRsp::mutable_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+  return _internal_mutable_attach_notificatino_msg();
+}
+inline const std::string& CIMGroupDisbandingRsp::_internal_attach_notificatino_msg() const {
+  return attach_notificatino_msg_.Get();
+}
+inline void CIMGroupDisbandingRsp::_internal_set_attach_notificatino_msg(const std::string& value) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupDisbandingRsp::set_attach_notificatino_msg(std::string&& value) {
+  
+  attach_notificatino_msg_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+}
+inline void CIMGroupDisbandingRsp::set_attach_notificatino_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+}
+inline void CIMGroupDisbandingRsp::set_attach_notificatino_msg(const void* value,
+    size_t size) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupDisbandingRsp::_internal_mutable_attach_notificatino_msg() {
+  
+  return attach_notificatino_msg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupDisbandingRsp::release_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+  return attach_notificatino_msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupDisbandingRsp::set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg) {
+  if (attach_notificatino_msg != nullptr) {
+    
+  } else {
+    
+  }
+  attach_notificatino_msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), attach_notificatino_msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupDisbandingRsp.attach_notificatino_msg)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupExitReq
+
+// uint64 user_id = 1;
+inline void CIMGroupExitReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupExitReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupExitReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitReq.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupExitReq::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitReq::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitReq::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitReq.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupExitReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupExitReq::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitReq.group_id)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupExitRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupExitRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupExitRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupExitRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitRsp.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupExitRsp::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitRsp::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupExitRsp::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitRsp.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupExitRsp::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupExitRsp::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitRsp.group_id)
+}
+
+// uint32 result_code = 3;
+inline void CIMGroupExitRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupExitRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupExitRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupExitRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupExitRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitRsp.result_code)
+}
+
+// bytes attach_notificatino_msg = 10;
+inline void CIMGroupExitRsp::clear_attach_notificatino_msg() {
+  attach_notificatino_msg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupExitRsp::attach_notificatino_msg() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+  return _internal_attach_notificatino_msg();
+}
+inline void CIMGroupExitRsp::set_attach_notificatino_msg(const std::string& value) {
+  _internal_set_attach_notificatino_msg(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupExitRsp::mutable_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+  return _internal_mutable_attach_notificatino_msg();
+}
+inline const std::string& CIMGroupExitRsp::_internal_attach_notificatino_msg() const {
+  return attach_notificatino_msg_.Get();
+}
+inline void CIMGroupExitRsp::_internal_set_attach_notificatino_msg(const std::string& value) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupExitRsp::set_attach_notificatino_msg(std::string&& value) {
+  
+  attach_notificatino_msg_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+}
+inline void CIMGroupExitRsp::set_attach_notificatino_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+}
+inline void CIMGroupExitRsp::set_attach_notificatino_msg(const void* value,
+    size_t size) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupExitRsp::_internal_mutable_attach_notificatino_msg() {
+  
+  return attach_notificatino_msg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupExitRsp::release_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+  return attach_notificatino_msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupExitRsp::set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg) {
+  if (attach_notificatino_msg != nullptr) {
+    
+  } else {
+    
+  }
+  attach_notificatino_msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), attach_notificatino_msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupExitRsp.attach_notificatino_msg)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupListReq
+
+// uint64 user_id = 1;
+inline void CIMGroupListReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupListReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupListReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupListReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupListReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupListReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupListReq.user_id)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupListRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupListRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupListRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupListRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupListRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupListRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupListRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupListRsp.user_id)
+}
+
+// repeated .CIM.Group.CIMGroupVersionInfo group_version_list = 2;
+inline int CIMGroupListRsp::_internal_group_version_list_size() const {
+  return group_version_list_.size();
+}
+inline int CIMGroupListRsp::group_version_list_size() const {
+  return _internal_group_version_list_size();
+}
+inline void CIMGroupListRsp::clear_group_version_list() {
+  group_version_list_.Clear();
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupListRsp::mutable_group_version_list(int index) {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupListRsp.group_version_list)
+  return group_version_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >*
+CIMGroupListRsp::mutable_group_version_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupListRsp.group_version_list)
+  return &group_version_list_;
+}
+inline const ::CIM::Group::CIMGroupVersionInfo& CIMGroupListRsp::_internal_group_version_list(int index) const {
+  return group_version_list_.Get(index);
+}
+inline const ::CIM::Group::CIMGroupVersionInfo& CIMGroupListRsp::group_version_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupListRsp.group_version_list)
+  return _internal_group_version_list(index);
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupListRsp::_internal_add_group_version_list() {
+  return group_version_list_.Add();
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupListRsp::add_group_version_list() {
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupListRsp.group_version_list)
+  return _internal_add_group_version_list();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >&
+CIMGroupListRsp::group_version_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupListRsp.group_version_list)
+  return group_version_list_;
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupInfoReq
+
+// uint64 user_id = 1;
+inline void CIMGroupInfoReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfoReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfoReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfoReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupInfoReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupInfoReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfoReq.user_id)
+}
+
+// repeated .CIM.Group.CIMGroupVersionInfo group_version_list = 2;
+inline int CIMGroupInfoReq::_internal_group_version_list_size() const {
+  return group_version_list_.size();
+}
+inline int CIMGroupInfoReq::group_version_list_size() const {
+  return _internal_group_version_list_size();
+}
+inline void CIMGroupInfoReq::clear_group_version_list() {
+  group_version_list_.Clear();
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupInfoReq::mutable_group_version_list(int index) {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfoReq.group_version_list)
+  return group_version_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >*
+CIMGroupInfoReq::mutable_group_version_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupInfoReq.group_version_list)
+  return &group_version_list_;
+}
+inline const ::CIM::Group::CIMGroupVersionInfo& CIMGroupInfoReq::_internal_group_version_list(int index) const {
+  return group_version_list_.Get(index);
+}
+inline const ::CIM::Group::CIMGroupVersionInfo& CIMGroupInfoReq::group_version_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfoReq.group_version_list)
+  return _internal_group_version_list(index);
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupInfoReq::_internal_add_group_version_list() {
+  return group_version_list_.Add();
+}
+inline ::CIM::Group::CIMGroupVersionInfo* CIMGroupInfoReq::add_group_version_list() {
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupInfoReq.group_version_list)
+  return _internal_add_group_version_list();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupVersionInfo >&
+CIMGroupInfoReq::group_version_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupInfoReq.group_version_list)
+  return group_version_list_;
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupInfoRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupInfoRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfoRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfoRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfoRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupInfoRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupInfoRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfoRsp.user_id)
+}
+
+// uint32 result_code = 2;
+inline void CIMGroupInfoRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfoRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfoRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfoRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupInfoRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupInfoRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfoRsp.result_code)
+}
+
+// repeated .CIM.Group.CIMGroupInfo group_info_list = 3;
+inline int CIMGroupInfoRsp::_internal_group_info_list_size() const {
+  return group_info_list_.size();
+}
+inline int CIMGroupInfoRsp::group_info_list_size() const {
+  return _internal_group_info_list_size();
+}
+inline void CIMGroupInfoRsp::clear_group_info_list() {
+  group_info_list_.Clear();
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupInfoRsp::mutable_group_info_list(int index) {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfoRsp.group_info_list)
+  return group_info_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupInfo >*
+CIMGroupInfoRsp::mutable_group_info_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupInfoRsp.group_info_list)
+  return &group_info_list_;
+}
+inline const ::CIM::Group::CIMGroupInfo& CIMGroupInfoRsp::_internal_group_info_list(int index) const {
+  return group_info_list_.Get(index);
+}
+inline const ::CIM::Group::CIMGroupInfo& CIMGroupInfoRsp::group_info_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfoRsp.group_info_list)
+  return _internal_group_info_list(index);
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupInfoRsp::_internal_add_group_info_list() {
+  return group_info_list_.Add();
+}
+inline ::CIM::Group::CIMGroupInfo* CIMGroupInfoRsp::add_group_info_list() {
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupInfoRsp.group_info_list)
+  return _internal_add_group_info_list();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupInfo >&
+CIMGroupInfoRsp::group_info_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupInfoRsp.group_info_list)
+  return group_info_list_;
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupInviteMemberReq
+
+// uint64 user_id = 1;
+inline void CIMGroupInviteMemberReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupInviteMemberReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupInviteMemberReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberReq.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupInviteMemberReq::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberReq.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupInviteMemberReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupInviteMemberReq::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberReq.group_id)
+}
+
+// repeated uint64 member_id_list = 3;
+inline int CIMGroupInviteMemberReq::_internal_member_id_list_size() const {
+  return member_id_list_.size();
+}
+inline int CIMGroupInviteMemberReq::member_id_list_size() const {
+  return _internal_member_id_list_size();
+}
+inline void CIMGroupInviteMemberReq::clear_member_id_list() {
+  member_id_list_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::_internal_member_id_list(int index) const {
+  return member_id_list_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberReq::member_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberReq.member_id_list)
+  return _internal_member_id_list(index);
+}
+inline void CIMGroupInviteMemberReq::set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberReq.member_id_list)
+}
+inline void CIMGroupInviteMemberReq::_internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Add(value);
+}
+inline void CIMGroupInviteMemberReq::add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_member_id_list(value);
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupInviteMemberReq.member_id_list)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupInviteMemberReq::_internal_member_id_list() const {
+  return member_id_list_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupInviteMemberReq::member_id_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupInviteMemberReq.member_id_list)
+  return _internal_member_id_list();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupInviteMemberReq::_internal_mutable_member_id_list() {
+  return &member_id_list_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupInviteMemberReq::mutable_member_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupInviteMemberReq.member_id_list)
+  return _internal_mutable_member_id_list();
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupInviteMemberRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupInviteMemberRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupInviteMemberRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupInviteMemberRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberRsp.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupInviteMemberRsp::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberRsp::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInviteMemberRsp::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberRsp.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupInviteMemberRsp::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupInviteMemberRsp::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberRsp.group_id)
+}
+
+// uint32 result_code = 3;
+inline void CIMGroupInviteMemberRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInviteMemberRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInviteMemberRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupInviteMemberRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupInviteMemberRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberRsp.result_code)
+}
+
+// bytes attach_notificatino_msg = 10;
+inline void CIMGroupInviteMemberRsp::clear_attach_notificatino_msg() {
+  attach_notificatino_msg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupInviteMemberRsp::attach_notificatino_msg() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+  return _internal_attach_notificatino_msg();
+}
+inline void CIMGroupInviteMemberRsp::set_attach_notificatino_msg(const std::string& value) {
+  _internal_set_attach_notificatino_msg(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupInviteMemberRsp::mutable_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+  return _internal_mutable_attach_notificatino_msg();
+}
+inline const std::string& CIMGroupInviteMemberRsp::_internal_attach_notificatino_msg() const {
+  return attach_notificatino_msg_.Get();
+}
+inline void CIMGroupInviteMemberRsp::_internal_set_attach_notificatino_msg(const std::string& value) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupInviteMemberRsp::set_attach_notificatino_msg(std::string&& value) {
+  
+  attach_notificatino_msg_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+}
+inline void CIMGroupInviteMemberRsp::set_attach_notificatino_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+}
+inline void CIMGroupInviteMemberRsp::set_attach_notificatino_msg(const void* value,
+    size_t size) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupInviteMemberRsp::_internal_mutable_attach_notificatino_msg() {
+  
+  return attach_notificatino_msg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupInviteMemberRsp::release_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+  return attach_notificatino_msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupInviteMemberRsp::set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg) {
+  if (attach_notificatino_msg != nullptr) {
+    
+  } else {
+    
+  }
+  attach_notificatino_msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), attach_notificatino_msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupInviteMemberRsp.attach_notificatino_msg)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupKickOutMemberReq
+
+// uint64 user_id = 1;
+inline void CIMGroupKickOutMemberReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupKickOutMemberReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupKickOutMemberReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberReq.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupKickOutMemberReq::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberReq.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupKickOutMemberReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupKickOutMemberReq::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberReq.group_id)
+}
+
+// repeated uint64 member_id_list = 3;
+inline int CIMGroupKickOutMemberReq::_internal_member_id_list_size() const {
+  return member_id_list_.size();
+}
+inline int CIMGroupKickOutMemberReq::member_id_list_size() const {
+  return _internal_member_id_list_size();
+}
+inline void CIMGroupKickOutMemberReq::clear_member_id_list() {
+  member_id_list_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::_internal_member_id_list(int index) const {
+  return member_id_list_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberReq::member_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberReq.member_id_list)
+  return _internal_member_id_list(index);
+}
+inline void CIMGroupKickOutMemberReq::set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberReq.member_id_list)
+}
+inline void CIMGroupKickOutMemberReq::_internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Add(value);
+}
+inline void CIMGroupKickOutMemberReq::add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_member_id_list(value);
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupKickOutMemberReq.member_id_list)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupKickOutMemberReq::_internal_member_id_list() const {
+  return member_id_list_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupKickOutMemberReq::member_id_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupKickOutMemberReq.member_id_list)
+  return _internal_member_id_list();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupKickOutMemberReq::_internal_mutable_member_id_list() {
+  return &member_id_list_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupKickOutMemberReq::mutable_member_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupKickOutMemberReq.member_id_list)
+  return _internal_mutable_member_id_list();
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupKickOutMemberRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupKickOutMemberRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupKickOutMemberRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupKickOutMemberRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberRsp.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupKickOutMemberRsp::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberRsp::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupKickOutMemberRsp::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberRsp.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupKickOutMemberRsp::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupKickOutMemberRsp::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberRsp.group_id)
+}
+
+// uint32 result_code = 3;
+inline void CIMGroupKickOutMemberRsp::clear_result_code() {
+  result_code_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupKickOutMemberRsp::_internal_result_code() const {
+  return result_code_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupKickOutMemberRsp::result_code() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberRsp.result_code)
+  return _internal_result_code();
+}
+inline void CIMGroupKickOutMemberRsp::_internal_set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  result_code_ = value;
+}
+inline void CIMGroupKickOutMemberRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_result_code(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberRsp.result_code)
+}
+
+// bytes attach_notificatino_msg = 10;
+inline void CIMGroupKickOutMemberRsp::clear_attach_notificatino_msg() {
+  attach_notificatino_msg_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupKickOutMemberRsp::attach_notificatino_msg() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+  return _internal_attach_notificatino_msg();
+}
+inline void CIMGroupKickOutMemberRsp::set_attach_notificatino_msg(const std::string& value) {
+  _internal_set_attach_notificatino_msg(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupKickOutMemberRsp::mutable_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+  return _internal_mutable_attach_notificatino_msg();
+}
+inline const std::string& CIMGroupKickOutMemberRsp::_internal_attach_notificatino_msg() const {
+  return attach_notificatino_msg_.Get();
+}
+inline void CIMGroupKickOutMemberRsp::_internal_set_attach_notificatino_msg(const std::string& value) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupKickOutMemberRsp::set_attach_notificatino_msg(std::string&& value) {
+  
+  attach_notificatino_msg_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+}
+inline void CIMGroupKickOutMemberRsp::set_attach_notificatino_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+}
+inline void CIMGroupKickOutMemberRsp::set_attach_notificatino_msg(const void* value,
+    size_t size) {
+  
+  attach_notificatino_msg_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+}
+inline std::string* CIMGroupKickOutMemberRsp::_internal_mutable_attach_notificatino_msg() {
+  
+  return attach_notificatino_msg_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupKickOutMemberRsp::release_attach_notificatino_msg() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+  return attach_notificatino_msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupKickOutMemberRsp::set_allocated_attach_notificatino_msg(std::string* attach_notificatino_msg) {
+  if (attach_notificatino_msg != nullptr) {
+    
+  } else {
+    
+  }
+  attach_notificatino_msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), attach_notificatino_msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupKickOutMemberRsp.attach_notificatino_msg)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupMemberListReq
+
+// uint64 user_id = 1;
+inline void CIMGroupMemberListReq::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListReq::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListReq::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberListReq.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupMemberListReq::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupMemberListReq::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberListReq.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupMemberListReq::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListReq::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListReq::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberListReq.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupMemberListReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupMemberListReq::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberListReq.group_id)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupMemberListRsp
+
+// uint64 user_id = 1;
+inline void CIMGroupMemberListRsp::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberListRsp.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupMemberListRsp::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupMemberListRsp::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberListRsp.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupMemberListRsp::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberListRsp.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupMemberListRsp::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupMemberListRsp::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberListRsp.group_id)
+}
+
+// repeated uint64 member_id_list = 3;
+inline int CIMGroupMemberListRsp::_internal_member_id_list_size() const {
+  return member_id_list_.size();
+}
+inline int CIMGroupMemberListRsp::member_id_list_size() const {
+  return _internal_member_id_list_size();
+}
+inline void CIMGroupMemberListRsp::clear_member_id_list() {
+  member_id_list_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::_internal_member_id_list(int index) const {
+  return member_id_list_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberListRsp::member_id_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberListRsp.member_id_list)
+  return _internal_member_id_list(index);
+}
+inline void CIMGroupMemberListRsp::set_member_id_list(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Set(index, value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberListRsp.member_id_list)
+}
+inline void CIMGroupMemberListRsp::_internal_add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  member_id_list_.Add(value);
+}
+inline void CIMGroupMemberListRsp::add_member_id_list(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_member_id_list(value);
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupMemberListRsp.member_id_list)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupMemberListRsp::_internal_member_id_list() const {
+  return member_id_list_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+CIMGroupMemberListRsp::member_id_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupMemberListRsp.member_id_list)
+  return _internal_member_id_list();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupMemberListRsp::_internal_mutable_member_id_list() {
+  return &member_id_list_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+CIMGroupMemberListRsp::mutable_member_id_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupMemberListRsp.member_id_list)
+  return _internal_mutable_member_id_list();
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupMemberChangedNotify
+
+// uint64 user_id = 1;
+inline void CIMGroupMemberChangedNotify::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedNotify::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedNotify::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberChangedNotify.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupMemberChangedNotify::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupMemberChangedNotify::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberChangedNotify.user_id)
+}
+
+// uint64 group_id = 2;
+inline void CIMGroupMemberChangedNotify::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedNotify::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedNotify::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberChangedNotify.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupMemberChangedNotify::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupMemberChangedNotify::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberChangedNotify.group_id)
+}
+
+// repeated .CIM.Group.CIMGroupMemberChangedInfo changed_list = 3;
+inline int CIMGroupMemberChangedNotify::_internal_changed_list_size() const {
+  return changed_list_.size();
+}
+inline int CIMGroupMemberChangedNotify::changed_list_size() const {
+  return _internal_changed_list_size();
+}
+inline void CIMGroupMemberChangedNotify::clear_changed_list() {
+  changed_list_.Clear();
+}
+inline ::CIM::Group::CIMGroupMemberChangedInfo* CIMGroupMemberChangedNotify::mutable_changed_list(int index) {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupMemberChangedNotify.changed_list)
+  return changed_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupMemberChangedInfo >*
+CIMGroupMemberChangedNotify::mutable_changed_list() {
+  // @@protoc_insertion_point(field_mutable_list:CIM.Group.CIMGroupMemberChangedNotify.changed_list)
+  return &changed_list_;
+}
+inline const ::CIM::Group::CIMGroupMemberChangedInfo& CIMGroupMemberChangedNotify::_internal_changed_list(int index) const {
+  return changed_list_.Get(index);
+}
+inline const ::CIM::Group::CIMGroupMemberChangedInfo& CIMGroupMemberChangedNotify::changed_list(int index) const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberChangedNotify.changed_list)
+  return _internal_changed_list(index);
+}
+inline ::CIM::Group::CIMGroupMemberChangedInfo* CIMGroupMemberChangedNotify::_internal_add_changed_list() {
+  return changed_list_.Add();
+}
+inline ::CIM::Group::CIMGroupMemberChangedInfo* CIMGroupMemberChangedNotify::add_changed_list() {
+  // @@protoc_insertion_point(field_add:CIM.Group.CIMGroupMemberChangedNotify.changed_list)
+  return _internal_add_changed_list();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::CIM::Group::CIMGroupMemberChangedInfo >&
+CIMGroupMemberChangedNotify::changed_list() const {
+  // @@protoc_insertion_point(field_list:CIM.Group.CIMGroupMemberChangedNotify.changed_list)
+  return changed_list_;
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupMemberChangedInfo
+
+// uint64 user_id = 1;
+inline void CIMGroupMemberChangedInfo::clear_user_id() {
+  user_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedInfo::_internal_user_id() const {
+  return user_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupMemberChangedInfo::user_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberChangedInfo.user_id)
+  return _internal_user_id();
+}
+inline void CIMGroupMemberChangedInfo::_internal_set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  user_id_ = value;
+}
+inline void CIMGroupMemberChangedInfo::set_user_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_user_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberChangedInfo.user_id)
+}
+
+// .CIM.Group.CIMGroupMemberChangedType type = 2;
+inline void CIMGroupMemberChangedInfo::clear_type() {
+  type_ = 0;
+}
+inline ::CIM::Group::CIMGroupMemberChangedType CIMGroupMemberChangedInfo::_internal_type() const {
+  return static_cast< ::CIM::Group::CIMGroupMemberChangedType >(type_);
+}
+inline ::CIM::Group::CIMGroupMemberChangedType CIMGroupMemberChangedInfo::type() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupMemberChangedInfo.type)
+  return _internal_type();
+}
+inline void CIMGroupMemberChangedInfo::_internal_set_type(::CIM::Group::CIMGroupMemberChangedType value) {
+  
+  type_ = value;
+}
+inline void CIMGroupMemberChangedInfo::set_type(::CIM::Group::CIMGroupMemberChangedType value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupMemberChangedInfo.type)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupInfo
+
+// uint64 group_id = 1;
+inline void CIMGroupInfo::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfo::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfo::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupInfo::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupInfo::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_id)
+}
+
+// string group_name = 2;
+inline void CIMGroupInfo::clear_group_name() {
+  group_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupInfo::group_name() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_name)
+  return _internal_group_name();
+}
+inline void CIMGroupInfo::set_group_name(const std::string& value) {
+  _internal_set_group_name(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_name)
+}
+inline std::string* CIMGroupInfo::mutable_group_name() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfo.group_name)
+  return _internal_mutable_group_name();
+}
+inline const std::string& CIMGroupInfo::_internal_group_name() const {
+  return group_name_.Get();
+}
+inline void CIMGroupInfo::_internal_set_group_name(const std::string& value) {
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupInfo::set_group_name(std::string&& value) {
+  
+  group_name_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupInfo.group_name)
+}
+inline void CIMGroupInfo::set_group_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupInfo.group_name)
+}
+inline void CIMGroupInfo::set_group_name(const char* value,
+    size_t size) {
+  
+  group_name_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupInfo.group_name)
+}
+inline std::string* CIMGroupInfo::_internal_mutable_group_name() {
+  
+  return group_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupInfo::release_group_name() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupInfo.group_name)
+  return group_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupInfo::set_allocated_group_name(std::string* group_name) {
+  if (group_name != nullptr) {
+    
+  } else {
+    
+  }
+  group_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), group_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupInfo.group_name)
+}
+
+// .CIM.Group.CIMGroupType group_type = 3;
+inline void CIMGroupInfo::clear_group_type() {
+  group_type_ = 0;
+}
+inline ::CIM::Group::CIMGroupType CIMGroupInfo::_internal_group_type() const {
+  return static_cast< ::CIM::Group::CIMGroupType >(group_type_);
+}
+inline ::CIM::Group::CIMGroupType CIMGroupInfo::group_type() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_type)
+  return _internal_group_type();
+}
+inline void CIMGroupInfo::_internal_set_group_type(::CIM::Group::CIMGroupType value) {
+  
+  group_type_ = value;
+}
+inline void CIMGroupInfo::set_group_type(::CIM::Group::CIMGroupType value) {
+  _internal_set_group_type(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_type)
+}
+
+// .CIM.Group.CIMGroupJoinModel join_model = 4;
+inline void CIMGroupInfo::clear_join_model() {
+  join_model_ = 0;
+}
+inline ::CIM::Group::CIMGroupJoinModel CIMGroupInfo::_internal_join_model() const {
+  return static_cast< ::CIM::Group::CIMGroupJoinModel >(join_model_);
+}
+inline ::CIM::Group::CIMGroupJoinModel CIMGroupInfo::join_model() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.join_model)
+  return _internal_join_model();
+}
+inline void CIMGroupInfo::_internal_set_join_model(::CIM::Group::CIMGroupJoinModel value) {
+  
+  join_model_ = value;
+}
+inline void CIMGroupInfo::set_join_model(::CIM::Group::CIMGroupJoinModel value) {
+  _internal_set_join_model(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.join_model)
+}
+
+// .CIM.Group.CIMGroupBeInviteMode be_invite_model = 5;
+inline void CIMGroupInfo::clear_be_invite_model() {
+  be_invite_model_ = 0;
+}
+inline ::CIM::Group::CIMGroupBeInviteMode CIMGroupInfo::_internal_be_invite_model() const {
+  return static_cast< ::CIM::Group::CIMGroupBeInviteMode >(be_invite_model_);
+}
+inline ::CIM::Group::CIMGroupBeInviteMode CIMGroupInfo::be_invite_model() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.be_invite_model)
+  return _internal_be_invite_model();
+}
+inline void CIMGroupInfo::_internal_set_be_invite_model(::CIM::Group::CIMGroupBeInviteMode value) {
+  
+  be_invite_model_ = value;
+}
+inline void CIMGroupInfo::set_be_invite_model(::CIM::Group::CIMGroupBeInviteMode value) {
+  _internal_set_be_invite_model(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.be_invite_model)
+}
+
+// .CIM.Group.CIMGroupMuteModel mute_model = 6;
+inline void CIMGroupInfo::clear_mute_model() {
+  mute_model_ = 0;
+}
+inline ::CIM::Group::CIMGroupMuteModel CIMGroupInfo::_internal_mute_model() const {
+  return static_cast< ::CIM::Group::CIMGroupMuteModel >(mute_model_);
+}
+inline ::CIM::Group::CIMGroupMuteModel CIMGroupInfo::mute_model() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.mute_model)
+  return _internal_mute_model();
+}
+inline void CIMGroupInfo::_internal_set_mute_model(::CIM::Group::CIMGroupMuteModel value) {
+  
+  mute_model_ = value;
+}
+inline void CIMGroupInfo::set_mute_model(::CIM::Group::CIMGroupMuteModel value) {
+  _internal_set_mute_model(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.mute_model)
+}
+
+// uint64 group_owner_id = 7;
+inline void CIMGroupInfo::clear_group_owner_id() {
+  group_owner_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfo::_internal_group_owner_id() const {
+  return group_owner_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupInfo::group_owner_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_owner_id)
+  return _internal_group_owner_id();
+}
+inline void CIMGroupInfo::_internal_set_group_owner_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_owner_id_ = value;
+}
+inline void CIMGroupInfo::set_group_owner_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_owner_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_owner_id)
+}
+
+// uint32 create_time = 8;
+inline void CIMGroupInfo::clear_create_time() {
+  create_time_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfo::_internal_create_time() const {
+  return create_time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfo::create_time() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.create_time)
+  return _internal_create_time();
+}
+inline void CIMGroupInfo::_internal_set_create_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  create_time_ = value;
+}
+inline void CIMGroupInfo::set_create_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_create_time(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.create_time)
+}
+
+// uint32 update_time = 9;
+inline void CIMGroupInfo::clear_update_time() {
+  update_time_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfo::_internal_update_time() const {
+  return update_time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupInfo::update_time() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.update_time)
+  return _internal_update_time();
+}
+inline void CIMGroupInfo::_internal_set_update_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  update_time_ = value;
+}
+inline void CIMGroupInfo::set_update_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_update_time(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.update_time)
+}
+
+// string group_intro = 10;
+inline void CIMGroupInfo::clear_group_intro() {
+  group_intro_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupInfo::group_intro() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_intro)
+  return _internal_group_intro();
+}
+inline void CIMGroupInfo::set_group_intro(const std::string& value) {
+  _internal_set_group_intro(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_intro)
+}
+inline std::string* CIMGroupInfo::mutable_group_intro() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfo.group_intro)
+  return _internal_mutable_group_intro();
+}
+inline const std::string& CIMGroupInfo::_internal_group_intro() const {
+  return group_intro_.Get();
+}
+inline void CIMGroupInfo::_internal_set_group_intro(const std::string& value) {
+  
+  group_intro_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupInfo::set_group_intro(std::string&& value) {
+  
+  group_intro_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupInfo.group_intro)
+}
+inline void CIMGroupInfo::set_group_intro(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  group_intro_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupInfo.group_intro)
+}
+inline void CIMGroupInfo::set_group_intro(const char* value,
+    size_t size) {
+  
+  group_intro_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupInfo.group_intro)
+}
+inline std::string* CIMGroupInfo::_internal_mutable_group_intro() {
+  
+  return group_intro_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupInfo::release_group_intro() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupInfo.group_intro)
+  return group_intro_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupInfo::set_allocated_group_intro(std::string* group_intro) {
+  if (group_intro != nullptr) {
+    
+  } else {
+    
+  }
+  group_intro_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), group_intro,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupInfo.group_intro)
+}
+
+// string announcement = 11;
+inline void CIMGroupInfo::clear_announcement() {
+  announcement_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupInfo::announcement() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.announcement)
+  return _internal_announcement();
+}
+inline void CIMGroupInfo::set_announcement(const std::string& value) {
+  _internal_set_announcement(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.announcement)
+}
+inline std::string* CIMGroupInfo::mutable_announcement() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfo.announcement)
+  return _internal_mutable_announcement();
+}
+inline const std::string& CIMGroupInfo::_internal_announcement() const {
+  return announcement_.Get();
+}
+inline void CIMGroupInfo::_internal_set_announcement(const std::string& value) {
+  
+  announcement_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupInfo::set_announcement(std::string&& value) {
+  
+  announcement_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupInfo.announcement)
+}
+inline void CIMGroupInfo::set_announcement(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  announcement_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupInfo.announcement)
+}
+inline void CIMGroupInfo::set_announcement(const char* value,
+    size_t size) {
+  
+  announcement_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupInfo.announcement)
+}
+inline std::string* CIMGroupInfo::_internal_mutable_announcement() {
+  
+  return announcement_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupInfo::release_announcement() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupInfo.announcement)
+  return announcement_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupInfo::set_allocated_announcement(std::string* announcement) {
+  if (announcement != nullptr) {
+    
+  } else {
+    
+  }
+  announcement_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), announcement,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupInfo.announcement)
+}
+
+// string group_avatar = 12;
+inline void CIMGroupInfo::clear_group_avatar() {
+  group_avatar_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CIMGroupInfo::group_avatar() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupInfo.group_avatar)
+  return _internal_group_avatar();
+}
+inline void CIMGroupInfo::set_group_avatar(const std::string& value) {
+  _internal_set_group_avatar(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupInfo.group_avatar)
+}
+inline std::string* CIMGroupInfo::mutable_group_avatar() {
+  // @@protoc_insertion_point(field_mutable:CIM.Group.CIMGroupInfo.group_avatar)
+  return _internal_mutable_group_avatar();
+}
+inline const std::string& CIMGroupInfo::_internal_group_avatar() const {
+  return group_avatar_.Get();
+}
+inline void CIMGroupInfo::_internal_set_group_avatar(const std::string& value) {
+  
+  group_avatar_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CIMGroupInfo::set_group_avatar(std::string&& value) {
+  
+  group_avatar_.SetLite(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Group.CIMGroupInfo.group_avatar)
+}
+inline void CIMGroupInfo::set_group_avatar(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  group_avatar_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Group.CIMGroupInfo.group_avatar)
+}
+inline void CIMGroupInfo::set_group_avatar(const char* value,
+    size_t size) {
+  
+  group_avatar_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Group.CIMGroupInfo.group_avatar)
+}
+inline std::string* CIMGroupInfo::_internal_mutable_group_avatar() {
+  
+  return group_avatar_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CIMGroupInfo::release_group_avatar() {
+  // @@protoc_insertion_point(field_release:CIM.Group.CIMGroupInfo.group_avatar)
+  return group_avatar_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMGroupInfo::set_allocated_group_avatar(std::string* group_avatar) {
+  if (group_avatar != nullptr) {
+    
+  } else {
+    
+  }
+  group_avatar_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), group_avatar,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Group.CIMGroupInfo.group_avatar)
+}
+
+// -------------------------------------------------------------------
+
+// CIMGroupVersionInfo
+
+// uint64 group_id = 1;
+inline void CIMGroupVersionInfo::clear_group_id() {
+  group_id_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupVersionInfo::_internal_group_id() const {
+  return group_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 CIMGroupVersionInfo::group_id() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupVersionInfo.group_id)
+  return _internal_group_id();
+}
+inline void CIMGroupVersionInfo::_internal_set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  group_id_ = value;
+}
+inline void CIMGroupVersionInfo::set_group_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_group_id(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupVersionInfo.group_id)
+}
+
+// uint32 group_version = 2;
+inline void CIMGroupVersionInfo::clear_group_version() {
+  group_version_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupVersionInfo::_internal_group_version() const {
+  return group_version_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 CIMGroupVersionInfo::group_version() const {
+  // @@protoc_insertion_point(field_get:CIM.Group.CIMGroupVersionInfo.group_version)
+  return _internal_group_version();
+}
+inline void CIMGroupVersionInfo::_internal_set_group_version(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  group_version_ = value;
+}
+inline void CIMGroupVersionInfo::set_group_version(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_group_version(value);
+  // @@protoc_insertion_point(field_set:CIM.Group.CIMGroupVersionInfo.group_version)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace Group
 }  // namespace CIM
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::CIM::Group::CIMGroupMemberChangedType> : ::std::true_type {};
+template <> struct is_proto_enum< ::CIM::Group::CIMGroupType> : ::std::true_type {};
+template <> struct is_proto_enum< ::CIM::Group::CIMGroupJoinModel> : ::std::true_type {};
+template <> struct is_proto_enum< ::CIM::Group::CIMGroupBeInviteMode> : ::std::true_type {};
+template <> struct is_proto_enum< ::CIM::Group::CIMGroupMuteModel> : ::std::true_type {};
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

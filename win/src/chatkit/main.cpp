@@ -17,7 +17,9 @@ int main(int argc, char* argv) {
     client->setConnectionCallback([](const ConnectStatus & status) {
         LogInfo("connection status changed:{}", status);
     });
-    client->login("1008", "123456", "10.0.107.244", 8000);
+    client->login("1008", "123456", "10.0.107.244", 8000, [](const CIM::Login::CIMAuthTokenRsp & rsp) {
+        LogInfo("login result={}", rsp.result_code() == CIM::Def::kCIM_ERR_SUCCSSE);
+    }, nullptr);
 
     std::this_thread::sleep_for(std::chrono::hours(1));
     return 0;

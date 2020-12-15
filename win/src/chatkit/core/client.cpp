@@ -12,9 +12,16 @@
 //std::atomic_uint16_t g_seq = 1;
 const uint32_t kMaxBufferLen = 1024 * 10;// 10 KB
 
+const std::string kClientVersion = "0.1"; // 客户端类型
+
 namespace cim {
     namespace core {
-        Client::Client() : conn_status_(kDefault), tcp_client_(nullptr), loop_(nullptr), user_id_(0) {
+        Client::Client() :
+            conn_status_(kDefault),
+            tcp_client_(nullptr),
+            loop_(nullptr),
+            user_id_(0),
+            is_login_(false) {
             loop_ = std::make_unique<evpp::EventLoopThread>();
         }
 
@@ -26,8 +33,10 @@ namespace cim {
             return &client;
         }
 
-        void Client::login(std::string user_name, std::string pwd, string ip, uint16_t port) {
+        void Client::login(std::string user_name, std::string pwd, string ip, uint16_t port, const LoginCallback& cb, const TimeoutCallback& timeout_cb) {
             conn_status_ = kConnectting;
+            login_cb_ = cb;
+            login_timeout_cb_ = timeout_cb;
 
             std::string end_point = ip + ":" + std::to_string(port);
 
@@ -50,6 +59,8 @@ namespace cim {
         }
 
         void Client::logout() {
+            is_login_ = false;
+
             CIM::Login::CIMLogoutReq req;
             req.set_user_id(user_id_);
             req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_IOS);
@@ -73,11 +84,27 @@ namespace cim {
             IMHeader header = { 0 };
             header.cmd = cmd_id;
             header.seq = getSeq();
+            header.len = sizeof(IMHeader) +  msg.ByteSize();
+            header.version = kProtocolVersion;
 
-            evpp::Buffer buffer(sizeof(IMHeader) + msg.ByteSize());
-            buffer.Write(&header, sizeof(IMHeader));
+            IMHeader* header2 = &header;
+            LogDebug("{}", header2->len);
+
+            evpp::Buffer buffer(header.len);
+            buffer.AppendInt32((int32_t)header.len);
+            buffer.AppendInt16((int16_t)kProtocolVersion);
+            buffer.AppendInt16(0);
+            buffer.AppendInt16(0);
+            buffer.AppendInt16((int16_t)header.cmd);
+            buffer.AppendInt16((int16_t)header.seq);
+            buffer.AppendInt16(0);
+
+            //buffer.Write(&header, sizeof(IMHeader));
             msg.SerializeToArray(buffer.WriteBegin(), msg.ByteSize());
             buffer.WriteBytes(msg.ByteSize());
+
+            const char* data = buffer.data();
+            LogInfo("data={}", data);
 
             if (conn_status_ == kConnectOk && tcp_client_->conn()) {
                 tcp_client_->conn()->Send(&buffer);
@@ -108,6 +135,16 @@ namespace cim {
                 conn_status_ = kDefault;
             }
 
+            // 登录请求
+            if (!is_login_ && conn_status_ == kConnectOk) {
+                CIM::Login::CIMAuthTokenReq req;
+                req.set_user_id(user_id_);
+                req.set_user_token(user_token_);
+                req.set_client_version(kClientVersion);
+                req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_PC_WINDOWS);
+                send(CIM::Def::kCIM_CID_LOGIN_AUTH_TOKEN_REQ, req);
+            }
+
             LogInfo("connection status={}", conn_status_);
 
             if (connection_cb_) {
@@ -128,9 +165,24 @@ namespace cim {
                 IMHeader* header = (IMHeader*)buffer->data();
                 buffer->Skip(sizeof(IMHeader));
 
+                int reset_len = buffer->length() - header->len;
+
                 if (header->len < kMaxBufferLen) {
 
                     if (header->len >= buffer->size()) {
+                        break;
+                    }
+
+                    onHandleData(header, buffer);
+
+                    assert(reset_len == buffer->length());
+                    //buffer->Skip(header->len);
+
+                    if (buffer->length() <= 0) {
+                        break;
+
+                    } else if (buffer->length() < sizeof(IMHeader)) {
+                        LogWarn("packet not full");
                         break;
                     }
 
@@ -143,9 +195,34 @@ namespace cim {
             buffer->Reset();
         }
 
+        void Client::onHandleData(const IMHeader* header, evpp::Buffer* buffer) {
+            LogDebug("cmd={},seq={},len={}", header->cmd, header->seq, header->len);
+
+            switch (header->cmd) {
+            case CIM::Def::kCIM_CID_LOGIN_AUTH_TOKEN_RSP:
+                onHandleAuthRsp(header, buffer);
+
+            default:
+                LogInfo("unknown cmd={}", header->cmd);
+                break;
+            }
+        }
+
         uint16_t Client::getSeq() {
             ++seq_;
             return seq_;
+        }
+
+        void Client::onHandleAuthRsp(const IMHeader* header, evpp::Buffer* buffer) {
+            CIM::Login::CIMAuthTokenRsp rsp;
+
+            PARSE_PB_AND_CHECK(rsp, buffer);
+
+            LogInfo("result_code={},result_string={}", rsp.result_code(), rsp.result_string());
+
+            if (login_cb_) {
+                login_cb_(rsp);
+            }
         }
     }
 }

@@ -12,6 +12,16 @@
 const int kSuccess = 0;
 const int kError = -1;
 
+const uint16_t kProtocolVersion = 1;
+
+// MessageLite, evpp::Buffer
+#define PARSE_PB_AND_CHECK(rsp,buffer) if (!rsp.ParseFromArray(buffer->data(), buffer->length())) { \
+LogInfo("prase pb error."); \
+return; \
+} else { \
+    buffer->Skip(rsp.ByteSize()); \
+} \
+
 // total 16 Bytes
 struct IMHeader {
     uint32_t len;		// 数据部长度
