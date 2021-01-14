@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "client.h"
 #include "base/Log.h"
 
@@ -37,6 +38,8 @@ namespace cim {
             conn_status_ = kConnectting;
             login_cb_ = cb;
             login_timeout_cb_ = timeout_cb;
+
+
 
             std::string end_point = ip + ":" + std::to_string(port);
 
@@ -87,9 +90,6 @@ namespace cim {
             header.len = sizeof(IMHeader) +  msg.ByteSize();
             header.version = kProtocolVersion;
 
-            IMHeader* header2 = &header;
-            LogDebug("{}", header2->len);
-
             evpp::Buffer buffer(header.len);
             buffer.AppendInt32((int32_t)header.len);
             buffer.AppendInt16((int16_t)kProtocolVersion);
@@ -102,9 +102,6 @@ namespace cim {
             //buffer.Write(&header, sizeof(IMHeader));
             msg.SerializeToArray(buffer.WriteBegin(), msg.ByteSize());
             buffer.WriteBytes(msg.ByteSize());
-
-            const char* data = buffer.data();
-            LogInfo("data={}", data);
 
             if (conn_status_ == kConnectOk && tcp_client_->conn()) {
                 tcp_client_->conn()->Send(&buffer);
@@ -162,18 +159,23 @@ namespace cim {
 
             // tcp Õ³°ü
             while (true) {
-                IMHeader* header = (IMHeader*)buffer->data();
-                buffer->Skip(sizeof(IMHeader));
+                IMHeader header = { 0 };
+                header.len = static_cast<uint32_t>(buffer->PeekInt32());
+                int reset_len = buffer->length() - header.len;
 
-                int reset_len = buffer->length() - header->len;
+                if (header.len < kMaxBufferLen) {
+                    header.version = static_cast<uint16_t>(buffer->PeekInt16());
+                    header.flag = static_cast<uint16_t>(buffer->PeekInt16());
+                    header.service_id = static_cast<uint16_t>(buffer->PeekInt16());
+                    header.cmd = static_cast<uint16_t>(buffer->PeekInt16());
+                    header.seq = static_cast<uint16_t>(buffer->PeekInt16());
+                    header.reserved = static_cast<uint16_t>(buffer->PeekInt16());
 
-                if (header->len < kMaxBufferLen) {
-
-                    if (header->len >= buffer->size()) {
+                    if (header.len >= buffer->size()) {
                         break;
                     }
 
-                    onHandleData(header, buffer);
+                    onHandleData(&header, buffer);
 
                     assert(reset_len == buffer->length());
                     //buffer->Skip(header->len);

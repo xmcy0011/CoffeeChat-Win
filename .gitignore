@@ -21,3 +21,5 @@ win/bin/gflags_debug.dll
 win/bin/fmtd.dll
 win/bin/event.dll
 win/bin/chatkit.lib
+win/bin/logs/
+.vscode/

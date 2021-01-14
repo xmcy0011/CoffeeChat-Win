@@ -1,2 +1,37 @@
 # CoffeeChat-Windows
-CoffeeChat windows client open source project
+
+CoffeeChat windows(c++,nim_duilib) client open source project
+
+## 开发环境
+
+1. 安装VS2017
+2. 安装vcpkg
+   ```bash
+   $ git clone https://github.com/Microsoft/vcpkg.git
+   $ cd vcpkg
+   $ bootstrap-vcpkg.bat
+   $ vcpkg integrate install
+   ```
+3. 集成vcpkg到vs2017（https://zhuanlan.zhihu.com/p/103334720）
+```bash
+$ vcpkg integrate install # vs2017感知工具
+$ vcpkg integrate project # 集成到工程
+# 在 Visual Studio 中，点击菜单 “工具->选项”, 选择"NuGet包管理器->程序包源"
+# 添加新的可用程序包源, 选择 vcpkg 目录下的 “scripts\buildsystems” 目录，然后点击右侧的 “更新” 按钮。
+```
+4. 三方库安装
+   ```bash
+   $ vcpkg install spdlog   # 安装
+   $ vcpkg install protobuf # 3.13.0
+   $ vcpkg install evpp     # c++跨平台通信库
+   $ vcpkg install jsoncpp  # json解析库
+   ```
+
+常见错误：
+1. 找不到“evpp/xxx”或者"spdlog"或者"google/protobuf"等等，先确认vcpkg安装了上述依赖
+2. 安装了依赖还是找不到，这个时候可能项目配置错误。把工程如chatkit.vcxproj以文本打开，删除多出来的vcpkg的xml项
+3. 电脑启动不了，提示缺少msvcp140.dll，需要下载安装vc++2015运行环境。
+
+## 编译
+
+使用VS 2017打开all.sln，切换到release，然后编译即可。

@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Log.h"
 
 cim::ZLogger& GetInstance() {
