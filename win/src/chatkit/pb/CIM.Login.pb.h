@@ -45,7 +45,7 @@ struct TableStruct_CIM_2eLogin_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[6]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -53,6 +53,9 @@ struct TableStruct_CIM_2eLogin_2eproto {
 };
 namespace CIM {
 namespace Login {
+class CIMAuthReq;
+class CIMAuthReqDefaultTypeInternal;
+extern CIMAuthReqDefaultTypeInternal _CIMAuthReq_default_instance_;
 class CIMAuthTokenReq;
 class CIMAuthTokenReqDefaultTypeInternal;
 extern CIMAuthTokenReqDefaultTypeInternal _CIMAuthTokenReq_default_instance_;
@@ -71,6 +74,7 @@ extern CIMLogoutRspDefaultTypeInternal _CIMLogoutRsp_default_instance_;
 }  // namespace Login
 }  // namespace CIM
 PROTOBUF_NAMESPACE_OPEN
+template<> ::CIM::Login::CIMAuthReq* Arena::CreateMaybeMessage<::CIM::Login::CIMAuthReq>(Arena*);
 template<> ::CIM::Login::CIMAuthTokenReq* Arena::CreateMaybeMessage<::CIM::Login::CIMAuthTokenReq>(Arena*);
 template<> ::CIM::Login::CIMAuthTokenRsp* Arena::CreateMaybeMessage<::CIM::Login::CIMAuthTokenRsp>(Arena*);
 template<> ::CIM::Login::CIMHeartBeat* Arena::CreateMaybeMessage<::CIM::Login::CIMHeartBeat>(Arena*);
@@ -438,6 +442,152 @@ class CIMAuthTokenRsp PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class CIMAuthReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Login.CIMAuthReq) */ {
+ public:
+  inline CIMAuthReq() : CIMAuthReq(nullptr) {}
+  virtual ~CIMAuthReq();
+
+  CIMAuthReq(const CIMAuthReq& from);
+  CIMAuthReq(CIMAuthReq&& from) noexcept
+    : CIMAuthReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CIMAuthReq& operator=(const CIMAuthReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CIMAuthReq& operator=(CIMAuthReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const CIMAuthReq& default_instance();
+
+  static inline const CIMAuthReq* internal_default_instance() {
+    return reinterpret_cast<const CIMAuthReq*>(
+               &_CIMAuthReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(CIMAuthReq& a, CIMAuthReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CIMAuthReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CIMAuthReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CIMAuthReq* New() const final {
+    return CreateMaybeMessage<CIMAuthReq>(nullptr);
+  }
+
+  CIMAuthReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<CIMAuthReq>(arena);
+  }
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)
+    final;
+  void CopyFrom(const CIMAuthReq& from);
+  void MergeFrom(const CIMAuthReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  void DiscardUnknownFields();
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(CIMAuthReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "CIM.Login.CIMAuthReq";
+  }
+  protected:
+  explicit CIMAuthReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  std::string GetTypeName() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserNameFieldNumber = 1,
+    kUserPwdFieldNumber = 2,
+  };
+  // string user_name = 1;
+  void clear_user_name();
+  const std::string& user_name() const;
+  void set_user_name(const std::string& value);
+  void set_user_name(std::string&& value);
+  void set_user_name(const char* value);
+  void set_user_name(const char* value, size_t size);
+  std::string* mutable_user_name();
+  std::string* release_user_name();
+  void set_allocated_user_name(std::string* user_name);
+  private:
+  const std::string& _internal_user_name() const;
+  void _internal_set_user_name(const std::string& value);
+  std::string* _internal_mutable_user_name();
+  public:
+
+  // string user_pwd = 2;
+  void clear_user_pwd();
+  const std::string& user_pwd() const;
+  void set_user_pwd(const std::string& value);
+  void set_user_pwd(std::string&& value);
+  void set_user_pwd(const char* value);
+  void set_user_pwd(const char* value, size_t size);
+  std::string* mutable_user_pwd();
+  std::string* release_user_pwd();
+  void set_allocated_user_pwd(std::string* user_pwd);
+  private:
+  const std::string& _internal_user_pwd() const;
+  void _internal_set_user_pwd(const std::string& value);
+  std::string* _internal_mutable_user_pwd();
+  public:
+
+  // @@protoc_insertion_point(class_scope:CIM.Login.CIMAuthReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_pwd_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_CIM_2eLogin_2eproto;
+};
+// -------------------------------------------------------------------
+
 class CIMLogoutReq PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:CIM.Login.CIMLogoutReq) */ {
  public:
@@ -470,7 +620,7 @@ class CIMLogoutReq PROTOBUF_FINAL :
                &_CIMLogoutReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(CIMLogoutReq& a, CIMLogoutReq& b) {
     a.Swap(&b);
@@ -602,7 +752,7 @@ class CIMLogoutRsp PROTOBUF_FINAL :
                &_CIMLogoutRsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(CIMLogoutRsp& a, CIMLogoutRsp& b) {
     a.Swap(&b);
@@ -723,7 +873,7 @@ class CIMHeartBeat PROTOBUF_FINAL :
                &_CIMHeartBeat_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   friend void swap(CIMHeartBeat& a, CIMHeartBeat& b) {
     a.Swap(&b);
@@ -1215,6 +1365,132 @@ inline void CIMAuthTokenRsp::set_allocated_user_info(::CIM::Def::CIMUserInfo* us
 
 // -------------------------------------------------------------------
 
+// CIMAuthReq
+
+// string user_name = 1;
+inline void CIMAuthReq::clear_user_name() {
+  user_name_.ClearToEmpty();
+}
+inline const std::string& CIMAuthReq::user_name() const {
+  // @@protoc_insertion_point(field_get:CIM.Login.CIMAuthReq.user_name)
+  return _internal_user_name();
+}
+inline void CIMAuthReq::set_user_name(const std::string& value) {
+  _internal_set_user_name(value);
+  // @@protoc_insertion_point(field_set:CIM.Login.CIMAuthReq.user_name)
+}
+inline std::string* CIMAuthReq::mutable_user_name() {
+  // @@protoc_insertion_point(field_mutable:CIM.Login.CIMAuthReq.user_name)
+  return _internal_mutable_user_name();
+}
+inline const std::string& CIMAuthReq::_internal_user_name() const {
+  return user_name_.Get();
+}
+inline void CIMAuthReq::_internal_set_user_name(const std::string& value) {
+  
+  user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void CIMAuthReq::set_user_name(std::string&& value) {
+  
+  user_name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Login.CIMAuthReq.user_name)
+}
+inline void CIMAuthReq::set_user_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Login.CIMAuthReq.user_name)
+}
+inline void CIMAuthReq::set_user_name(const char* value,
+    size_t size) {
+  
+  user_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Login.CIMAuthReq.user_name)
+}
+inline std::string* CIMAuthReq::_internal_mutable_user_name() {
+  
+  return user_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* CIMAuthReq::release_user_name() {
+  // @@protoc_insertion_point(field_release:CIM.Login.CIMAuthReq.user_name)
+  return user_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMAuthReq::set_allocated_user_name(std::string* user_name) {
+  if (user_name != nullptr) {
+    
+  } else {
+    
+  }
+  user_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Login.CIMAuthReq.user_name)
+}
+
+// string user_pwd = 2;
+inline void CIMAuthReq::clear_user_pwd() {
+  user_pwd_.ClearToEmpty();
+}
+inline const std::string& CIMAuthReq::user_pwd() const {
+  // @@protoc_insertion_point(field_get:CIM.Login.CIMAuthReq.user_pwd)
+  return _internal_user_pwd();
+}
+inline void CIMAuthReq::set_user_pwd(const std::string& value) {
+  _internal_set_user_pwd(value);
+  // @@protoc_insertion_point(field_set:CIM.Login.CIMAuthReq.user_pwd)
+}
+inline std::string* CIMAuthReq::mutable_user_pwd() {
+  // @@protoc_insertion_point(field_mutable:CIM.Login.CIMAuthReq.user_pwd)
+  return _internal_mutable_user_pwd();
+}
+inline const std::string& CIMAuthReq::_internal_user_pwd() const {
+  return user_pwd_.Get();
+}
+inline void CIMAuthReq::_internal_set_user_pwd(const std::string& value) {
+  
+  user_pwd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void CIMAuthReq::set_user_pwd(std::string&& value) {
+  
+  user_pwd_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:CIM.Login.CIMAuthReq.user_pwd)
+}
+inline void CIMAuthReq::set_user_pwd(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_pwd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:CIM.Login.CIMAuthReq.user_pwd)
+}
+inline void CIMAuthReq::set_user_pwd(const char* value,
+    size_t size) {
+  
+  user_pwd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:CIM.Login.CIMAuthReq.user_pwd)
+}
+inline std::string* CIMAuthReq::_internal_mutable_user_pwd() {
+  
+  return user_pwd_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* CIMAuthReq::release_user_pwd() {
+  // @@protoc_insertion_point(field_release:CIM.Login.CIMAuthReq.user_pwd)
+  return user_pwd_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CIMAuthReq::set_allocated_user_pwd(std::string* user_pwd) {
+  if (user_pwd != nullptr) {
+    
+  } else {
+    
+  }
+  user_pwd_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_pwd,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:CIM.Login.CIMAuthReq.user_pwd)
+}
+
+// -------------------------------------------------------------------
+
 // CIMLogoutReq
 
 // uint64 user_id = 1;
@@ -1288,6 +1564,8 @@ inline void CIMLogoutRsp::set_result_code(::PROTOBUF_NAMESPACE_ID::uint32 value)
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
