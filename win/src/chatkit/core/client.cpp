@@ -39,8 +39,6 @@ namespace cim {
             login_cb_ = cb;
             login_timeout_cb_ = timeout_cb;
 
-
-
             std::string end_point = ip + ":" + std::to_string(port);
 
             if (tcp_client_ == nullptr) {
