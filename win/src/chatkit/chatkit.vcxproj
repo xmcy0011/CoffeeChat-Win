@@ -163,6 +163,7 @@
     <ClCompile Include="base\Log.cpp" />
     <ClCompile Include="cim.cpp" />
     <ClCompile Include="core\client.cpp" />
+    <ClCompile Include="core\im_user_manager.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pb\CIM.Def.pb.cc" />
@@ -180,6 +181,7 @@
     <ClInclude Include="cim_def.h" />
     <ClInclude Include="cim_dll.h" />
     <ClInclude Include="core\client.h" />
+    <ClInclude Include="core\im_user_manager.h" />
     <ClInclude Include="pb\CIM.Def.pb.h" />
     <ClInclude Include="pb\CIM.Group.pb.h" />
     <ClInclude Include="pb\CIM.List.pb.h" />

@@ -31,6 +31,9 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="cim.cpp" />
+    <ClCompile Include="core\im_user_manager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cim_dll.h" />
@@ -64,6 +67,9 @@
       <Filter>pb</Filter>
     </ClInclude>
     <ClInclude Include="core\client.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\im_user_manager.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
