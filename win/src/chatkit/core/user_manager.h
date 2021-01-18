@@ -11,16 +11,21 @@
 
 namespace cim {
     namespace core {
-        class IMUserManager: cim::noncopyable {
+        struct HttpResponseBase {
+            int code;
+            std::string msg;
+        };
+
+        class UserManager: cim::noncopyable {
           public:
-            static IMUserManager* getInstance();
+            static UserManager* getInstance();
 
           public:
-            //bool registerUser();
+            bool registerUser(std::string userName, std::string userPwd, std::string nickName, HttpResponseBase& out);
 
           private:
-            IMUserManager();
-            ~IMUserManager() = default;
+            UserManager();
+            ~UserManager() = default;
         };
     }
 }

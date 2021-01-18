@@ -22,11 +22,18 @@
 #include "cim_dll.h"
 
 namespace cim {
-    struct ChatKitConfig {
+    const uint16_t kDefaultGateSrvPort = 8000;
+    const uint16_t kDefaultHttpSrvPort = 18080;
 
+    struct ChatKitConfig {
+        std::string serverIp;								// 服务器IP地址
+        uint16_t	serverGataPort = kDefaultGateSrvPort;	// Gate服务端口
+        uint16_t    serverHttpPort = kDefaultHttpSrvPort;	// Http服务端口
     };
 
     int initChatKit(const ChatKitConfig& config);
+
+    const ChatKitConfig& getChatKitConfig();
 }
 
 #endif//_CIM_5CC209E1_C52B_43B1_9339_2A2145CADB60_

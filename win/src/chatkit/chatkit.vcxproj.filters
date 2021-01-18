@@ -31,8 +31,17 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="cim.cpp" />
-    <ClCompile Include="core\im_user_manager.cpp">
+    <ClCompile Include="core\user_manager.cpp">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="crypt\md5.cpp">
+      <Filter>crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_client.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_user_manager.cpp">
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,8 +78,20 @@
     <ClInclude Include="core\client.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\im_user_manager.h">
+    <ClInclude Include="core\callback.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\user_manager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="crypt\md5.h">
+      <Filter>crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="test\test_client.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\test_user_manager.h">
+      <Filter>test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +106,9 @@
     </Filter>
     <Filter Include="pb">
       <UniqueIdentifier>{139e0b81-36ac-4d6e-abe5-a4e03f197deb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypt">
+      <UniqueIdentifier>{25d091eb-3681-46d0-93ca-28b03197e563}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

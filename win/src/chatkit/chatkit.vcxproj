@@ -74,7 +74,8 @@
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\bin\</OutDir>
-    <IncludePath>.;$(IncludePath)</IncludePath>
+    <IncludePath>.;..\..\third_party\json\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\third_party\json\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -100,6 +101,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>jsoncppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -163,7 +165,8 @@
     <ClCompile Include="base\Log.cpp" />
     <ClCompile Include="cim.cpp" />
     <ClCompile Include="core\client.cpp" />
-    <ClCompile Include="core\im_user_manager.cpp" />
+    <ClCompile Include="core\user_manager.cpp" />
+    <ClCompile Include="crypt\md5.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pb\CIM.Def.pb.cc" />
@@ -172,6 +175,8 @@
     <ClCompile Include="pb\CIM.Login.pb.cc" />
     <ClCompile Include="pb\CIM.Message.pb.cc" />
     <ClCompile Include="pb\CIM.Voip.pb.cc" />
+    <ClCompile Include="test\test_client.cpp" />
+    <ClCompile Include="test\test_user_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base\Exception.h" />
@@ -181,13 +186,17 @@
     <ClInclude Include="cim_def.h" />
     <ClInclude Include="cim_dll.h" />
     <ClInclude Include="core\client.h" />
-    <ClInclude Include="core\im_user_manager.h" />
+    <ClInclude Include="core\callback.h" />
+    <ClInclude Include="core\user_manager.h" />
+    <ClInclude Include="crypt\md5.h" />
     <ClInclude Include="pb\CIM.Def.pb.h" />
     <ClInclude Include="pb\CIM.Group.pb.h" />
     <ClInclude Include="pb\CIM.List.pb.h" />
     <ClInclude Include="pb\CIM.Login.pb.h" />
     <ClInclude Include="pb\CIM.Message.pb.h" />
     <ClInclude Include="pb\CIM.Voip.pb.h" />
+    <ClInclude Include="test\test_client.h" />
+    <ClInclude Include="test\test_user_manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -22,9 +22,10 @@ $ vcpkg integrate project # 集成到工程
 4. 三方库安装
    ```bash
    $ vcpkg install spdlog   # 安装
-   $ vcpkg install protobuf # 3.13.0
+   $ vcpkg install protobuf # 3.14.0（如果版本变了，请重新生成protobuf文件）
    $ vcpkg install evpp     # c++跨平台通信库
-   $ vcpkg install jsoncpp  # json解析库
+   $ vcpkg install restclient-cpp # c++ wraps libcurl for HTTP requests
+   #$ vcpkg install jsoncpp # json解析库（使用老版本API，新版API有崩溃）
    ```
 
 常见错误：

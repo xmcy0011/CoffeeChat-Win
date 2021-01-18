@@ -14,8 +14,7 @@
 
 #include "cim.h"
 #include "cim_def.h"
-#include "pb/CIM.Def.pb.h"
-#include "pb/cim.Login.pb.h"
+#include "callback.h"
 #include "base/noncopyable.h"
 
 #include <google/protobuf/message_lite.h>
@@ -24,6 +23,7 @@ using namespace std;
 
 namespace evpp {
     class TCPClient;
+    class EventLoop;
     class EventLoopThread;
     class Buffer;
     class TCPConn;
@@ -40,7 +40,6 @@ namespace cim {
         };
         typedef std::function<void(const ConnectStatus& status)> ConnectionCallback;
         typedef std::function<void(IMHeader&, evpp::Buffer* data)> MessageCallback;
-        typedef std::function<void(const CIM::Login::CIMAuthTokenRsp& rsp)> LoginCallback;
         typedef std::function<void()> TimeoutCallback;
 
         class CIM_DLL_API Client : public cim::noncopyable {
@@ -57,11 +56,12 @@ namespace cim {
               * @param
               * @return
               */
-            void login(std::string user_name, std::string pwd, string ip, uint16_t port, const LoginCallback& cb, const TimeoutCallback& timeout_cb);
+            void login(std::string user_name, std::string pwd, const LoginCallback& cb, const TimeoutCallback& timeout_cb);
             void setConnectionCallback(const ConnectionCallback& cb);
             void logout();
 
             ConnectStatus connStatus();
+            evpp::EventLoop* connLoop();
 
             int sendRaw(const char* data, const int& len);
 

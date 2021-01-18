@@ -2,6 +2,7 @@
 #include "client.h"
 #include "base/Log.h"
 
+#include <evpp/event_loop.h>
 #include <evpp/event_loop_thread.h>
 #include <evpp/tcp_conn.h>
 #include <evpp/tcp_client.h>
@@ -24,9 +25,13 @@ namespace cim {
             user_id_(0),
             is_login_(false) {
             loop_ = std::make_unique<evpp::EventLoopThread>();
+            // start loop
+            loop_->Start(true);
         }
 
         Client::~Client() {
+            logout();
+            loop_->Stop(true);
         }
 
         Client* Client::getInstance() {
@@ -34,12 +39,12 @@ namespace cim {
             return &client;
         }
 
-        void Client::login(std::string user_name, std::string pwd, string ip, uint16_t port, const LoginCallback& cb, const TimeoutCallback& timeout_cb) {
+        void Client::login(std::string user_name, std::string pwd, const LoginCallback& cb, const TimeoutCallback& timeout_cb) {
             conn_status_ = kConnectting;
             login_cb_ = cb;
             login_timeout_cb_ = timeout_cb;
 
-            std::string end_point = ip + ":" + std::to_string(port);
+            std::string end_point = cim::getChatKitConfig().serverIp + ":" + std::to_string(cim::getChatKitConfig().serverGataPort);
 
             if (tcp_client_ == nullptr) {
                 tcp_client_ = std::make_unique<evpp::TCPClient>(loop_.get()->loop(), end_point, "tcp_client");
@@ -47,9 +52,6 @@ namespace cim {
                 // bind callback
                 tcp_client_->SetConnectionCallback(std::bind(&Client::onConnectionStatusChanged, this, std::placeholders::_1));
                 tcp_client_->SetMessageCallback(std::bind(&Client::onMessage, this, std::placeholders::_1, std::placeholders::_2));
-
-                // start loop
-                loop_->Start(true);
             }
 
             tcp_client_->Connect();
@@ -60,19 +62,26 @@ namespace cim {
         }
 
         void Client::logout() {
-            is_login_ = false;
-
-            CIM::Login::CIMLogoutReq req;
-            req.set_user_id(user_id_);
-            req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_IOS);
-            send(CIM::Def::kCIM_CID_LOGIN_AUTH_LOGOUT_REQ, req);
+            if (is_login_) {
+                is_login_ = false;
+                CIM::Login::CIMLogoutReq req;
+                req.set_user_id(user_id_);
+                req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_IOS);
+                send(CIM::Def::kCIM_CID_LOGIN_AUTH_LOGOUT_REQ, req);
+            }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
-            tcp_client_->Disconnect();
+
+            if (tcp_client_)
+                tcp_client_->Disconnect();
         }
 
         ConnectStatus Client::connStatus() {
-            return kDefault;
+            return conn_status_;
+        }
+
+        evpp::EventLoop* Client::connLoop() {
+            return loop_.get()->loop();
         }
 
         int Client::sendRaw(const char* data, const int& len) {

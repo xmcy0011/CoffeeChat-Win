@@ -23,3 +23,5 @@ win/bin/event.dll
 win/bin/chatkit.lib
 win/bin/logs/
 .vscode/
+win/bin/zlibd1.dll
+win/bin/libcurl-d.dll
