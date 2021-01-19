@@ -16,7 +16,7 @@ namespace cim {
             std::string msg;
         };
 
-        class UserManager: cim::noncopyable {
+        class CIM_DLL_API UserManager: cim::noncopyable {
           public:
             static UserManager* getInstance();
 

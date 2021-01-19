@@ -15,7 +15,7 @@
 namespace cim {
     namespace core {
         // client.h
-        typedef std::function<void(const CIM::Login::CIMAuthTokenRsp& rsp)> LoginCallback;
+        typedef std::function<void(const CIM::Login::CIMAuthRsp& rsp)> LoginCallback;
 
         // user_manager.h
         //typedef std::function<void(uint32_t code, std::string msg)> HttpBaseCallback;

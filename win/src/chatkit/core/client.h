@@ -90,8 +90,10 @@ namespace cim {
             TimeoutCallback login_timeout_cb_;
             atomic<bool> is_login_;
 
+            std::string user_name_;
+            std::string user_pwd_;
+
             uint64_t user_id_;
-            std::string user_token_;
 
             ConnectionCallback connection_cb_;
             atomic<uint16_t> seq_;

@@ -8,6 +8,8 @@
 #include <evpp/tcp_client.h>
 #include <evpp/buffer.h>
 
+#include "crypt/md5.h"
+
 #include "pb/CIM.Def.pb.h"
 #include "pb/CIM.Login.pb.h"
 
@@ -44,6 +46,12 @@ namespace cim {
             login_cb_ = cb;
             login_timeout_cb_ = timeout_cb;
 
+            MD5 md;
+            md.update(pwd);
+
+            user_name_ = user_name;
+            user_pwd_ = md.toString(); // md5
+
             std::string end_point = cim::getChatKitConfig().serverIp + ":" + std::to_string(cim::getChatKitConfig().serverGataPort);
 
             if (tcp_client_ == nullptr) {
@@ -55,6 +63,7 @@ namespace cim {
             }
 
             tcp_client_->Connect();
+            LogInfo("connect server,userName={},pwd={}", user_name, user_pwd_);
         }
 
         void Client::setConnectionCallback(const ConnectionCallback& cb) {
@@ -139,17 +148,18 @@ namespace cim {
                 conn_status_ = kDefault;
             }
 
+            LogInfo("connection status={}", conn_status_);
+
             // 登录请求
             if (!is_login_ && conn_status_ == kConnectOk) {
-                CIM::Login::CIMAuthTokenReq req;
-                req.set_user_id(user_id_);
-                req.set_user_token(user_token_);
+                CIM::Login::CIMAuthReq req;
+                req.set_user_name(user_name_);
+                req.set_user_pwd(user_pwd_);
                 req.set_client_version(kClientVersion);
                 req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_PC_WINDOWS);
-                send(CIM::Def::kCIM_CID_LOGIN_AUTH_TOKEN_REQ, req);
+                send(CIM::Def::kCIM_CID_LOGIN_AUTH_REQ, req);
+                LogInfo("connect success, login ... userName={},pwd={}", user_name_, user_pwd_);
             }
-
-            LogInfo("connection status={}", conn_status_);
 
             if (connection_cb_) {
                 connection_cb_(conn_status_);
@@ -167,20 +177,21 @@ namespace cim {
             // tcp 粘包
             while (true) {
                 IMHeader header = { 0 };
-                header.len = static_cast<uint32_t>(buffer->PeekInt32());
-                int reset_len = buffer->length() - header.len;
+                header.len = static_cast<uint32_t>(buffer->ReadInt32());			// 头+数据部的总长
+                int reset_len = buffer->length() - header.len + sizeof(uint32_t);	// 注意已读4字节
+
+                // 坏包，数据部长度超过buffer里面的，全部丢弃。
+                if (header.len - sizeof(uint32_t) > buffer->size()) {
+                    break;
+                }
 
                 if (header.len < kMaxBufferLen) {
-                    header.version = static_cast<uint16_t>(buffer->PeekInt16());
-                    header.flag = static_cast<uint16_t>(buffer->PeekInt16());
-                    header.service_id = static_cast<uint16_t>(buffer->PeekInt16());
-                    header.cmd = static_cast<uint16_t>(buffer->PeekInt16());
-                    header.seq = static_cast<uint16_t>(buffer->PeekInt16());
-                    header.reserved = static_cast<uint16_t>(buffer->PeekInt16());
-
-                    if (header.len >= buffer->size()) {
-                        break;
-                    }
+                    header.version = static_cast<uint16_t>(buffer->ReadInt16());
+                    header.flag = static_cast<uint16_t>(buffer->ReadInt16());
+                    header.service_id = static_cast<uint16_t>(buffer->ReadInt16());
+                    header.cmd = static_cast<uint16_t>(buffer->ReadInt16());
+                    header.seq = static_cast<uint16_t>(buffer->ReadInt16());
+                    header.reserved = static_cast<uint16_t>(buffer->ReadInt16());
 
                     onHandleData(&header, buffer);
 
@@ -208,11 +219,13 @@ namespace cim {
             LogDebug("cmd={},seq={},len={}", header->cmd, header->seq, header->len);
 
             switch (header->cmd) {
-            case CIM::Def::kCIM_CID_LOGIN_AUTH_TOKEN_RSP:
+            case CIM::Def::kCIM_CID_LOGIN_AUTH_RSP:
                 onHandleAuthRsp(header, buffer);
+                break;
 
             default:
                 LogInfo("unknown cmd={}", header->cmd);
+                buffer->Skip(header->len);
                 break;
             }
         }
@@ -223,7 +236,7 @@ namespace cim {
         }
 
         void Client::onHandleAuthRsp(const IMHeader* header, evpp::Buffer* buffer) {
-            CIM::Login::CIMAuthTokenRsp rsp;
+            CIM::Login::CIMAuthRsp rsp;
 
             PARSE_PB_AND_CHECK(rsp, buffer);
 

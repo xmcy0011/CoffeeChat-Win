@@ -2,11 +2,14 @@
 #include "cim.h"
 #include "base/Log.h"
 
-void testClient() {
+void testLogin() {
     using namespace cim::core;
 
     cim::ChatKitConfig config;
     config.serverIp = "10.0.107.244";
+
+    std::string u = "user123";
+    std::string pwd = "sa123456";
 
     if (cim::initChatKit(config) != kSuccess) {
         return;
@@ -17,8 +20,12 @@ void testClient() {
     client->setConnectionCallback([](const ConnectStatus & status) {
         LogInfo("connection status changed:{}", status);
     });
-    client->login("1008", "123456", [](const CIM::Login::CIMAuthTokenRsp & rsp) {
+    client->login(u, pwd, [](const CIM::Login::CIMAuthRsp & rsp) {
         LogInfo("login result={}", rsp.result_code() == CIM::Def::kCIM_ERR_SUCCSSE);
+
+        if (rsp.result_code() != CIM::Def::kCIM_ERR_SUCCSSE) {
+            Client::getInstance()->logout();
+        }
     }, nullptr);
 
     std::this_thread::sleep_for(std::chrono::hours(1));

@@ -13,7 +13,8 @@ using namespace cim::core;
 int main(int argc, char* argv) {
 
     // ×¢²áÓÃ»§
-    testRegisterUser();
+    testLogin();
+    //testRegisterUser();
 
     return 0;
 }

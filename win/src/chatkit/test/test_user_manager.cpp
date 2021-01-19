@@ -15,7 +15,7 @@ void testRegisterUser() {
 
     std::string u = "user123";
     std::string pwd = "sa123456";
-    std::string nick = "²âÊÔ×¢²áÓÃ»§";
+    std::string nick = "user123";
 
     cim::core::HttpResponseBase res;
 

@@ -31,7 +31,7 @@ namespace cim {
         uint16_t    serverHttpPort = kDefaultHttpSrvPort;	// Http·þÎñ¶Ë¿Ú
     };
 
-    int initChatKit(const ChatKitConfig& config);
+    CIM_DLL_API int initChatKit(const ChatKitConfig& config);
 
     const ChatKitConfig& getChatKitConfig();
 }

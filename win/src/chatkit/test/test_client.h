@@ -4,7 +4,7 @@
 #ifdef _DEBUG
 
 // ฒโสิตวยผ
-void testClient();
+void testLogin();
 
 #endif
 
