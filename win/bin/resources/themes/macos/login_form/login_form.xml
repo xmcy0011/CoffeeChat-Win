@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Window size="380,461" caption="0,0,0,60">
+    <VBox width="380" height="461" bkcolor="bk_wnd_lightcolor">
+        <!--标题-->
+        <HBox class="caption">
+            <Button class="btn_wnd_close" name="closebtn" margin="5,5,0,0" />
+            <Button class="btn_wnd_min" name="minbtn" margin="5,5,0,0" />
+            <Label text="登录" margin="2,2,0,0" align="center" width="stretch"></Label>
+        </HBox>
+
+        <HBox margin="0,21,0,0" height="140">
+            <Control />
+            <Control bkimage="app.png" width="140" />
+            <Control />
+        </HBox>
+
+        <HBox height="37">
+            <Control />
+            <Label text="Telegram" font="system_24" margin="0,5,0,0" width="auto"></Label>
+            <Control />
+        </HBox>
+
+        <Label text="Welcome to the macOS application" normaltextcolor="mid_gray" font="system_16" margin="55,3,0,0"></Label>
+
+        <TabBox selectedid="0" name="tab_main" height="130" margin="43,51,43,0">
+            <VBox>
+                <RichEdit class="simple input" rich="false" padding="17,15,17,0" multiline="false" name="re_user_name" width="stretch" height="50" valign="center" font="system_14" promptmode="true" prompttext="邮箱" promptcolor="gray" />
+                <Button class="btn_global_white_80x30" name="btn_next" width="94" height="37" margin="100,43,100,0" font="system_bold_12" text="Next" />
+            </VBox>
+            <VBox>
+                <RichEdit class="simple input" rich="false" padding="17,15,17,0" multiline="false" name="re_pwd" width="stretch" height="50" valign="center" font="system_14" promptmode="true" prompttext="邮箱" promptcolor="gray" />
+                <Button class="btn_global_white_80x30" name="btn_login" width="94" height="37" margin="100,43,100,0" font="system_bold_12" text="登录" />
+            </VBox>
+        </TabBox>
+
+
+    </VBox>
+</Window>

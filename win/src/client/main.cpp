@@ -38,7 +38,7 @@ void MainThread::Init() {
     // 默认皮肤使用 resources\\themes\\default
     // 默认语言使用 resources\\lang\\zh_CN
     // 如需修改请指定 Startup 最后两个参数
-    ui::GlobalManager::Startup(theme_dir + L"resources\\", ui::CreateControlCallback(), false);
+    ui::GlobalManager::Startup(theme_dir + L"resources\\", ui::CreateControlCallback(), false, L"themes\\macos");
 #else
     // Release 模式下使用资源中的压缩包作为资源
     // 资源被导入到资源列表分类为 THEME，资源名称为 IDR_THEME
