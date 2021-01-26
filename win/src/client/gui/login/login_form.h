@@ -40,7 +40,6 @@ class LoginForm : public ui::WindowImplBase {
     bool onLoginClick(ui::EventArgs* msg);
 
   private:
-    ui::TabBox* tab_main_;
     ui::RichEdit* edit_user_name_;
     ui::RichEdit* edit_pwd_;
 };

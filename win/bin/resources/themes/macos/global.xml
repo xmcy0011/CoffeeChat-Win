@@ -136,10 +136,10 @@
     <Class name="btn_global_red_80x30" font="system_bold_14" normaltextcolor="white" normalimage="file='../public/button/btn_global_red_80x30_normal.png'" hotimage="file='../public/button/btn_global_red_80x30_hovered.png'" pushedimage="file='../public/button/btn_global_red_80x30_pushed.png'" disabledimage="file='../public/button/btn_global_red_80x30_normal.png' fade='80'"/>
 
     <!--窗口右上角按钮 灰色版 -->
-    <Class name="btn_wnd_min" width="14" height="14" normalimage="../public/button/btn_wnd_min.png" hotimage="../public/button/btn_wnd_min_hovered.png" pushedimage="../public/button/btn_wnd_min_pushed.png"/>
-    <Class name="btn_wnd_close" width="14" height="14" normalimage="file='../public/button/btn_wnd_close.png'" hotimage="../public/button/btn_wnd_close_hove.png" pushedimage="../public/button/btn_wnd_white_close_pushed.png" fadehot="false"/>
-    <Class name="btn_wnd_max" width="auto" height="auto" forenormalimage="file='../public/button/btn_wnd_gray_max.png' dest='4,4,16,16'" normalimage="" hotimage="../public/button/btn_wnd_gray_max_hovered.png" pushedimage="../public/button/btn_wnd_gray_max_pushed.png"/>
-    <Class name="btn_wnd_restore" width="auto" height="auto" forenormalimage="file='../public/button/btn_wnd_gray_restore.png' dest='4,4,16,16'" normalimage="" hotimage="../public/button/btn_wnd_gray_restore_hovered.png" pushedimage="../public/button/btn_wnd_gray_restore_pushed.png"/>
+    <Class name="btn_wnd_min" width="12" height="12" normalimage="../public/button/btn_wnd_min.png" hotimage="../public/button/btn_wnd_min_hovered.png" pushedimage="../public/button/btn_wnd_min_pushed.png"/>
+    <Class name="btn_wnd_close" width="12" height="12" normalimage="../public/button/btn_wnd_close.png" hotimage="../public/button/btn_wnd_close_hovered.png" pushedimage="../public/button/btn_wnd_close_pushed.png" fadehot="false"/>
+    <Class name="btn_wnd_max" width="12" height="12" forenormalimage="../public/button/btn_wnd_max.png" normalimage="" hotimage="../public/button/btn_wnd_max_hovered.png" pushedimage="../public/button/btn_wnd_max_pushed.png"/>
+    <Class name="btn_wnd_restore" width="12" height="12" forenormalimage="../public/button/btn_wnd_restore.png" normalimage="" hotimage="../public/button/btn_wnd_restore_hovered.png" pushedimage="../public/button/btn_wnd_restore_pushed.png"/>
     <Class name="btn_wnd_settings" width="auto" height="auto" forenormalimage="file='../public/button/btn_wnd_settings.png' source='1,1,21,21'" hotimage="../public/button/btn_wnd_bk_hovered.png" pushedimage="../public/button/btn_wnd_bk_pushed.png"/>
 
     <!--窗口右上角按钮 白色版 -->
