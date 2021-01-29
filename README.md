@@ -2,7 +2,7 @@
 
 CoffeeChat windows(c++,nim_duilib) client open source project
 
-## 开发环境
+## build
 
 1. 安装VS2017
 2. 安装vcpkg
@@ -26,6 +26,11 @@ $ vcpkg integrate project # 集成到工程
    $ vcpkg install evpp     # c++跨平台通信库
    $ vcpkg install jsoncpp  # json解析库
    ```
+5. git clone
+```bash
+$ git clone https://github.com/xmcy0011/CoffeeChat-Win.git
+$ git submodule update --init # 拉子模块
+```
 
 常见错误：
 1. 找不到“evpp/xxx”或者"spdlog"或者"google/protobuf"等等，先确认vcpkg安装了上述依赖
