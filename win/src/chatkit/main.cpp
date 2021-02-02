@@ -1,8 +1,8 @@
 #include "pch.h"
 #include <iostream>
 
-#include "core/client.h"
-#include "base/Log.h"
+#include "cim/core/client.h"
+#include "cim/base/Log.h"
 
 // test
 #include "test/test_client.h"

@@ -10,7 +10,7 @@
 #include <string>
 #include <exception>
 
-#include "cim_dll.h"
+#include "cim/cim_dll.h"
 
 using std::string;
 

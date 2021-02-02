@@ -33,7 +33,7 @@
 			.append(">").c_str()
 #endif
 
-#include "cim_dll.h"
+#include "cim/cim_dll.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/daily_file_sink.h"
 #include "spdlog/sinks/stdout_color_sinks.h"

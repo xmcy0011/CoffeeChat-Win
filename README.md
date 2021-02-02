@@ -28,6 +28,7 @@ $ vcpkg integrate project # 集成到工程
    $ vcpkg install toml11           # toml解析库，header only, see: https://github.com/ToruNiina/toml11
    $ vcpkg install crossguid        # 跨平台guid，see: https://github.com/graeme-hill/crossguid
    #$ vcpkg install jsoncpp         # json解析库（使用老版本API，新版API有崩溃）
+   $ vcpkg install sqlitecpp        # sqlite3的封装库，see: https://github.com/SRombauts/SQLiteCpp
    ```
 
 常见错误：

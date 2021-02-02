@@ -46,6 +46,6 @@ class MD5 {
     static const size_t BUFFER_SIZE = 1024;
 };
 
-//std::string FileDigest(const string& file);
+std::string FileDigest(const string& file);
 
 

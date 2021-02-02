@@ -1,9 +1,10 @@
 #include "pch.h"
 #include "user_manager.h"
 
-#include "client.h"
-#include "crypt/md5.h"
-#include "base/Log.h"
+#include "cim/cim.h"
+#include "cim/core/client.h"
+#include "cim/crypt/md5.h"
+#include "cim/base/Log.h"
 
 #include "json/json.h"
 

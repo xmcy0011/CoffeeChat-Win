@@ -12,10 +12,9 @@
 #include <memory>
 #include <functional>
 
-#include "cim.h"
-#include "cim_def.h"
-#include "callback.h"
-#include "base/noncopyable.h"
+#include "cim/cim_def.h"
+#include "cim/core/callback.h"
+#include "cim/base/noncopyable.h"
 
 #include <google/protobuf/message_lite.h>
 

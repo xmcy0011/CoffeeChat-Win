@@ -9,8 +9,8 @@
 
 #include <string>
 
-#include "pb/CIM.Def.pb.h"
-#include "pb/cim.Login.pb.h"
+#include "cim/pb/CIM.Def.pb.h"
+#include "cim/pb/cim.Login.pb.h"
 
 namespace cim {
     namespace core {

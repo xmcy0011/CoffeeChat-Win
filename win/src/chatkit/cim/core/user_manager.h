@@ -7,7 +7,9 @@
 #ifndef _IM_USER_MANAGER_F51B4D37_8EE2_425D_8E93_7AD84E14CA08_
 #define _IM_USER_MANAGER_F51B4D37_8EE2_425D_8E93_7AD84E14CA08_
 
-#include "cim.h"
+#include "cim/base/noncopyable.h"
+#include "cim/cim_def.h"
+#include "cim/cim_dll.h"
 
 namespace cim {
     namespace core {

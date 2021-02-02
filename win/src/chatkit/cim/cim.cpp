@@ -1,7 +1,5 @@
 #include "pch.h"
-#include "cim.h"
-#include "core/client.h"
-#include "base/Log.h"
+#include "cim/cim.h"
 
 #include <WINSOCK2.H>
 

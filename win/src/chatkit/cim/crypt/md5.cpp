@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "md5.h"
+#include "cim/crypt/md5.h"
 
 using namespace std;
 
@@ -345,18 +345,18 @@ string MD5::toString() {
     return bytesToHexString(digest(), 16);
 }
 
-//string FileDigest(const string& file) {
-//    ifstream in(file.c_str(), ios::binary);
-//
-//    if (!in) {
-//        //int code = GetLastError();
-//        //LogWarn("ifstream error:{}", code);
-//        return "";
-//    }
-//
-//    MD5 md5;
-//    md5.update(in);
-//    std::string test = md5.toString();
-//    //LogInfo("md5:{}", test);
-//    return test;
-//}
+string FileDigest(const string& file) {
+    ifstream in(file.c_str(), ios::binary);
+
+    if (!in) {
+        //int code = GetLastError();
+        //LogWarn("ifstream error:{}", code);
+        return "";
+    }
+
+    MD5 md5;
+    md5.update(in);
+    std::string test = md5.toString();
+    //LogInfo("md5:{}", test);
+    return test;
+}

@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "main.h"
 #include "gui/login/login_form.h"
+#include "cim.h"
 
 enum ThreadId {
     kThreadUI
@@ -24,6 +25,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 执行主线程循环
     thread.RunOnCurrentThreadWithLoop(nbase::MessageLoop::kUIMessageLoop);
+
+    // init chatkit
+    cim::ChatKitConfig config;
+
+    if (cim::initChatKit(config)) != cim::Result::kSuccess) {
+        LogWarn("init chatkit failed.");
+        return -1;
+    }
 
     return 0;
 }

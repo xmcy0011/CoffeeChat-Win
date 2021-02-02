@@ -161,22 +161,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="base\Exception.cpp" />
-    <ClCompile Include="base\Log.cpp" />
-    <ClCompile Include="cim.cpp" />
-    <ClCompile Include="core\client.cpp" />
-    <ClCompile Include="core\user_manager.cpp" />
-    <ClCompile Include="crypt\md5.cpp" />
-    <ClCompile Include="db\config_manager.cpp" />
-    <ClCompile Include="db\sqlite3_helper.cpp" />
+    <ClCompile Include="cim\base\Exception.cpp" />
+    <ClCompile Include="cim\base\Log.cpp" />
+    <ClCompile Include="cim\cim.cpp" />
+    <ClCompile Include="cim\core\client.cpp" />
+    <ClCompile Include="cim\core\user_manager.cpp" />
+    <ClCompile Include="cim\crypt\md5.cpp" />
+    <ClCompile Include="cim\crypt\test.cpp" />
+    <ClCompile Include="cim\db\config_dao.cpp" />
+    <ClCompile Include="cim\db\sqlite3_helper.cpp" />
+    <ClCompile Include="cim\pb\CIM.Def.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.Friend.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.Group.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.List.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.Login.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.Message.pb.cc" />
+    <ClCompile Include="cim\pb\CIM.Voip.pb.cc" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pb\CIM.Def.pb.cc" />
-    <ClCompile Include="pb\CIM.Group.pb.cc" />
-    <ClCompile Include="pb\CIM.List.pb.cc" />
-    <ClCompile Include="pb\CIM.Login.pb.cc" />
-    <ClCompile Include="pb\CIM.Message.pb.cc" />
-    <ClCompile Include="pb\CIM.Voip.pb.cc" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
@@ -184,24 +186,26 @@
     <ClCompile Include="test\test_user_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="base\Exception.h" />
-    <ClInclude Include="base\Log.h" />
-    <ClInclude Include="base\noncopyable.h" />
-    <ClInclude Include="cim.h" />
-    <ClInclude Include="cim_def.h" />
-    <ClInclude Include="cim_dll.h" />
-    <ClInclude Include="core\client.h" />
-    <ClInclude Include="core\callback.h" />
-    <ClInclude Include="core\user_manager.h" />
-    <ClInclude Include="crypt\md5.h" />
-    <ClInclude Include="db\config_manager.h" />
-    <ClInclude Include="db\sqlite3_helper.h" />
-    <ClInclude Include="pb\CIM.Def.pb.h" />
-    <ClInclude Include="pb\CIM.Group.pb.h" />
-    <ClInclude Include="pb\CIM.List.pb.h" />
-    <ClInclude Include="pb\CIM.Login.pb.h" />
-    <ClInclude Include="pb\CIM.Message.pb.h" />
-    <ClInclude Include="pb\CIM.Voip.pb.h" />
+    <ClInclude Include="cim\base\Exception.h" />
+    <ClInclude Include="cim\base\Log.h" />
+    <ClInclude Include="cim\base\noncopyable.h" />
+    <ClInclude Include="cim\cim.h" />
+    <ClInclude Include="cim\cim_def.h" />
+    <ClInclude Include="cim\cim_dll.h" />
+    <ClInclude Include="cim\core\callback.h" />
+    <ClInclude Include="cim\core\cim_conn_base.h" />
+    <ClInclude Include="cim\core\client.h" />
+    <ClInclude Include="cim\core\user_manager.h" />
+    <ClInclude Include="cim\crypt\md5.h" />
+    <ClInclude Include="cim\db\config_dao.h" />
+    <ClInclude Include="cim\db\sqlite3_helper.h" />
+    <ClInclude Include="cim\pb\CIM.Def.pb.h" />
+    <ClInclude Include="cim\pb\CIM.Friend.pb.h" />
+    <ClInclude Include="cim\pb\CIM.Group.pb.h" />
+    <ClInclude Include="cim\pb\CIM.List.pb.h" />
+    <ClInclude Include="cim\pb\CIM.Login.pb.h" />
+    <ClInclude Include="cim\pb\CIM.Message.pb.h" />
+    <ClInclude Include="cim\pb\CIM.Voip.pb.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="test\test_client.h" />
     <ClInclude Include="test\test_user_manager.h" />

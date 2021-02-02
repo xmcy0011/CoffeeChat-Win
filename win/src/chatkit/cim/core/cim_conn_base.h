@@ -7,7 +7,7 @@
 #ifndef _CIM_CONN_BASE_E3284850_C63B_415E_8437_DA08266183CB_
 #define _CIM_CONN_BASE_E3284850_C63B_415E_8437_DA08266183CB_
 
-#include "pb/CIM.Def.pb.h"
+#include "cim/pb/CIM.Def.pb.h"
 #include <memory>
 #include <string>
 

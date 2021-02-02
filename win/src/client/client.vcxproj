@@ -75,8 +75,8 @@
     <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>coffeechat</TargetName>
     <OutDir>$(ProjectDir)..\..\bin\</OutDir>
-    <IncludePath>..\..\third_party\NIM_Duilib_Framework;..\..\third_party\NIM_Duilib_Framework\ui_components;$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\third_party\NIM_Duilib_Framework;..\..\third_party\NIM_Duilib_Framework\ui_components;..\chatkit;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -114,7 +114,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USE_CIM_LOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -180,6 +180,7 @@
   <ItemGroup>
     <ClInclude Include="gui\home\home_form.h" />
     <ClInclude Include="gui\login\login_form.h" />
+    <ClInclude Include="helper\config.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -188,6 +189,7 @@
   <ItemGroup>
     <ClCompile Include="gui\home\home_form.cpp" />
     <ClCompile Include="gui\login\login_form.cpp" />
+    <ClCompile Include="helper\config.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

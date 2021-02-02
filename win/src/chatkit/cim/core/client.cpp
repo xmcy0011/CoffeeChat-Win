@@ -1,6 +1,6 @@
 #include "pch.h"
-#include "client.h"
-#include "base/Log.h"
+#include "cim/core/client.h"
+#include "cim/base/Log.h"
 
 #include <evpp/event_loop.h>
 #include <evpp/event_loop_thread.h>
@@ -8,10 +8,11 @@
 #include <evpp/tcp_client.h>
 #include <evpp/buffer.h>
 
-#include "crypt/md5.h"
+#include "cim/cim.h"
+#include "cim/crypt/md5.h"
 
-#include "pb/CIM.Def.pb.h"
-#include "pb/CIM.Login.pb.h"
+#include "cim/pb/CIM.Def.pb.h"
+#include "cim/pb/CIM.Login.pb.h"
 
 //std::atomic_uint16_t g_seq = 1;
 const uint32_t kMaxBufferLen = 1024 * 10;// 10 KB

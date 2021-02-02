@@ -1,8 +1,8 @@
 #include "pch.h"
 
 #ifdef _DEBUG
-#include "cim.h"
-#include "base/Log.h"
+#include "cim/cim.h"
+#include "cim/base/Log.h"
 
 void testLogin() {
     using namespace cim::core;
@@ -13,7 +13,7 @@ void testLogin() {
     std::string u = "user123";
     std::string pwd = "sa123456";
 
-    if (cim::initChatKit(config) != kSuccess) {
+    if (cim::initChatKit(config) != cim::kSuccess) {
         return;
     }
 
