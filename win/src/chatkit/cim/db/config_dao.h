@@ -12,12 +12,21 @@ namespace cim {
             uint16_t httpPort;
         };
 
-        class ConfigDao : noncopyable {
+        class CIM_DLL_API ConfigDao : noncopyable {
           public:
             static ConfigDao* getInstance();
 
             // crud
+            bool createTable() noexcept;
+            bool query(IMConfig& out) noexcept;
 
+            void updateServerIp(const std::string& ip) noexcept;
+            void updateMsgPort(const uint16_t& msgPort) noexcept;
+            void updateHttpPort(const uint16_t& httpPort) noexcept;
+
+          private:
+            void insertDefaultData();
+            void updateKey(std::string key, std::string newValue) noexcept;
 
           private:
             ConfigDao();

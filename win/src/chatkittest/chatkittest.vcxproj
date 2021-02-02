@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test\test_client.h" />
+    <ClInclude Include="test\test_config_dao.hpp" />
     <ClInclude Include="test\test_user_manager.h" />
   </ItemGroup>
   <ItemGroup>

@@ -35,5 +35,8 @@
     <ClInclude Include="test\test_user_manager.h">
       <Filter>test</Filter>
     </ClInclude>
+    <ClInclude Include="test\test_config_dao.hpp">
+      <Filter>test</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
