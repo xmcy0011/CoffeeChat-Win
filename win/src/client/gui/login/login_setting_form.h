@@ -1,14 +1,15 @@
-#ifndef _HOME_FORM_F8DFE302_C7E2_4BE3_BD52_C8E98917FC35_
-#define _HOME_FORM_F8DFE302_C7E2_4BE3_BD52_C8E98917FC35_
+#ifndef _LOGIN_SETTING_FORM_31CB87C8_9343_4D9E_A478_3C8207A134DB_
+#define _LOGIN_SETTING_FORM_31CB87C8_9343_4D9E_A478_3C8207A134DB_
+
 
 #include "duilib/UIlib.h"
 
-void ShowHomeForm();
+void ShowLoginSettingForm();
 
-class HomeForm : public ui::WindowImplBase {
+class LoginSettingForm : public ui::WindowImplBase {
   public:
-    HomeForm();
-    ~HomeForm();
+    LoginSettingForm();
+    ~LoginSettingForm();
 
     /**
      * 一下三个接口是必须要覆写的接口，父类会调用这三个接口来构建窗口
@@ -33,8 +34,13 @@ class HomeForm : public ui::WindowImplBase {
     static const std::wstring kClassName;
 
   private:
+    bool onLoginClick(ui::EventArgs* msg);
+
+  private:
+    ui::RichEdit* edit_ip_;
+    ui::RichEdit* edit_gate_port_;
+    ui::RichEdit* edit_http_port_;
 };
 
-#endif//_HOME_FORM_F8DFE302_C7E2_4BE3_BD52_C8E98917FC35_
 
-
+#endif//_LOGIN_SETTING_FORM_31CB87C8_9343_4D9E_A478_3C8207A134DB_

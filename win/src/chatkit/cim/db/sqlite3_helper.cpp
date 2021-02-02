@@ -25,17 +25,21 @@ namespace cim {
         }
 
         bool SqliteHelper::init() {
-            // check db file exist
-
             std::wstring filename = cim::getChatKitConfig().appConfig.app_data_dir + L"\\" + kDefaultAppDataFilename;
 
             if (cim::getChatKitConfig().appConfig.app_data_dir.empty()) {
                 filename = kDefaultAppDataFilename;
+
+            } else {
+                if (!nbase::FilePathIsExist(cim::getChatKitConfig().appConfig.app_data_dir, true)) {
+                    nbase::CreateDirectoryW(cim::getChatKitConfig().appConfig.app_data_dir);
+                }
             }
 
             try {
                 std::string tempName = nbase::UTF16ToUTF8(filename);
 
+                // check db file exist
                 if (!nbase::FilePathIsExist(filename, false)) {
                     db_ = std::make_shared<SQLite::Database>(tempName, SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
 
@@ -52,6 +56,7 @@ namespace cim {
                 return false;
             }
 
+            db_is_open_ = true;
             return true;
         }
 
@@ -68,7 +73,6 @@ namespace cim {
             assert(db_ != nullptr);
             return db_;
         }
-
     }
 }
 

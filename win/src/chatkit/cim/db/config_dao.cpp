@@ -24,7 +24,9 @@ namespace cim {
         const std::string kTableNameUserConfig = "im_user_config";
 
 #define SELECT_USER_CONFIG_SQL ("select id,key,value from " + kTableNameUserConfig)
+#define SELECT_USER_CONFIG_SQL_SINGLE ("select id,key,value from " + kTableNameUserConfig + " where key=?")
 #define UPDATE_USER_CONFIG_SQL_IP ("update "+ kTableNameUserConfig + " set value=? where key=?")
+#define INSERT_USER_CONFIG_SQL "insert into " + kTableNameUserConfig + "(key,value) values(?,?)"
 
         ConfigDao* ConfigDao::getInstance() {
             static ConfigDao instance;
@@ -72,24 +74,63 @@ namespace cim {
             }
         }
 
-        void ConfigDao::updateKey(std::string key, std::string newValue) noexcept {
+        void ConfigDao::updateKey(const std::string& key, const std::string& newValue) noexcept {
+            auto conn = SqliteHelper::getInstance()->getConn();
+
+            std::string outV;
+
+            if (queryKey(key, outV)) { // update
+                try {
+                    SQLite::Statement st(*conn, UPDATE_USER_CONFIG_SQL_IP);
+                    st.bind(1, newValue);
+                    st.bind(2, key);
+
+                    if (st.exec() <= 0) {
+                        LogWarn("update {}={} error", key, newValue);
+                    }
+
+                } catch (const std::exception& e) {
+                    LogWarn("error:{}", e.what());
+                }
+
+            } else { // insert
+                try {
+                    SQLite::Statement st(*conn, INSERT_USER_CONFIG_SQL);
+                    st.bind(1, key);
+                    st.bind(2, newValue);
+
+                    if (st.exec() <= 0) {
+                        LogWarn("insert {}={} error", key, newValue);
+                    }
+
+                } catch (const std::exception& e) {
+                    LogWarn("error:{}", e.what());
+                }
+            }
+        }
+
+
+
+        bool ConfigDao::queryKey(const std::string& key, std::string& outValue) noexcept {
             auto conn = SqliteHelper::getInstance()->getConn();
 
             try {
-                SQLite::Statement st(*conn, UPDATE_USER_CONFIG_SQL_IP);
-                st.bind(1, newValue);
-                st.bind(2, key);
+                SQLite::Statement st(*conn, SELECT_USER_CONFIG_SQL_SINGLE);
+                st.bind(1, key);
 
-                if (st.exec() <= 0) {
-                    LogWarn("update {}={} error", key, newValue);
+                if (st.executeStep()) {
+                    outValue = st.getColumn(2).getString();
+                    return true;
                 }
 
             } catch (const std::exception& e) {
                 LogWarn("error:{}", e.what());
             }
+
+            return false;
         }
 
-        bool ConfigDao::query(IMConfig& out) noexcept {
+        bool ConfigDao::query(ConfigServerInfo& out) noexcept {
             auto conn = SqliteHelper::getInstance()->getConn();
 
             try {
@@ -105,7 +146,7 @@ namespace cim {
                     const std::string value = query.getColumn(2);
 
                     if (key == "serverIp") {
-                        out.serverIp = value;
+                        out.ip = value;
 
                     } else if (key == "gatePort") {
                         out.gatePort = std::atoi(value.c_str());

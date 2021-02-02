@@ -4,11 +4,8 @@
 #include "stdafx.h"
 #include "main.h"
 #include "gui/login/login_form.h"
+#include "gui/login/login_setting_form.h"
 #include "cim/cim.h"
-
-enum ThreadId {
-    kThreadUI
-};
 
 HINSTANCE g_instance_;
 
@@ -19,13 +16,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-    // 创建主线程
-    MainThread thread;
-    g_instance_ = hInstance;
-
-    // 执行主线程循环
-    thread.RunOnCurrentThreadWithLoop(nbase::MessageLoop::kUIMessageLoop);
-
     // init chatkit
     cim::ChatKitConfig config;
 
@@ -33,6 +23,21 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         LogWarn("init chatkit failed.");
         return -1;
     }
+
+    cim::ConfigServerInfo info;
+
+    if (cim::db::ConfigDao::getInstance()->query(info)) {
+        LogInfo("serverIP:{},gatePort:{},httpPort:{}", info.ip, info.gatePort, info.httpPort);
+        cim::setChatKitServerInfo(info);
+    }
+
+
+    // 创建主线程
+    MainThread thread;
+    g_instance_ = hInstance;
+
+    // 执行主线程循环
+    thread.RunOnCurrentThreadWithLoop(nbase::MessageLoop::kUIMessageLoop);
 
     return 0;
 }
@@ -58,7 +63,6 @@ void MainThread::Init() {
     ui::GlobalManager::Startup(L"resources\\", ui::CreateControlCallback(), false);
 #endif
 
-    // 创建一个默认带有阴影的居中窗口
     LoginForm* window = new LoginForm();
 
     //设置程序默认图标
@@ -77,4 +81,8 @@ void MainThread::Cleanup() {
     ui::GlobalManager::Shutdown();
     SetThreadWasQuitProperly(true);
     nbase::ThreadManager::UnregisterThread();
+
+    // kill myself
+    HANDLE hself = GetCurrentProcess();
+    TerminateProcess(hself, 0);
 }

@@ -44,7 +44,7 @@ namespace cim {
     const uint16_t kDefaultGateSrvPort = 8000;
     const uint16_t kDefaultHttpSrvPort = 18080;
 
-    const std::wstring kDefaultAppDataDir = L"";
+    const std::wstring kDefaultAppDataDir = L"data";
     const std::wstring kDefaultAppDataFilename = L"msg.db";
 
     struct ConfigServerInfo {

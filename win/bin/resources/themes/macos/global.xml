@@ -64,7 +64,7 @@
     
 
     <!--文字色值，不带透明层-->
-    <TextColor name="textdefaultcolor" value="#ff333333"/>
+    <TextColor name="textdefaultcolor" value="#ff242424"/>
     <TextColor name="textdefaultdisablecolor" value="#ffa1aebc"/>
 
     <!--窗口常用背景色-->
