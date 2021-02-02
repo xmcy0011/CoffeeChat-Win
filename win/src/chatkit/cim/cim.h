@@ -41,6 +41,10 @@ namespace cim {
     * @return cim::Result
     */
     CIM_DLL_API int initChatKit(const ChatKitConfig& config);
+    /** @fn cleanup
+      * @brief 退出前释放相关资源
+      */
+    CIM_DLL_API void cleanup();
 
     /** @fn setChatKitServerInfo
       * @brief 设置服务器信息

@@ -41,6 +41,11 @@ namespace cim {
         typedef std::function<void(IMHeader&, evpp::Buffer* data)> MessageCallback;
         typedef std::function<void()> TimeoutCallback;
 
+        /** @class Client
+          * @brief 封装和服务器通信的类，必须认证后才可使用
+          * @author fei.xu
+          * @date 2021/2/2
+          */
         class CIM_DLL_API Client : public cim::noncopyable {
           public:
             /** @fn

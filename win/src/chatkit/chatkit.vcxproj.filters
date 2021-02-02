@@ -2,15 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="test\test_client.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="test\test_user_manager.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>msvc</Filter>
     </ClCompile>
@@ -64,12 +55,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test\test_client.h">
-      <Filter>test</Filter>
-    </ClInclude>
-    <ClInclude Include="test\test_user_manager.h">
-      <Filter>test</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>msvc</Filter>
     </ClInclude>
@@ -135,9 +120,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="test">
-      <UniqueIdentifier>{a098dc41-c7d6-40c1-b606-8e9cdc49c90a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="msvc">
       <UniqueIdentifier>{d9cf3e5e-a6b3-4fbe-a888-eccfcf01c4a9}</UniqueIdentifier>
     </Filter>

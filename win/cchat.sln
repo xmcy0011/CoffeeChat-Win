@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sdk", "sdk", "{3A12B708-197
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chatkit", "src\chatkit\chatkit.vcxproj", "{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chatkittest", "src\chatkittest\chatkittest.vcxproj", "{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -77,6 +79,14 @@ Global
 		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x64.Build.0 = Release|x64
 		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x86.ActiveCfg = Release|Win32
 		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}.Release|x86.Build.0 = Release|Win32
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Debug|x64.ActiveCfg = Debug|x64
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Debug|x64.Build.0 = Debug|x64
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Debug|x86.Build.0 = Debug|Win32
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Release|x64.ActiveCfg = Release|x64
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Release|x64.Build.0 = Release|x64
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Release|x86.ActiveCfg = Release|Win32
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +98,7 @@ Global
 		{F1A9371F-9A34-45A0-98EB-83FF371F067F} = {31F23DA8-F38E-4C6F-9685-082E6E9C45E5}
 		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9} = {D5BFAFF5-8137-479E-8EAC-012B1B3E0E09}
 		{C4D56953-7A3F-406C-89DE-AD1BC477DA1D} = {3A12B708-1971-40DE-8180-D95DD5A7E3C0}
+		{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B} = {3A12B708-1971-40DE-8180-D95DD5A7E3C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {854C0D93-9D52-4AE7-B9AF-BB643DAFB456}

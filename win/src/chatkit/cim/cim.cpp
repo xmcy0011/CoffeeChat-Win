@@ -31,7 +31,17 @@ namespace cim {
 
         // init loop
         cim::core::Client::getInstance();
+
+        // init db
+        if (!cim::db::SqliteHelper::getInstance()->init()) {
+            return kError;
+        }
+
         return kSuccess;
+    }
+
+    CIM_DLL_API void cleanup() {
+        cim::core::Client::getInstance()->logout();
     }
 
     CIM_DLL_API void setChatKitServerInfo(const ConfigServerInfo& info) {

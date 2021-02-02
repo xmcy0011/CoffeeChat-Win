@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "main.h"
 #include "gui/login/login_form.h"
-#include "cim.h"
+#include "cim/cim.h"
 
 enum ThreadId {
     kThreadUI
@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     // init chatkit
     cim::ChatKitConfig config;
 
-    if (cim::initChatKit(config)) != cim::Result::kSuccess) {
+    if (cim::initChatKit(config) != cim::Result::kSuccess) {
         LogWarn("init chatkit failed.");
         return -1;
     }
@@ -71,6 +71,9 @@ void MainThread::Init() {
 }
 
 void MainThread::Cleanup() {
+    // sdk dispose
+    cim::cleanup();
+
     ui::GlobalManager::Shutdown();
     SetThreadWasQuitProperly(true);
     nbase::ThreadManager::UnregisterThread();

@@ -20,33 +20,33 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{C4D56953-7A3F-406C-89DE-AD1BC477DA1D}</ProjectGuid>
+    <ProjectGuid>{7BAA5C45-D2D2-4C93-84E4-2E3AA5883D6B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>chatkit</RootNamespace>
+    <RootNamespace>chatkittest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -72,143 +72,101 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\bin\</OutDir>
-    <IncludePath>.;..\..\third_party\json\include;..\..\third_party\NIM_Duilib_Framework;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\third_party\json\bin;$(LibraryPath)</LibraryPath>
-    <TargetName>$(ProjectName)d</TargetName>
+    <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>.;..\chatkit;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;CIM_DLL_EXPORTS;_CONSOLE;_USRDLL;USE_PCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>jsoncppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;CHATKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cim\base\Exception.cpp" />
-    <ClCompile Include="cim\base\Log.cpp" />
-    <ClCompile Include="cim\cim.cpp" />
-    <ClCompile Include="cim\core\client.cpp" />
-    <ClCompile Include="cim\core\user_manager.cpp" />
-    <ClCompile Include="cim\crypt\md5.cpp" />
-    <ClCompile Include="cim\crypt\test.cpp" />
-    <ClCompile Include="cim\db\config_dao.cpp" />
-    <ClCompile Include="cim\db\sqlite3_helper.cpp" />
-    <ClCompile Include="cim\pb\CIM.Def.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.Friend.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.Group.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.List.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.Login.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.Message.pb.cc" />
-    <ClCompile Include="cim\pb\CIM.Voip.pb.cc" />
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test\test_client.cpp" />
+    <ClCompile Include="test\test_user_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cim\base\Exception.h" />
-    <ClInclude Include="cim\base\Log.h" />
-    <ClInclude Include="cim\base\noncopyable.h" />
-    <ClInclude Include="cim\cim.h" />
-    <ClInclude Include="cim\cim_def.h" />
-    <ClInclude Include="cim\cim_dll.h" />
-    <ClInclude Include="cim\core\callback.h" />
-    <ClInclude Include="cim\core\cim_conn_base.h" />
-    <ClInclude Include="cim\core\client.h" />
-    <ClInclude Include="cim\core\user_manager.h" />
-    <ClInclude Include="cim\crypt\md5.h" />
-    <ClInclude Include="cim\db\config_dao.h" />
-    <ClInclude Include="cim\db\sqlite3_helper.h" />
-    <ClInclude Include="cim\pb\CIM.Def.pb.h" />
-    <ClInclude Include="cim\pb\CIM.Friend.pb.h" />
-    <ClInclude Include="cim\pb\CIM.Group.pb.h" />
-    <ClInclude Include="cim\pb\CIM.List.pb.h" />
-    <ClInclude Include="cim\pb\CIM.Login.pb.h" />
-    <ClInclude Include="cim\pb\CIM.Message.pb.h" />
-    <ClInclude Include="cim\pb\CIM.Voip.pb.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="test\test_client.h" />
+    <ClInclude Include="test\test_user_manager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\third_party\NIM_Duilib_Framework\base\base.vcxproj">
-      <Project>{8d9a6595-717a-41c8-b468-0011a72be3d1}</Project>
+    <ProjectReference Include="..\chatkit\chatkit.vcxproj">
+      <Project>{c4d56953-7a3f-406c-89de-ad1bc477da1d}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
