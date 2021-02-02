@@ -12,6 +12,16 @@
 const int kSuccess = 0;
 const int kError = -1;
 
+namespace cim {
+    enum Result {
+        kUnknown = 0,
+        kSuccess = 1,
+        kError = -1,
+
+        // more
+    };
+}
+
 const uint16_t kProtocolVersion = 1;
 
 // MessageLite, evpp::Buffer

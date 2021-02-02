@@ -1,5 +1,6 @@
-#ifdef _DEBUG
+#include "pch.h"
 
+#ifdef _DEBUG
 #include "cim.h"
 #include "base/Log.h"
 
@@ -7,7 +8,7 @@
 
 void testRegisterUser() {
     cim::ChatKitConfig config;
-    config.serverIp = "10.0.107.244";
+    config.serverInfo.ip = "10.0.107.244";
 
     if (cim::initChatKit(config) != kSuccess) {
         return;

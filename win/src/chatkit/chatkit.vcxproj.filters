@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="base\Exception.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -42,6 +41,18 @@
     </ClCompile>
     <ClCompile Include="test\test_user_manager.cpp">
       <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="db\config_manager.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\sqlite3_helper.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>msvc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +104,15 @@
     <ClInclude Include="test\test_user_manager.h">
       <Filter>test</Filter>
     </ClInclude>
+    <ClInclude Include="db\config_manager.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="db\sqlite3_helper.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>msvc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="base">
@@ -109,6 +129,12 @@
     </Filter>
     <Filter Include="crypt">
       <UniqueIdentifier>{25d091eb-3681-46d0-93ca-28b03197e563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{9858fd2f-822f-484e-85aa-487c8025da7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msvc">
+      <UniqueIdentifier>{d9cf3e5e-a6b3-4fbe-a888-eccfcf01c4a9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

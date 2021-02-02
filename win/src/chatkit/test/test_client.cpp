@@ -1,3 +1,5 @@
+#include "pch.h"
+
 #ifdef _DEBUG
 #include "cim.h"
 #include "base/Log.h"
@@ -6,7 +8,7 @@ void testLogin() {
     using namespace cim::core;
 
     cim::ChatKitConfig config;
-    config.serverIp = "10.0.107.244";
+    config.serverInfo.ip = "10.0.107.244";
 
     std::string u = "user123";
     std::string pwd = "sa123456";

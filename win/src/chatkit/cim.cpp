@@ -36,6 +36,10 @@ namespace cim {
         return kSuccess;
     }
 
+    CIM_DLL_API void setChatKitServerInfo(const ConfigServerInfo& info) {
+        g_config.serverInfo = info;
+    }
+
     const ChatKitConfig& cim::getChatKitConfig() {
         return g_config;
     }

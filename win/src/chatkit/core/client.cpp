@@ -52,7 +52,7 @@ namespace cim {
             user_name_ = user_name;
             user_pwd_ = md.toString(); // md5
 
-            std::string end_point = cim::getChatKitConfig().serverIp + ":" + std::to_string(cim::getChatKitConfig().serverGataPort);
+            std::string end_point = cim::getChatKitConfig().serverInfo.ip + ":" + std::to_string(cim::getChatKitConfig().serverInfo.gatePort);
 
             if (tcp_client_ == nullptr) {
                 tcp_client_ = std::make_unique<evpp::TCPClient>(loop_.get()->loop(), end_point, "tcp_client");

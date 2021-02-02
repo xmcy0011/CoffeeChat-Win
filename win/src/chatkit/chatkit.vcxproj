@@ -27,7 +27,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -74,7 +74,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\bin\</OutDir>
-    <IncludePath>.;..\..\third_party\json\include;$(IncludePath)</IncludePath>
+    <IncludePath>.;..\..\third_party\json\include;..\..\third_party\NIM_Duilib_Framework;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\third_party\json\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -89,11 +89,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;CIM_DLL_EXPORTS;_CONSOLE;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CIM_DLL_EXPORTS;_CONSOLE;_USRDLL;USE_PCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -167,6 +167,8 @@
     <ClCompile Include="core\client.cpp" />
     <ClCompile Include="core\user_manager.cpp" />
     <ClCompile Include="crypt\md5.cpp" />
+    <ClCompile Include="db\config_manager.cpp" />
+    <ClCompile Include="db\sqlite3_helper.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pb\CIM.Def.pb.cc" />
@@ -175,6 +177,9 @@
     <ClCompile Include="pb\CIM.Login.pb.cc" />
     <ClCompile Include="pb\CIM.Message.pb.cc" />
     <ClCompile Include="pb\CIM.Voip.pb.cc" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="test\test_client.cpp" />
     <ClCompile Include="test\test_user_manager.cpp" />
   </ItemGroup>
@@ -189,14 +194,22 @@
     <ClInclude Include="core\callback.h" />
     <ClInclude Include="core\user_manager.h" />
     <ClInclude Include="crypt\md5.h" />
+    <ClInclude Include="db\config_manager.h" />
+    <ClInclude Include="db\sqlite3_helper.h" />
     <ClInclude Include="pb\CIM.Def.pb.h" />
     <ClInclude Include="pb\CIM.Group.pb.h" />
     <ClInclude Include="pb\CIM.List.pb.h" />
     <ClInclude Include="pb\CIM.Login.pb.h" />
     <ClInclude Include="pb\CIM.Message.pb.h" />
     <ClInclude Include="pb\CIM.Voip.pb.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="test\test_client.h" />
     <ClInclude Include="test\test_user_manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\third_party\NIM_Duilib_Framework\base\base.vcxproj">
+      <Project>{8d9a6595-717a-41c8-b468-0011a72be3d1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

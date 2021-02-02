@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "user_manager.h"
 
 #include "client.h"
@@ -22,7 +23,7 @@ namespace cim {
         }
 
         bool UserManager::registerUser(std::string userName, std::string userPwd, std::string nickName, HttpResponseBase& out) {
-            std::string url = "http://" + cim::getChatKitConfig().serverIp + ":" + std::to_string(cim::getChatKitConfig().serverHttpPort) + kUrlRegisterUser;
+            std::string url = "http://" + cim::getChatKitConfig().serverInfo.ip + ":" + std::to_string(cim::getChatKitConfig().serverInfo.httpPort) + kUrlRegisterUser;
 
             MD5 md;
             md.update(userPwd);
