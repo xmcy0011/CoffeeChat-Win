@@ -43,7 +43,6 @@ void LoginForm::InitWindow() {
 }
 
 LRESULT LoginForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) {
-    PostQuitMessage(0L);
     return __super::OnClose(uMsg, wParam, lParam, bHandled);
 }
 

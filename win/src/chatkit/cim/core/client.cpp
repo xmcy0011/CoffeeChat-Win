@@ -76,7 +76,7 @@ namespace cim {
                 is_login_ = false;
                 CIM::Login::CIMLogoutReq req;
                 req.set_user_id(user_id_);
-                req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_IOS);
+                req.set_client_type(CIM::Def::kCIM_CLIENT_TYPE_PC_WINDOWS);
                 send(CIM::Def::kCIM_CID_LOGIN_AUTH_LOGOUT_REQ, req);
             }
 

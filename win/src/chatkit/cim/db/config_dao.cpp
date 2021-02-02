@@ -109,8 +109,6 @@ namespace cim {
             }
         }
 
-
-
         bool ConfigDao::queryKey(const std::string& key, std::string& outValue) noexcept {
             auto conn = SqliteHelper::getInstance()->getConn();
 
