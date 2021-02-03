@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{d2cec430-57e8-4394-af9b-0b9efb0531ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\test_client.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_user_manager.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test\test_client.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\test_user_manager.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\test_config_dao.hpp">
+      <Filter>test</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

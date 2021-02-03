@@ -4,10 +4,8 @@
 #include "stdafx.h"
 #include "main.h"
 #include "gui/login/login_form.h"
-
-enum ThreadId {
-    kThreadUI
-};
+#include "gui/login/login_setting_form.h"
+#include "cim/cim.h"
 
 HINSTANCE g_instance_;
 
@@ -17,6 +15,22 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                       _In_ int       nCmdShow) {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
+
+    // init chatkit
+    cim::ChatKitConfig config;
+
+    if (cim::initChatKit(config) != cim::Result::kSuccess) {
+        LogWarn("init chatkit failed.");
+        return -1;
+    }
+
+    cim::ConfigServerInfo info;
+
+    if (cim::db::ConfigDao::getInstance()->query(info)) {
+        LogInfo("serverIP:{},gatePort:{},httpPort:{}", info.ip, info.gatePort, info.httpPort);
+        cim::setChatKitServerInfo(info);
+    }
+
 
     // 创建主线程
     MainThread thread;
@@ -38,7 +52,7 @@ void MainThread::Init() {
     // 默认皮肤使用 resources\\themes\\default
     // 默认语言使用 resources\\lang\\zh_CN
     // 如需修改请指定 Startup 最后两个参数
-    ui::GlobalManager::Startup(theme_dir + L"resources\\", ui::CreateControlCallback(), false);
+    ui::GlobalManager::Startup(theme_dir + L"resources\\", ui::CreateControlCallback(), false, L"themes\\macos");
 #else
     // Release 模式下使用资源中的压缩包作为资源
     // 资源被导入到资源列表分类为 THEME，资源名称为 IDR_THEME
@@ -49,7 +63,6 @@ void MainThread::Init() {
     ui::GlobalManager::Startup(L"resources\\", ui::CreateControlCallback(), false);
 #endif
 
-    // 创建一个默认带有阴影的居中窗口
     LoginForm* window = new LoginForm();
 
     //设置程序默认图标
@@ -62,7 +75,14 @@ void MainThread::Init() {
 }
 
 void MainThread::Cleanup() {
+    // sdk dispose
+    cim::cleanup();
+
     ui::GlobalManager::Shutdown();
     SetThreadWasQuitProperly(true);
     nbase::ThreadManager::UnregisterThread();
+
+    // kill myself
+    HANDLE hself = GetCurrentProcess();
+    TerminateProcess(hself, 0);
 }

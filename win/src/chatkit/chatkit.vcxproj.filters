@@ -2,82 +2,143 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="base\Exception.cpp">
-      <Filter>base</Filter>
+    <ClCompile Include="pch.cpp">
+      <Filter>msvc</Filter>
     </ClCompile>
-    <ClCompile Include="base\Log.cpp">
-      <Filter>base</Filter>
+    <ClCompile Include="cim\cim.cpp">
+      <Filter>cim</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.Def.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.Def.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.Group.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.Friend.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.List.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.Group.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.Login.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.List.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.Message.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.Login.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="pb\CIM.Voip.pb.cc">
-      <Filter>pb</Filter>
+    <ClCompile Include="cim\pb\CIM.Message.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="core\client.cpp">
-      <Filter>core</Filter>
+    <ClCompile Include="cim\pb\CIM.Voip.pb.cc">
+      <Filter>cim\pb</Filter>
     </ClCompile>
-    <ClCompile Include="cim.cpp" />
+    <ClCompile Include="cim\base\Exception.cpp">
+      <Filter>cim\base</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\base\Log.cpp">
+      <Filter>cim\base</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\core\client.cpp">
+      <Filter>cim\core</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\core\user_manager.cpp">
+      <Filter>cim\core</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\crypt\md5.cpp">
+      <Filter>cim\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\crypt\test.cpp">
+      <Filter>cim\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\db\sqlite3_helper.cpp">
+      <Filter>cim\db</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\db\config_dao.cpp">
+      <Filter>cim\db</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cim_dll.h" />
-    <ClInclude Include="cim_def.h" />
-    <ClInclude Include="cim.h" />
-    <ClInclude Include="base\Exception.h">
-      <Filter>base</Filter>
+    <ClInclude Include="pch.h">
+      <Filter>msvc</Filter>
     </ClInclude>
-    <ClInclude Include="base\Log.h">
-      <Filter>base</Filter>
+    <ClInclude Include="cim\cim.h">
+      <Filter>cim</Filter>
     </ClInclude>
-    <ClInclude Include="base\noncopyable.h">
-      <Filter>base</Filter>
+    <ClInclude Include="cim\cim_def.h">
+      <Filter>cim</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.Def.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\cim_dll.h">
+      <Filter>cim</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.Group.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\pb\CIM.Def.pb.h">
+      <Filter>cim\pb</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.List.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\pb\CIM.Friend.pb.h">
+      <Filter>cim\pb</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.Login.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\pb\CIM.Group.pb.h">
+      <Filter>cim\pb</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.Message.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\pb\CIM.List.pb.h">
+      <Filter>cim\pb</Filter>
     </ClInclude>
-    <ClInclude Include="pb\CIM.Voip.pb.h">
-      <Filter>pb</Filter>
+    <ClInclude Include="cim\pb\CIM.Login.pb.h">
+      <Filter>cim\pb</Filter>
     </ClInclude>
-    <ClInclude Include="core\client.h">
-      <Filter>core</Filter>
+    <ClInclude Include="cim\pb\CIM.Message.pb.h">
+      <Filter>cim\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\pb\CIM.Voip.pb.h">
+      <Filter>cim\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\base\Exception.h">
+      <Filter>cim\base</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\base\Log.h">
+      <Filter>cim\base</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\base\noncopyable.h">
+      <Filter>cim\base</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\callback.h">
+      <Filter>cim\core</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\cim_conn_base.h">
+      <Filter>cim\core</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\client.h">
+      <Filter>cim\core</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\user_manager.h">
+      <Filter>cim\core</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\crypt\md5.h">
+      <Filter>cim\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\db\sqlite3_helper.h">
+      <Filter>cim\db</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\db\config_dao.h">
+      <Filter>cim\db</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="base">
+    <Filter Include="msvc">
+      <UniqueIdentifier>{d9cf3e5e-a6b3-4fbe-a888-eccfcf01c4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cim">
+      <UniqueIdentifier>{3b386593-f7fa-41ce-95f7-89eac11c420e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cim\base">
       <UniqueIdentifier>{07d5a5a8-7a99-404a-be2f-b111f76c292b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core">
+    <Filter Include="cim\core">
       <UniqueIdentifier>{bfa7c3e9-6bff-412c-b388-42aad4280aab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="test">
-      <UniqueIdentifier>{a098dc41-c7d6-40c1-b606-8e9cdc49c90a}</UniqueIdentifier>
+    <Filter Include="cim\crypt">
+      <UniqueIdentifier>{25d091eb-3681-46d0-93ca-28b03197e563}</UniqueIdentifier>
     </Filter>
-    <Filter Include="pb">
+    <Filter Include="cim\db">
+      <UniqueIdentifier>{9858fd2f-822f-484e-85aa-487c8025da7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cim\pb">
       <UniqueIdentifier>{139e0b81-36ac-4d6e-abe5-a4e03f197deb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

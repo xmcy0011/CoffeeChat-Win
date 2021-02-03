@@ -22,6 +22,9 @@
     <Filter Include="gui\home">
       <UniqueIdentifier>{908650fd-f1c7-4370-972a-7926490f6ec4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="helper">
+      <UniqueIdentifier>{5d4ebf77-62ce-4721-bc38-7818e19fb1b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -42,6 +45,12 @@
     <ClInclude Include="gui\home\home_form.h">
       <Filter>gui\home</Filter>
     </ClInclude>
+    <ClInclude Include="helper\config.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\login\login_setting_form.h">
+      <Filter>gui\login</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -55,6 +64,12 @@
     </ClCompile>
     <ClCompile Include="gui\home\home_form.cpp">
       <Filter>gui\home</Filter>
+    </ClCompile>
+    <ClCompile Include="helper\config.cpp">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\login\login_setting_form.cpp">
+      <Filter>gui\login</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

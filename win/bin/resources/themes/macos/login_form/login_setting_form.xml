@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="380,190" caption="0,0,0,190">
+	<VBox width="380" height="190" bkcolor="bk_wnd_lightcolor">
+		<!-- 标题 -->
+		<HBox class="caption">
+			<Button class="btn_wnd_close" name="closebtn" float="true" margin="8,5,0,0" />
+			<Label text="设置" margin="51,2,51,0" align="center" width="277">
+			</Label>
+		</HBox>
+		<HBox height="20" margin="0,23,0,0">
+			<Label text="服务器IP地址：" normaltextcolor="textdefaultcolor" font="system_12" align="right" margin="14,0,0,0" width="120" />
+			<RichEdit class="simple input" rich="false" padding="5,0,5,0" multiline="false" name="re_ip" width="138" height="20" valign="center" font="system_12" promptmode="true" prompttext="127.0.0.1" promptcolor="gray" />
+			<Button class="btn_global_white_80x30" name="btn_test" width="53" height="19" margin="12,0,0,0" font="system_12" text="Test" />
+		</HBox>
+		<HBox height="20" margin="0,12,0,0">
+			<Label text="gata服务端口：" normaltextcolor="textdefaultcolor" font="system_12" align="right" margin="14,0,0,0" width="120" />
+			<RichEdit class="simple input" rich="false" padding="5,0,5,0" multiline="false" name="re_gate_port" width="138" height="20" valign="center" font="system_12" promptmode="true" prompttext="8000" promptcolor="gray" />			
+		</HBox>
+		<HBox height="20" margin="0,12,0,0">
+			<Label text="http服务端口：" normaltextcolor="textdefaultcolor" font="system_12" align="right" margin="14,0,0,0" width="120" />
+			<RichEdit class="simple input" rich="false" padding="5,0,5,0" multiline="false" name="re_http_port" width="138" height="20" valign="center" font="system_12" promptmode="true" prompttext="18080" promptcolor="gray" />
+		</HBox>
+		<HBox>
+			<Control />
+			<Button class="btn_global_white_80x30" name="btn_save" width="53" height="19" margin="12,19,0,0" font="system_12" text="Save" />
+			<Control />
+		</HBox>
+	</VBox>
+</Window>

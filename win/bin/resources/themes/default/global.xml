@@ -7,6 +7,8 @@
     <Font id="system_18" name="system" size="18"/>
     <Font id="system_20" name="system" size="20"/>
     <Font id="system_22" name="system" size="22"/>
+    <Font id="system_24" name="system" size="24"/>
+    <Font id="system_26" name="system" size="26"/>
     <Font id="system_bold_12" name="system" size="12" bold="true"/>
     <Font id="system_bold_14" name="system" size="14" bold="true"/>
     <Font id="system_bold_16" name="system" size="16" bold="true"/>
@@ -35,20 +37,31 @@
     <!--一些常规固定颜色-->
     <TextColor name="white" value="#ffffffff"/>
     <TextColor name="black" value="#ff000000"/>
+    <TextColor name="orange" value="#FFFF9500"/>
+    <TextColor name="yellow" value="#FFFFCC00"/>
+    <TextColor name="green" value="#FF4CD964"/>
+    <TextColor name="teal_blue" value="#FF5AC8FA"/>
+    <TextColor name="blue" value="#FF007AFF"/>
+    <TextColor name="purple" value="#FF5856D6"/>
+    <TextColor name="pink" value="#FFFF2D55"/>  
+    <TextColor name="red" value="#FFFF3B30"/>
+    <TextColor name="gray" value="#FF8E8E93"/>
+    
+    <TextColor name="custom_gray" value="#FFEFEFF4"/>
+    <TextColor name="light_gray" value="#FFE5E5EA"/>
+    <TextColor name="light_gray2" value="#FFD1D1D6"/>
+    <TextColor name="mid_gray" value="#FFC7C7CC"/>
+
     <TextColor name="darkcolor" value="#ff333333"/>
     <TextColor name="lightcolor" value="#ff888888"/>
-    <TextColor name="gray" value="#ff8e99a6"/>
-    <TextColor name="light_gray" value="#ffa8a8a8"/>
     <TextColor name="dark_gray" value="#ff72797f"/>
-    <TextColor name="green" value="#ff00bb96"/>
     <TextColor name="link_green" value="#ff21c7a6"/>
     <TextColor name="link_gray" value="#ff7F8FA4"/>
     <TextColor name="link_blue" value="#ff006DD9"/>
     <TextColor name="link_blue2" value="#ff55a0f5"/>
     <TextColor name="link_red" value="#ffC63535"/>
     <TextColor name="light_green" value="#ff21c7a6"/>
-    <TextColor name="blue" value="#ff006DD9"/>
-    <TextColor name="red" value="#ffC63535"/>
+    
 
     <!--文字色值，不带透明层-->
     <TextColor name="textdefaultcolor" value="#ff333333"/>
@@ -58,11 +71,14 @@
     <TextColor name="bk_main_wnd_title" value="#ff238efa"/>
     <TextColor name="bk_main_wnd_search" value="#ff1e7ad7"/>
     <TextColor name="bk_wnd_darkcolor" value="#fff0f2f5"/>
-    <TextColor name="bk_wnd_lightcolor" value="#fff4f5f4"/>
+    <TextColor name="bk_wnd_lightcolor" value="#FFEDEDED"/>
     <TextColor name="bk_menuitem_hovered" value="#ffe1e6eb"/>
     <TextColor name="bk_menuitem_selected" value="#ffced4db"/>
     <TextColor name="bk_listitem_hovered" value="#fff0f2f5"/>
     <TextColor name="bk_listitem_selected" value="#ffe4e7eb"/>
+    <TextColor name="bk_wnd_caption_color" value="#FFEDECED"/>  <!-- 渐变标题栏颜色 -->
+    <TextColor name="bk_wnd_caption_color1" value="#FFD2D1D2"/>
+
 
     <!--置顶项的背景颜色-->
     <TextColor name="bk_topitem_normal" value="#ffffffe0"/>
@@ -97,7 +113,8 @@
     <Class name="font_title" font="system_14"/>
 
     <!--标题栏-->
-    <Class name="caption" height="34" bkimage="file='../public/caption/caption_public.png' corner='0,0,0,1'" padding="10,0,5,0" />
+    <!-- <Class name="caption" height="34" bkimage="file='../public/caption/caption_public.png' corner='0,0,0,1'" padding="10,0,5,0" /> -->
+    <Class name="caption" height="22" bkcolor="bk_wnd_caption_color" bkcolor1="bk_wnd_caption_color1"/>
 
     <!--滚动条-->
     <Class name="vscrollbar" width="14" fadealpha="true" thumbnormalimage="file='../public/vscrollbar/thumb_normal.png'  corner='0,8,0,8'" thumbhotimage="file='../public/vscrollbar/thumb_hovered.png' corner='0,8,0,8'" bkhotimage="file='../public/vscrollbar/bk_hovered.png' corner='0,4,0,4'" showbutton1="false" showbutton2="false" />   
