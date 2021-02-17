@@ -4,12 +4,13 @@ CoffeeChat windows(c++,nim_duilib) client open source project
 
 ## build
 
-1. 安装VS2017
+1. 安装VS2017。PS：“语言包”中记得勾选“英语”选项，即安装English language pack包
 2. 安装vcpkg
    ```bash
    $ git clone https://github.com/Microsoft/vcpkg.git
    $ cd vcpkg
-   $ bootstrap-vcpkg.bat
+   $ # vcpkg目录加入到环境变量，如F:\github\vcpkg
+   $ bootstrap-vcpkg.bat # PS: 如果安装失败，请直接在release页面下载源码。
    $ vcpkg integrate install
    ```
 3. 集成vcpkg到vs2017（https://zhuanlan.zhihu.com/p/103334720）
@@ -33,6 +34,7 @@ $ vcpkg integrate project # 集成到工程
 5. git clone
 ```bash
 $ git clone https://github.com/xmcy0011/CoffeeChat-Win.git
+$ cd CoffeeChat-Win
 $ git submodule update --init # 拉子模块
 ```
 

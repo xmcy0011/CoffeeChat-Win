@@ -1,4 +1,4 @@
-set DST_DIR=..\src\chatkit\pb\
+set DST_DIR=..\src\chatkit\cim\pb\
 
 protoc --cpp_out=%DST_DIR% CIM.Def.proto
 protoc --cpp_out=%DST_DIR% CIM.Friend.proto
