@@ -2,17 +2,21 @@
 <Window>
 	<ListContainerElement class="listitem" height="70">
 		<HBox padding="5,0,10,0" childmargin="5" mouse="false">
-			<Box width="50" height="50" valign="center" mouse="false" mousechild="false">
+			<Box width="50" height="50" valign="center" mouse="false" mousechild="false" margin="5,10,0,10">
 				<Control name="item_icon" width="38" height="38" borderround="38,38,38,38" margin="1,1,0,0" />
 				<Control class="icon_headimage_mask_50x50" />
 			</Box>
 			<VBox>
-				<Label name="item_name" margin="15,10,0,0" width="stretch" font="system_bold_14" mouse="false" />
-				<!-- <Box width="auto" height="auto" float="true" halign="right" valign="center">
-					bkimage="file='../public/icon/icon_number.png' corner='8,7,8,7'"
+				<HBox height="20" margin="5,8,0,0">
+					<Label name="item_name" font="system_bold_14" width="auto" mouse="false" />
+					<Control bkimage="not_ring_normal.png" width="16" height="16" margin="0,2,0,0"/>
+					<Control />
+					<Label name="item_time" width="50" font="system_12" normaltextcolor="gray" mouse="false" text="1分钟前"/>
+				</HBox>
+				<!-- <Box width="auto" height="auto" float="true" halign="right" valign="center"> bkimage="file='../public/icon/icon_number.png' corner='8,7,8,7'"
 					<Label name="item_unread" width="auto" minwidth="18" height="18" textpadding="2,1,2,2" align="center" halign="center" normaltextcolor="white" mouse="false" visible="false" />
 				</Box> -->
-				<Label name="item_msg" width="stretch" margin="15,1,0,0" font="system_12" mouse="false" />
+				<Label name="item_msg" singleline="false" endellipsis="true" width="stretch" margin="5,1,0,0" font="system_12" mouse="false" height="32"/>
 			</VBox>
 		</HBox>
 		<Control class="splitline_hor_level1" float="true" valign="bottom" mouse="false" />

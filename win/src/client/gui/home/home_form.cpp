@@ -35,12 +35,14 @@ void HomeForm::InitWindow() {
     lb_session_ = static_cast<ui::ListBox*>(FindControl(L"list_session"));
     assert(lb_session_);
 
-    gui::session::SessionItem* item = new gui::session::SessionItem();
-    ui::GlobalManager::FillBoxWithCache(item, L"home_form/session_item.xml", nullptr);
-    item->InitControl("", false);
-    item->SetTitle(L"testchannel");
-    item->SetLatestMsg(L"[1Ìõ]xmcy0011£ºhello world");
-    lb_session_->Add(item);
+    for (int i = 0; i < 15; i++) {
+        gui::session::SessionItem* item = new gui::session::SessionItem();
+        ui::GlobalManager::FillBoxWithCache(item, L"home_form/session_item.xml", nullptr);
+        item->InitControl("", false);
+        item->SetTitle(L"testchannel");
+        item->SetLatestMsg(L"[1Ìõ]xmcy0011£ºhello world hello world hello world hello world hello world");
+        lb_session_->Add(item);
+    }
 }
 
 LRESULT HomeForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) {

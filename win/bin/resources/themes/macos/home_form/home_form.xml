@@ -16,8 +16,10 @@
 				<Control bkimage="contact_normal.png" width="36" height="36" margin="9,35,10,0" />
 				<Control bkimage="setting_normal.png" width="36" height="36" margin="9,35,10,0" />
 			</VBox>
+			<Control class="splitline_ver_level1" width="1" mouse="false" />
+
 			<!-- 好友列表 -->
-			<VBox width="300" bkcolor="light_gray">
+			<VBox width="300" bkcolor="white">
 				<HBox height="53">
 					<RichEdit class="simple input" rich="false" padding="5,6,5,0" margin="13,13,0,0" multiline="false" name="re_username" width="227" height="30" valign="center" font="system_12" promptmode="true" prompttext="Search" promptcolor="gray" />
 					<Button class="btn_session_edit" name="btn_session_add" margin="14,21,0,0" />
