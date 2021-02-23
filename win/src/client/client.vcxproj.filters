@@ -25,6 +25,9 @@
     <Filter Include="helper">
       <UniqueIdentifier>{5d4ebf77-62ce-4721-bc38-7818e19fb1b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui\session">
+      <UniqueIdentifier>{be5c6c00-028a-4752-b2ed-908ede4a1b0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -51,6 +54,9 @@
     <ClInclude Include="gui\login\login_setting_form.h">
       <Filter>gui\login</Filter>
     </ClInclude>
+    <ClInclude Include="gui\session\session_item.h">
+      <Filter>gui\session</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -70,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="gui\login\login_setting_form.cpp">
       <Filter>gui\login</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\session\session_item.cpp">
+      <Filter>gui\session</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

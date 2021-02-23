@@ -149,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -181,6 +181,7 @@
     <ClInclude Include="gui\home\home_form.h" />
     <ClInclude Include="gui\login\login_form.h" />
     <ClInclude Include="gui\login\login_setting_form.h" />
+    <ClInclude Include="gui\session\session_item.h" />
     <ClInclude Include="helper\config.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="resource.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="gui\home\home_form.cpp" />
     <ClCompile Include="gui\login\login_form.cpp" />
     <ClCompile Include="gui\login\login_setting_form.cpp" />
+    <ClCompile Include="gui\session\session_item.cpp" />
     <ClCompile Include="helper\config.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">

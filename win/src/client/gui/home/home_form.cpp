@@ -5,6 +5,8 @@
 #include "msgbox/msgbox.h"
 #include "cim/cim.h"
 
+#include "gui/session/session_item.h"
+
 const std::wstring HomeForm::kClassName = L"HomeForm";
 
 HomeForm::HomeForm() {
@@ -30,11 +32,15 @@ void HomeForm::InitWindow() {
     ((ui::Button*)FindControl(L"btn_login"))->AttachClick(callback);
     ((ui::Button*)FindControl(L"btn_setting"))->AttachClick(callback);*/
 
-    /*edit_user_name_ = static_cast<ui::RichEdit*>(FindControl(L"re_username"));
-    edit_pwd_ = static_cast<ui::RichEdit*>(FindControl(L"re_userpwd"));
+    lb_session_ = static_cast<ui::ListBox*>(FindControl(L"list_session"));
+    assert(lb_session_);
 
-    assert(edit_user_name_);
-    assert(edit_pwd_);*/
+    gui::session::SessionItem* item = new gui::session::SessionItem();
+    ui::GlobalManager::FillBoxWithCache(item, L"home_form/session_item.xml", nullptr);
+    item->InitControl("", false);
+    item->SetTitle(L"testchannel");
+    item->SetLatestMsg(L"[1Ìõ]xmcy0011£ºhello world");
+    lb_session_->Add(item);
 }
 
 LRESULT HomeForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) {

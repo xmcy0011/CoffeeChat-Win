@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window size="1024,768" caption="0,0,0,35">
-  <HBox>
-    <!-- 左侧菜单栏 -->
-    <VBox width="60" bkcolor="darkcolor">
-      <Control bkimage="head.png" width="40" height="40" margin="10,10"/>
-    </VBox>
-    <!-- 好友列表 -->
-    <VBox width="270" bkcolor="light_gray">
-      <Box padding="10,8,10,8" height="auto">
-        <RichEdit class="simple prompt input" name="nickname" width="stretch" height="35" padding="25,8,8,8" borderround="5,5" prompttext="搜索"/>
-        <Control width="auto" height="auto" margin="6,9" bkimage="search_icon.png"/>
-      </Box>
-      <VBox>
-        <!-- Firends -->
-      </VBox>
-    </VBox>
-    <!-- 聊天区域 -->
-    <VBox>
-      <HBox height="80" bkcolor="bk_wnd_darkcolor">
-      </HBox>
-      <Control class="splitline_hor_level1"/>
-      <VBox bkcolor="bk_wnd_darkcolor">
-      </VBox>
-      <VBox height="150" bkcolor="bk_wnd_lightcolor">
-      </VBox>
-    </VBox>
-  </HBox>
+<Window size="800,560" caption="0,0,0,35">
+	<VBox>
+		<!-- 标题 -->
+		<HBox class="caption">
+			<Button class="btn_wnd_close" name="closebtn" float="true" margin="8,5,0,0" />
+			<Button class="btn_wnd_min" name="minbtn" float="true" margin="28,5,0,0" />
+			<Label text="Telegram" margin="51,2,51,0" align="center" width="277">
+			</Label>
+		</HBox>
+		<HBox>
+			<!-- 左侧菜单栏 -->
+			<VBox width="55" bkcolor="white">
+				<Control bkcolor="gray" width="36" height="36" margin="9,34,10,0" />
+				<Control bkimage="msg_normal.png" width="36" height="36" margin="9,35,10,0" />
+				<Control bkimage="contact_normal.png" width="36" height="36" margin="9,35,10,0" />
+				<Control bkimage="setting_normal.png" width="36" height="36" margin="9,35,10,0" />
+			</VBox>
+			<!-- 好友列表 -->
+			<VBox width="300" bkcolor="light_gray">
+				<HBox height="53">
+					<RichEdit class="simple input" rich="false" padding="5,6,5,0" margin="13,13,0,0" multiline="false" name="re_username" width="227" height="30" valign="center" font="system_12" promptmode="true" prompttext="Search" promptcolor="gray" />
+					<Button class="btn_session_edit" name="btn_session_add" margin="14,21,0,0" />
+				</HBox>
+				<VListBox name="list_session">
+				</VListBox>
+			</VBox>
+			<!-- 聊天区域 -->
+			<VBox>
+				<HBox height="80" bkcolor="bk_wnd_darkcolor">
+				</HBox>
+				<Control class="splitline_hor_level1" />
+				<VBox bkcolor="bk_wnd_darkcolor">
+				</VBox>
+				<VBox height="150" bkcolor="bk_wnd_lightcolor">
+				</VBox>
+			</VBox>
+		</HBox>
+	</VBox>
 </Window>

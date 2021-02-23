@@ -33,6 +33,7 @@ class HomeForm : public ui::WindowImplBase {
     static const std::wstring kClassName;
 
   private:
+    ui::ListBox* lb_session_;
 };
 
 #endif//_HOME_FORM_F8DFE302_C7E2_4BE3_BD52_C8E98917FC35_
