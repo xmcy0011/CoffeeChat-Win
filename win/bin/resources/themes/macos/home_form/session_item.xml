@@ -2,21 +2,30 @@
 <Window>
 	<ListContainerElement class="listitem" height="70">
 		<HBox padding="5,0,10,0" childmargin="5" mouse="false">
-			<Box width="50" height="50" valign="center" mouse="false" mousechild="false" margin="5,10,0,10">
+			<!-- 头像 -->
+			<Box width="50" height="50" valign="center" mouse="false" mousechild="false" margin="9,10,0,10">
 				<Control name="item_icon" width="38" height="38" borderround="38,38,38,38" margin="1,1,0,0" />
 				<Control class="icon_headimage_mask_50x50" />
 			</Box>
+			<!-- 未读计数 -->
+			<HBox float="true" width="34" height="auto" margin="35,0,0,0">
+				<Control />
+				<Box name="box_unread" width="auto" height="auto" halign="center" padding="6,2,6,2" bkimage="file='icon_number.png' corner='8,8,7,8'">
+					<Label name="label_unread" halign="center" normaltextcolor="white" />
+				</Box>
+				<Control />
+			</HBox>
 			<VBox>
-				<HBox height="20" margin="5,8,0,0">
+				<!-- 会话名和时间 -->
+				<HBox height="20" margin="9,8,0,0">
 					<Label name="item_name" font="system_bold_14" width="auto" mouse="false" />
-					<Control bkimage="not_ring_normal.png" width="16" height="16" margin="0,2,0,0"/>
+					<!-- 免打扰标志 -->
+					<Control name="bk_dnot_disturb" bkimage="dnot_disturb_normal.png" width="16" height="16" margin="0,2,0,0" visible="false"/>
 					<Control />
-					<Label name="item_time" width="50" font="system_12" normaltextcolor="gray" mouse="false" text="1分钟前"/>
+					<Label name="item_time" width="60" margin="0,0,11,0" font="system_12" align="right" normaltextcolor="gray" mouse="false" text="1分钟前" />
 				</HBox>
-				<!-- <Box width="auto" height="auto" float="true" halign="right" valign="center"> bkimage="file='../public/icon/icon_number.png' corner='8,7,8,7'"
-					<Label name="item_unread" width="auto" minwidth="18" height="18" textpadding="2,1,2,2" align="center" halign="center" normaltextcolor="white" mouse="false" visible="false" />
-				</Box> -->
-				<Label name="item_msg" singleline="false" endellipsis="true" width="stretch" margin="5,1,0,0" font="system_12" mouse="false" height="32"/>
+				<!-- 最近一条消息 -->
+				<Label name="item_msg" singleline="false" endellipsis="true" width="stretch" margin="9,1,0,0" font="system_12" mouse="false" height="32" />
 			</VBox>
 		</HBox>
 		<Control class="splitline_hor_level1" float="true" valign="bottom" mouse="false" />

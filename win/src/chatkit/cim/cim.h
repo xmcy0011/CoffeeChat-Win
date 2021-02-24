@@ -21,6 +21,7 @@
 #include "cim/core/cim_conn_base.h"
 #include "cim/core/client.h"
 #include "cim/core/user_manager.h"
+#include "cim/core/chat_manager.h"
 
 // protobuf
 #include "cim/pb/CIM.Def.pb.h"

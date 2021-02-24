@@ -35,12 +35,17 @@ void HomeForm::InitWindow() {
     lb_session_ = static_cast<ui::ListBox*>(FindControl(L"list_session"));
     assert(lb_session_);
 
+    srand(time(nullptr));
+
     for (int i = 0; i < 15; i++) {
         gui::session::SessionItem* item = new gui::session::SessionItem();
         ui::GlobalManager::FillBoxWithCache(item, L"home_form/session_item.xml", nullptr);
         item->InitControl("", false);
         item->SetTitle(L"testchannel");
         item->SetLatestMsg(L"[1Ìõ]xmcy0011£ºhello world hello world hello world hello world hello world");
+        item->SetUnread(rand() % 100);
+        item->SetDisturb(rand() % 2 == 0);
+        item->SetLatestTime(time(nullptr) - (rand() % (60 * 60)) * (i + 1) - i * 1000000);
         lb_session_->Add(item);
     }
 }

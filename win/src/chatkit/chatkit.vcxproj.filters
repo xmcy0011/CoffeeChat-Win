@@ -53,6 +53,9 @@
     <ClCompile Include="cim\db\config_dao.cpp">
       <Filter>cim\db</Filter>
     </ClCompile>
+    <ClCompile Include="cim\core\chat_manager.cpp">
+      <Filter>cim\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -117,6 +120,9 @@
     </ClInclude>
     <ClInclude Include="cim\db\config_dao.h">
       <Filter>cim\db</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\chat_manager.h">
+      <Filter>cim\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

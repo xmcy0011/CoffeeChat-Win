@@ -16,11 +16,17 @@ namespace gui {
             void SetTitle(const std::wstring& title);
             void SetUnread(const uint32_t& count);
             void SetLatestMsg(const std::wstring msg);
+            void SetDisturb(const bool& yes);
+            void SetLatestTime(const int64_t& latestTimeStamp);
 
           private:
             ui::Label* lab_title_;
             ui::Label* lab_unreade_;
             ui::Label* lab_latest_msg_;
+            ui::Label* lab_time_;
+            ui::Control* bk_dnot_disturb_;
+
+            uint32_t create_time_;
         };
     }
 }

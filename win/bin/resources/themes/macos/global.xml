@@ -158,7 +158,7 @@
     <Class name="btn_session_edit" width="24" height="24" normalimage="../home_form/edit_normal.png" hotimage="../home_form/edit_normal.png" pushedimage="../home_form/edit_normal.png"/>
 
     <!--列表通用样式-->
-    <Class name="list" bkcolor="bk_wnd_lightcolor" vscrollbar="true"/>
+    <Class name="list" bkcolor="white" vscrollbar="true"/>
     <Class name="listitem" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected" selectednormalcolor="bk_listitem_selected" fadehot="false"/>
     <Class name="list_topitem" normalcolor="bk_topitem_normal" hotcolor="bk_topitem_hovered" pushedcolor="bk_topitem_selected" selectednormalcolor="bk_topitem_selected" fadehot="false"/>
 
