@@ -11,7 +11,7 @@
 		<HBox>
 			<!-- 左侧菜单栏 -->
 			<VBox width="55" bkcolor="white">
-				<Control bkcolor="gray" width="36" height="36" margin="9,34,10,0" />
+				<Control bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png" width="36" height="36" margin="9,34,10,0" />
 				<Control bkimage="msg_normal.png" width="36" height="36" margin="9,35,10,0" />
 				<Control bkimage="contact_normal.png" width="36" height="36" margin="9,35,10,0" />
 				<Control bkimage="setting_normal.png" width="36" height="36" margin="9,35,10,0" />

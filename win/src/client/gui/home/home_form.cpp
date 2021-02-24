@@ -47,7 +47,7 @@ void HomeForm::InitWindow() {
         gui::session::SessionItem* item = new gui::session::SessionItem();
         ui::GlobalManager::FillBoxWithCache(item, L"home_form/session_item.xml", nullptr);
         item->InitControl("session_" + std::to_string(i + 1), false);
-        item->SetTitle(L"testchannel" + nbase::UTF8ToUTF16(std::to_string(i)));
+        item->SetTitle(L"testchannel" + nbase::UTF8ToUTF16(std::to_string(i + 1)));
         item->SetLatestMsg(L"[1Ìõ]xmcy0011£ºhello world hello world hello world hello world hello world");
         item->SetUnread(rand() % 100);
         item->SetDisturb(rand() % 2 == 0);
