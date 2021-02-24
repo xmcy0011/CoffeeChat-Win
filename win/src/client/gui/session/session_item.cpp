@@ -18,6 +18,8 @@ namespace gui {
             assert(lab_latest_msg_);
             assert(lab_time_);
             assert(lab_unreade_);
+
+            session_id_ = sessionId;
         }
         void SessionItem::SetTitle(const std::wstring& title) {
             lab_title_->SetText(title);
@@ -34,5 +36,13 @@ namespace gui {
         void SessionItem::SetLatestTime(const int64_t& latestTimeStamp) {
             lab_time_->SetText(cim::core::ChatManager::FormatMsgTime(latestTimeStamp));
         }
+        const std::string& SessionItem::GetSessionId() const {
+            return session_id_;
+        }
+
+        std::wstring SessionItem::GetTitle() const {
+            return lab_title_->GetText();
+        }
+
     }
 }

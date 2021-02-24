@@ -26,16 +26,21 @@
 				<VListBox class="list" name="list_session" vscrollunit="100">
 				</VListBox>
 			</VBox>
-			<!-- 聊天区域 -->
-			<VBox>
-				<HBox height="80" bkcolor="bk_wnd_darkcolor">
+			<!--默认提示-->
+			<Control class="splitline_ver_level1" width="1" mouse="false" />
+			<VBox name="box_default_tips" bkcolor="white">
+				<Control />
+				<HBox height="20">
+					<Control />
+					<Label text="Select a chat start messaging" width="auto" />
+					<Control />
 				</HBox>
-				<Control class="splitline_hor_level1" />
-				<VBox bkcolor="bk_wnd_darkcolor">
-				</VBox>
-				<VBox height="150" bkcolor="bk_wnd_lightcolor">
-				</VBox>
+				<Control />
 			</VBox>
+			<!-- 聊天区域 -->
+			<TabBox name="tab_session_box" visible="false" bkcolor="white">
+			</TabBox>
+
 		</HBox>
 	</VBox>
 </Window>

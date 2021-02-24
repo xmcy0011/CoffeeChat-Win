@@ -57,6 +57,9 @@
     <ClInclude Include="gui\session\session_item.h">
       <Filter>gui\session</Filter>
     </ClInclude>
+    <ClInclude Include="gui\session\session_box.h">
+      <Filter>gui\session</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -78,6 +81,9 @@
       <Filter>gui\login</Filter>
     </ClCompile>
     <ClCompile Include="gui\session\session_item.cpp">
+      <Filter>gui\session</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\session\session_box.cpp">
       <Filter>gui\session</Filter>
     </ClCompile>
   </ItemGroup>

@@ -181,6 +181,7 @@
     <ClInclude Include="gui\home\home_form.h" />
     <ClInclude Include="gui\login\login_form.h" />
     <ClInclude Include="gui\login\login_setting_form.h" />
+    <ClInclude Include="gui\session\session_box.h" />
     <ClInclude Include="gui\session\session_item.h" />
     <ClInclude Include="helper\config.h" />
     <ClInclude Include="main.h" />
@@ -192,6 +193,7 @@
     <ClCompile Include="gui\home\home_form.cpp" />
     <ClCompile Include="gui\login\login_form.cpp" />
     <ClCompile Include="gui\login\login_setting_form.cpp" />
+    <ClCompile Include="gui\session\session_box.cpp" />
     <ClCompile Include="gui\session\session_item.cpp" />
     <ClCompile Include="helper\config.cpp" />
     <ClCompile Include="main.cpp" />

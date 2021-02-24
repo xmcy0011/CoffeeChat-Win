@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <VBox bkcolor="white">
+        <!--顶部标题栏-->
+        <VBox height="51">
+            <HBox height="50">
+                <Control margin="10,2,0,0" bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png" width="36" height="36" />
+                <VBox height="42">
+                    <!--会话名字-->
+                    <Label name="lab_session_name" margin="7,3,0,0" text="testchannel" height="20" font="system_14"/>
+                    <Label margin="7,2,0,0" text="36 members" height="17" font="system_12"/>
+                </VBox>
+
+                <Button name="btn_more" margin="0,14,9,0" normalimage="icon_more_normal.png" width="24" height="24"/>
+            </HBox>
+
+            <Control class="splitline_hor_level1" mouse="false"/>
+        </VBox>
+
+        <!--内容区域-->
+        <VBox bkcolor="gray">
+
+        </VBox>
+
+        <!--底部输入框-->
+        <HBox height="50">
+            <Button normalimage="icon_file_normal.png" margin="10,7,0,7" width="36" height="36" />
+            <VBox width="stretch">
+                <Control />
+                <RichEdit promptmode="true" prompttext="Broadcast a message…" promptcolor="gray" align="vcenter" vscrollbar="true" height="40" margin="0,2,0,2"/>
+                <Control />
+            </VBox>
+            <Button normalimage="icon_emotion_normal.png" margin="0,7,9,7" width="36" height="36" />
+        </HBox>
+    </VBox>
+</Window>

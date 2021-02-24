@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window>
-	<ListContainerElement class="listitem" height="70">
+	<ListContainerElement class="listitem" height="70" normalcolor="white">
 		<HBox padding="5,0,10,0" childmargin="5" mouse="false">
 			<!-- 头像 -->
 			<Box width="50" height="50" valign="center" mouse="false" mousechild="false" margin="9,10,0,10">
@@ -8,14 +8,14 @@
 				<Control class="icon_headimage_mask_50x50" />
 			</Box>
 			<!-- 未读计数 -->
-			<HBox float="true" width="34" height="auto" margin="35,0,0,0">
+			<HBox float="true" width="34" height="auto" margin="35,0,0,0"  mouse="false" mousechild="false">
 				<Control />
 				<Box name="box_unread" width="auto" height="auto" halign="center" padding="6,2,6,2" bkimage="file='icon_number.png' corner='8,8,7,8'">
 					<Label name="label_unread" halign="center" normaltextcolor="white" />
 				</Box>
 				<Control />
 			</HBox>
-			<VBox>
+			<VBox  mouse="false" mousechild="false">
 				<!-- 会话名和时间 -->
 				<HBox height="20" margin="9,8,0,0">
 					<Label name="item_name" font="system_bold_14" width="auto" mouse="false" />
