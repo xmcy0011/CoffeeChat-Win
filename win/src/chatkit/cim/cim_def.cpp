@@ -38,7 +38,7 @@ namespace cim {
     }
 
     bool MessageModel::IsSystemMsg() const {
-        return msg_type == kCIM_MSG_TYPE_TIPS && msg_type == kCIM_MSG_TYPE_NOTIFACATION;
+        return msg_type == kCIM_MSG_TYPE_TIPS || msg_type == kCIM_MSG_TYPE_NOTIFACATION;
     }
 
 }

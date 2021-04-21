@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window>
-	<ListContainerElement class="listitem" height="auto">
+	<ListContainerElement height="auto">
 		<HBox height="auto" margin="10,3,0,3">
 			<!-- 左侧头像 -->
 			<Box name="header_panel" width="auto" height="auto" margin="0,5,0,0">
@@ -9,7 +9,7 @@
 			</Box>
 			<VBox height="auto">
 				<!-- 发送人名称 -->
-				<RichEdit name="sender_name" margin="6,0,0,0" text="bob" height="20" width="100" font="system_12" normaltextcolor="black" readonly="true" multiline="true" vscrollbar="false" autovscroll="false" />
+				<RichEdit name="sender_name" margin="6,0,0,0" text="bob" height="20" font="system_12" normaltextcolor="black" readonly="true" multiline="true" vscrollbar="false" autovscroll="false" />
 				<HBox height="auto" margin="6,0,0,0">
 					<!-- 气泡左角标 -->
 					<Control bkimage="file='../session/bubble_left.png'" width="auto" height="auto" margin="0,8,0,0"/>

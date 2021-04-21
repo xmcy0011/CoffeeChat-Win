@@ -20,11 +20,6 @@ namespace gui {
         }
 
         void SessionBox::AddMsg(const cim::MessageModel& msg) {
-            if (msg.msg_type != kCIM_MSG_TYPE_TEXT) {
-                LogInfo("unknown msg type");
-                return;
-            }
-
             ui::ListContainerElement* element = new ui::ListContainerElement();
 
             if (msg.IsSystemMsg()) {
@@ -39,13 +34,15 @@ namespace gui {
                 }
             }
 
+
             auto box = dynamic_cast<ui::Box*>(element->FindSubControl(L"BubbleBox"));
             assert(box != nullptr);
+
+            ui::Box* subBox = new ui::Box();
 
             if (box != nullptr) {
                 switch (msg.msg_type) {
                 case kCIM_MSG_TYPE_TEXT: {
-                    ui::Box* subBox = new ui::Box();
                     ui::GlobalManager::FillBoxWithCache(subBox, msg.IsMyMsg() ? L"session/text_right.xml" : L"session/text_left.xml");
                     auto richEdit = dynamic_cast<ui::RichEdit*>(subBox->FindSubControl(L"text"));
                     assert(richEdit != nullptr);
@@ -54,15 +51,37 @@ namespace gui {
                         richEdit->SetText(nbase::UTF8ToUTF16(msg.msg_data));
                     }
 
-                    box->Add(subBox);
-                }
-                break;
-
-                default:
                     break;
+                }
+
+                case kCIM_MSG_TYPE_TIPS:
+                case kCIM_MSG_TYPE_NOTIFACATION: {
+                    ui::GlobalManager::FillBoxWithCache(subBox, L"session/system_tips_row.xml");
+                    auto richEdit = dynamic_cast<ui::Label*>(subBox->FindSubControl(L"text"));
+                    assert(richEdit != nullptr);
+
+                    if (richEdit != nullptr) {
+                        richEdit->SetText(nbase::UTF8ToUTF16(msg.msg_data));
+                    }
+
+                    break;
+                }
+
+                default: {
+                    ui::GlobalManager::FillBoxWithCache(subBox, msg.IsMyMsg() ? L"session/unknown_left.xml" : L"session/unknown_right.xml");
+                    auto richEdit = dynamic_cast<ui::RichEdit*>(subBox->FindSubControl(L"text"));
+                    assert(richEdit != nullptr);
+
+                    if (richEdit != nullptr) {
+                        richEdit->SetText(L"未知消息类型");
+                    }
+
+                    break;
+                }
                 }
             }
 
+            box->Add(subBox);
             this->listbox_msg->Add(element);
         }
     }

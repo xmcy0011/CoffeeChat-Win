@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box height="24" width="auto">
+		<HBox>
+			<Control />
+			<Label name="text" margin="0,4,0,0" font="system_12" normaltextcolor="bk_msg_tips_color" />
+			<Control />
+		</HBox>
+	</Box>
+</Window>

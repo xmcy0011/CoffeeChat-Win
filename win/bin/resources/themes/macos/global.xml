@@ -110,6 +110,7 @@
 
     <!-- 聊天界面专用颜色 -->
     <TextColor name="bk_msg_bubble_color" value="#ffe4e4e4"/>
+    <TextColor name="bk_msg_tips_color" value="#ff9A999A"/>
 
     <!--字体大小-->
     <Class name="font_title" font="system_14"/>

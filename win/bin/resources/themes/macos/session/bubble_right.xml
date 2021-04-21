@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window>
-	<ListContainerElement class="listitem" height="auto">
+	<ListContainerElement height="auto">
 		<HBox height="auto" margin="0,3,10,3">
 			<VBox height="auto">
 				<HBox height="20">

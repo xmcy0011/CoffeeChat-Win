@@ -94,6 +94,12 @@ bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
         m.from_user_id = cim::core::Client::getInstance()->GetUserId() + 1;
         box->AddMsg(m);
 
+        // 提示消息
+        m.msg_type = kCIM_MSG_TYPE_TIPS;
+        m.msg_data = "12:00";
+        m.from_user_id = 0;
+        box->AddMsg(m);
+
         m.msg_type = kCIM_MSG_TYPE_TEXT;
         m.msg_data = "hello world";
         m.from_user_id = cim::core::Client::getInstance()->GetUserId();
