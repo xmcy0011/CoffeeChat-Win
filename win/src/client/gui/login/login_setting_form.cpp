@@ -57,6 +57,13 @@ bool LoginSettingForm::onLoginClick(ui::EventArgs* msg) {
 
         nim_comp::ShowMsgBox(GetHWND(), [this](nim_comp::MsgBoxRet) {
             this->Close();
+
+            cim::ConfigServerInfo info;
+
+            if (cim::db::ConfigDao::getInstance()->query(info)) {
+                LogInfo("serverIP:{},gatePort:{},httpPort:{}", info.ip, info.gatePort, info.httpPort);
+                cim::setChatKitServerInfo(info);
+            }
         }, L"save success!", false);
     }
 

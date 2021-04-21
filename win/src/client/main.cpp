@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "main.h"
 #include "gui/login/login_form.h"
+#include "gui/home/home_form.h"
 #include "gui/login/login_setting_form.h"
 #include "cim/cim.h"
 
@@ -63,15 +64,18 @@ void MainThread::Init() {
     ui::GlobalManager::Startup(L"resources\\", ui::CreateControlCallback(), false);
 #endif
 
-    LoginForm* window = new LoginForm();
+    //LoginForm* window = new LoginForm();
+    //HomeForm* window = new HomeForm();
 
     //设置程序默认图标
-    HICON hIcon = ::LoadIcon(g_instance_, L"IDI_BASIC");
-    ::SendMessage(window->GetHWND(), STM_SETICON, IMAGE_ICON, (LPARAM)(UINT)hIcon);
+    /*HICON hIcon = ::LoadIcon(g_instance_, L"IDI_BASIC");
+    ::SendMessage(window->GetHWND(), STM_SETICON, IMAGE_ICON, (LPARAM)(UINT)hIcon);*/
 
-    window->Create(NULL, LoginForm::kClassName.c_str(), WS_OVERLAPPEDWINDOW & ~WS_MAXIMIZEBOX, 0);
+    /*window->Create(NULL, LoginForm::kClassName.c_str(), WS_OVERLAPPEDWINDOW & ~WS_MAXIMIZEBOX, 0);
     window->CenterWindow();
-    window->ShowWindow();
+    window->ShowWindow();*/
+
+    ShowHomeForm();
 }
 
 void MainThread::Cleanup() {

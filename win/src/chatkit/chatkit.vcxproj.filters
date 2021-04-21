@@ -5,9 +5,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>msvc</Filter>
     </ClCompile>
-    <ClCompile Include="cim\cim.cpp">
-      <Filter>cim</Filter>
-    </ClCompile>
     <ClCompile Include="cim\pb\CIM.Def.pb.cc">
       <Filter>cim\pb</Filter>
     </ClCompile>
@@ -52,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="cim\db\config_dao.cpp">
       <Filter>cim\db</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\core\chat_manager.cpp">
+      <Filter>cim\core</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\cim_def.cpp">
+      <Filter>cim</Filter>
+    </ClCompile>
+    <ClCompile Include="cim\cim_helper.cpp">
+      <Filter>cim</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +123,12 @@
     </ClInclude>
     <ClInclude Include="cim\db\config_dao.h">
       <Filter>cim\db</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\core\chat_manager.h">
+      <Filter>cim\core</Filter>
+    </ClInclude>
+    <ClInclude Include="cim\cim_helper.h">
+      <Filter>cim</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

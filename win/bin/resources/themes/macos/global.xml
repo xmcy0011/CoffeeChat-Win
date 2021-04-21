@@ -79,7 +79,6 @@
     <TextColor name="bk_wnd_caption_color" value="#FFEDECED"/>  <!-- 渐变标题栏颜色 -->
     <TextColor name="bk_wnd_caption_color1" value="#FFD2D1D2"/>
 
-
     <!--置顶项的背景颜色-->
     <TextColor name="bk_topitem_normal" value="#ffffffe0"/>
     <TextColor name="bk_topitem_hovered" value="#ffffffeb"/>
@@ -108,6 +107,9 @@
     <TextColor name="color_palette7" value="#ff545454"/>
     <TextColor name="color_palette8" value="#ffa8a8a8"/>
     <TextColor name="color_palette9" value="#ffffffff"/>
+
+    <!-- 聊天界面专用颜色 -->
+    <TextColor name="bk_msg_bubble_color" value="#ffe4e4e4"/>
 
     <!--字体大小-->
     <Class name="font_title" font="system_14"/>
@@ -154,8 +156,11 @@
     <Class name="btn_refresh" width="auto" height="auto" normalimage="file='../public/button/btn_refresh_normal.png'" hotimage="file='../public/button/btn_refresh_hovered.png'" pushedimage="file='../public/button/btn_refresh_pushed.png'" disabledimage="file='../public/button/btn_refresh_normal.png' fade='80'"/>
     <Class name="btn_del_search" normalimage="../public/button/btn_del_search_normal_gray.png" hotimage="../public/button/btn_del_search_hover_gray.png" pushedimage="../public/button/btn_del_search_pushed_gray.png"/>
 
+    <!--聊天界面按钮样式-->
+    <Class name="btn_session_edit" width="24" height="24" normalimage="../home_form/edit_normal.png" hotimage="../home_form/edit_normal.png" pushedimage="../home_form/edit_normal.png"/>
+
     <!--列表通用样式-->
-    <Class name="list" bkcolor="bk_wnd_lightcolor" vscrollbar="true"/>
+    <Class name="list" bkcolor="white" vscrollbar="true"/>
     <Class name="listitem" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected" selectednormalcolor="bk_listitem_selected" fadehot="false"/>
     <Class name="list_topitem" normalcolor="bk_topitem_normal" hotcolor="bk_topitem_hovered" pushedcolor="bk_topitem_selected" selectednormalcolor="bk_topitem_selected" fadehot="false"/>
 
@@ -179,6 +184,7 @@
     <Class name="edit" hotimage="file='../public/edit/edit1.png' corner='10,10,10,10'" focusedimage="file='../public/edit/edit2.png' corner='10,10,10,10'"/>
     <Class name="input" normalimage="file='../public/edit/edit0.png' corner='10,10,10,10'" hotimage="file='../public/edit/edit0.png' corner='10,10,10,10'" focusedimage="file='../public/edit/edit0.png' corner='10,10,10,10'" disabledimage="file='../public/edit/edit0.png' corner='10,10,10,10' fade='80'"/>
 
-   <!--头像蒙版-->
-    <Class name="icon_headimage_mask_40x40" width="40" height="40" bkimage="../public/headmask/icon_headimage_mask_40x40_normal.png"/>
+    <!--头像蒙版-->
+    <Class name="icon_headimage_mask_50x50" width="50" height="50" bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png"/>
+    <Class name="icon_headimage_mask_30x30" width="30" height="30" bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png"/>
 </Global>

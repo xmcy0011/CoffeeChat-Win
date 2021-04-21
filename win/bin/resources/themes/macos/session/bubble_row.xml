@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" height="auto">
+		<!-- 发送的内容，根据消息类型，动态渲染 -->
+		<Box name="BubbleBox" width="auto" height="auto" />
+	</ListContainerElement>
+</Window>

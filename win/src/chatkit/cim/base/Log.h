@@ -34,9 +34,9 @@
 #endif
 
 #include "cim/cim_dll.h"
-#include "spdlog/spdlog.h"
-#include "spdlog/sinks/daily_file_sink.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/daily_file_sink.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace cim {
     class CIM_DLL_API ZLogger {

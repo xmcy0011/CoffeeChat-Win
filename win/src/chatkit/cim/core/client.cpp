@@ -43,6 +43,8 @@ namespace cim {
         }
 
         void Client::login(std::string user_name, std::string pwd, const LoginCallback& cb, const TimeoutCallback& timeout_cb) {
+            logout();
+
             conn_status_ = kConnectting;
             login_cb_ = cb;
             login_timeout_cb_ = timeout_cb;
@@ -61,6 +63,9 @@ namespace cim {
                 // bind callback
                 tcp_client_->SetConnectionCallback(std::bind(&Client::onConnectionStatusChanged, this, std::placeholders::_1));
                 tcp_client_->SetMessageCallback(std::bind(&Client::onMessage, this, std::placeholders::_1, std::placeholders::_2));
+
+            } else {
+
             }
 
             tcp_client_->Connect();
@@ -80,10 +85,12 @@ namespace cim {
                 send(CIM::Def::kCIM_CID_LOGIN_AUTH_LOGOUT_REQ, req);
             }
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-
-            if (tcp_client_)
+            if (tcp_client_) {
                 tcp_client_->Disconnect();
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+                tcp_client_ = nullptr;
+            }
         }
 
         ConnectStatus Client::connStatus() {
@@ -92,6 +99,10 @@ namespace cim {
 
         evpp::EventLoop* Client::connLoop() {
             return loop_.get()->loop();
+        }
+
+        uint64_t Client::GetUserId() const {
+            return user_id_;
         }
 
         int Client::sendRaw(const char* data, const int& len) {
@@ -129,10 +140,6 @@ namespace cim {
             }
 
             return kError;
-        }
-
-        int Client::sendRequest() {
-            return 0;
         }
 
         void Client::onConnectionStatusChanged(const evpp::TCPConnPtr& conn) {
