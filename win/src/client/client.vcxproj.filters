@@ -28,6 +28,9 @@
     <Filter Include="gui\session">
       <UniqueIdentifier>{be5c6c00-028a-4752-b2ed-908ede4a1b0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui\session\control">
+      <UniqueIdentifier>{c632d193-7724-41b9-b962-666657d85ecd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

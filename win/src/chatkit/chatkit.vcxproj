@@ -164,7 +164,8 @@
   <ItemGroup>
     <ClCompile Include="cim\base\Exception.cpp" />
     <ClCompile Include="cim\base\Log.cpp" />
-    <ClCompile Include="cim\cim.cpp" />
+    <ClCompile Include="cim\cim_def.cpp" />
+    <ClCompile Include="cim\cim_helper.cpp" />
     <ClCompile Include="cim\core\chat_manager.cpp" />
     <ClCompile Include="cim\core\client.cpp" />
     <ClCompile Include="cim\core\user_manager.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="cim\cim.h" />
     <ClInclude Include="cim\cim_def.h" />
     <ClInclude Include="cim\cim_dll.h" />
+    <ClInclude Include="cim\cim_helper.h" />
     <ClInclude Include="cim\core\callback.h" />
     <ClInclude Include="cim\core\cim_conn_base.h" />
     <ClInclude Include="cim\core\client.h" />

@@ -75,7 +75,6 @@ void MainThread::Init() {
     window->CenterWindow();
     window->ShowWindow();*/
 
-    cim::core::testFormatMsgTime();
     ShowHomeForm();
 }
 

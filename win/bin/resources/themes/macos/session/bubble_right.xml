@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement class="listitem" height="auto">
+		<HBox height="auto" margin="0,3,10,3">
+			<VBox height="auto">
+				<HBox height="20">
+					<Control />
+					<!-- 发送人名称 -->
+					<RichEdit name="sender_name" margin="0,0,6,0" align="right" text="Alice" font="system_12" normaltextcolor="black" readonly="true" multiline="true" vscrollbar="false" autovscroll="false" />
+				</HBox>
+				<HBox height="auto" margin="0,3,0,0">
+                    <Control />
+					<!-- 发送的内容，根据消息类型，动态渲染 -->
+					<Box name="BubbleBox" width="auto" height="auto" />
+					<!-- 气泡右角标 -->
+					<Control bkimage="file='../session/bubble_right.png'" width="auto" height="auto" margin="0,8,0,0"/>
+				</HBox>
+			</VBox>
+			<!-- 右侧头像（自己发送的消息在右侧） -->
+			<Box name="header_panel" width="auto" height="auto" margin="0,5,0,0">
+				<!-- <Button name="msg_header_button" width="38" height="38" borderround="38,38,38,38" margin="1,1,0,0" cursortype="hand" forenormalimage="../session/header.png" /> -->
+				<Button class="icon_headimage_mask_30x30" name="head_image_mask" mouse="false" />
+			</Box>
+		</HBox>
+	</ListContainerElement>
+</Window>

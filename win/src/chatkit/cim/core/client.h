@@ -67,11 +67,10 @@ namespace cim {
             ConnectStatus connStatus();
             evpp::EventLoop* connLoop();
 
+            uint64_t GetUserId() const;
+
             int sendRaw(const char* data, const int& len);
-
             int send(CIM::Def::CIMCmdID cmd_id, const google::protobuf::MessageLite& msg);
-
-            int sendRequest();
 
           private:
             void onConnectionStatusChanged(const evpp::TCPConnPtr& conn);

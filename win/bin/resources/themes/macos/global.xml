@@ -79,7 +79,6 @@
     <TextColor name="bk_wnd_caption_color" value="#FFEDECED"/>  <!-- 渐变标题栏颜色 -->
     <TextColor name="bk_wnd_caption_color1" value="#FFD2D1D2"/>
 
-
     <!--置顶项的背景颜色-->
     <TextColor name="bk_topitem_normal" value="#ffffffe0"/>
     <TextColor name="bk_topitem_hovered" value="#ffffffeb"/>
@@ -108,6 +107,9 @@
     <TextColor name="color_palette7" value="#ff545454"/>
     <TextColor name="color_palette8" value="#ffa8a8a8"/>
     <TextColor name="color_palette9" value="#ffffffff"/>
+
+    <!-- 聊天界面专用颜色 -->
+    <TextColor name="bk_msg_bubble_color" value="#ffe4e4e4"/>
 
     <!--字体大小-->
     <Class name="font_title" font="system_14"/>
@@ -184,4 +186,5 @@
 
     <!--头像蒙版-->
     <Class name="icon_headimage_mask_50x50" width="50" height="50" bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png"/>
+    <Class name="icon_headimage_mask_30x30" width="30" height="30" bkimage="../public/headmask/icon_headimage_mask_50x50_normal.png"/>
 </Global>

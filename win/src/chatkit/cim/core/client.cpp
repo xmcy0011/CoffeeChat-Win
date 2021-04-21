@@ -101,6 +101,10 @@ namespace cim {
             return loop_.get()->loop();
         }
 
+        uint64_t Client::GetUserId() const {
+            return user_id_;
+        }
+
         int Client::sendRaw(const char* data, const int& len) {
             return 0;
         }
@@ -136,10 +140,6 @@ namespace cim {
             }
 
             return kError;
-        }
-
-        int Client::sendRequest() {
-            return 0;
         }
 
         void Client::onConnectionStatusChanged(const evpp::TCPConnPtr& conn) {

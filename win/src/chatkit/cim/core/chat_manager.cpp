@@ -90,6 +90,7 @@ namespace cim {
         ChatManager::~ChatManager() {
         }
 
+#if 0
         void testFormatMsgTime() {
             // ∑÷÷”
             int64_t msgTime = time(nullptr) - rand() % 10 * 60;
@@ -116,6 +117,8 @@ namespace cim {
             msgTime = time(nullptr) - 2 * 360 * 86400;
             LogInfo("{} {}", msgTime, nbase::UTF16ToUTF8(ChatManager::FormatMsgTime(msgTime)));
         }
+#endif
+
     }
 }
 

@@ -61,6 +61,7 @@ LRESULT HomeForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandle
     return __super::OnClose(uMsg, wParam, lParam, bHandled);
 }
 
+// 选中某一个会话，显示历史消息
 bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
     box_default_tips_->SetVisible(false);
     tab_session_box_->SetVisible(true);
@@ -70,11 +71,13 @@ bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
     if (item) {
         std::string sessionId = item->GetSessionId();
 
+
         gui::session::SessionBox* box = nullptr;
 
+        // 新的会话，直接创建控件
         if (map_sessions_.find(sessionId) == map_sessions_.end()) {
             box = new gui::session::SessionBox();
-            ui::GlobalManager::FillBoxWithCache(box, L"home_form/session_box.xml", nullptr);
+            ui::GlobalManager::FillBoxWithCache(box, L"session/session_box.xml", nullptr);
             box->InitControl(sessionId, item->GetTitle());
             map_sessions_[sessionId] = box;
             tab_session_box_->Add(box);
@@ -82,6 +85,20 @@ bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
         } else {
             box = map_sessions_[sessionId];
         }
+
+#if 1
+        // 添加测试消息
+        cim::MessageModel m = {};
+        m.msg_type = kCIM_MSG_TYPE_TEXT;
+        m.msg_data = "hello world";
+        m.from_user_id = cim::core::Client::getInstance()->GetUserId() + 1;
+        box->AddMsg(m);
+
+        m.msg_type = kCIM_MSG_TYPE_TEXT;
+        m.msg_data = "hello world";
+        m.from_user_id = cim::core::Client::getInstance()->GetUserId();
+        box->AddMsg(m);
+#endif
 
         tab_session_box_->SelectItem(box);
     }

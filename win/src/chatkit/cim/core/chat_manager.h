@@ -18,7 +18,7 @@ namespace cim {
             ~ChatManager();
         };
 
-        void CIM_DLL_API testFormatMsgTime();
+        //void CIM_DLL_API testFormatMsgTime();
     }
 }
 

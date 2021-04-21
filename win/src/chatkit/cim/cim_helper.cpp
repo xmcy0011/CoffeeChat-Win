@@ -1,5 +1,5 @@
 /** @file cim.cpp
-  * @brief 
+  * @brief
   * @author summer sh
   * @date 2021/2/17
   */
@@ -54,6 +54,3 @@ namespace cim {
         return g_config;
     }
 }
-
-
-

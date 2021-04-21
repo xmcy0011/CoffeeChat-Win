@@ -26,7 +26,7 @@
 				<VListBox class="list" name="list_session" vscrollunit="100">
 				</VListBox>
 			</VBox>
-			<!--默认提示-->
+			<!-- 默认提示 -->
 			<Control class="splitline_ver_level1" width="1" mouse="false" />
 			<VBox name="box_default_tips" bkcolor="white">
 				<Control />
@@ -40,7 +40,6 @@
 			<!-- 聊天区域 -->
 			<TabBox name="tab_session_box" visible="false" bkcolor="white">
 			</TabBox>
-
 		</HBox>
 	</VBox>
 </Window>
