@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window size="800,560" caption="0,0,0,35">
+<Window size="800,560" caption="0,0,0,35" sizebox="4,4,6,6" mininfo="800,560">
 	<VBox>
 		<!-- 标题 -->
 		<HBox class="caption">
