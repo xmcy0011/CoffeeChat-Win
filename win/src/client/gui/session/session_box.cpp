@@ -42,7 +42,7 @@ namespace gui {
 
             if (box != nullptr) {
                 switch (msg.msg_type) {
-                case kCIM_MSG_TYPE_TEXT: {
+                case kCIM_MSG_TYPE_TEXT: { // 文本消息
                     ui::GlobalManager::FillBoxWithCache(subBox, msg.IsMyMsg() ? L"session/text_right.xml" : L"session/text_left.xml");
                     auto richEdit = dynamic_cast<ui::RichEdit*>(subBox->FindSubControl(L"text"));
                     assert(richEdit != nullptr);
@@ -55,7 +55,7 @@ namespace gui {
                 }
 
                 case kCIM_MSG_TYPE_TIPS:
-                case kCIM_MSG_TYPE_NOTIFACATION: {
+                case kCIM_MSG_TYPE_NOTIFACATION: {// 通知消息
                     ui::GlobalManager::FillBoxWithCache(subBox, L"session/system_tips_row.xml");
                     auto richEdit = dynamic_cast<ui::Label*>(subBox->FindSubControl(L"text"));
                     assert(richEdit != nullptr);
@@ -67,13 +67,13 @@ namespace gui {
                     break;
                 }
 
-                default: {
-                    ui::GlobalManager::FillBoxWithCache(subBox, msg.IsMyMsg() ? L"session/unknown_left.xml" : L"session/unknown_right.xml");
+                default: { // 未知消息
+                    ui::GlobalManager::FillBoxWithCache(subBox, msg.IsMyMsg() ? L"session/text_right.xml" : L"session/text_left.xml");
                     auto richEdit = dynamic_cast<ui::RichEdit*>(subBox->FindSubControl(L"text"));
                     assert(richEdit != nullptr);
 
                     if (richEdit != nullptr) {
-                        richEdit->SetText(L"未知消息类型");
+                        richEdit->SetText(L"暂不支持的消息，请在手机上查看");
                     }
 
                     break;

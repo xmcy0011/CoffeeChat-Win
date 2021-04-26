@@ -61,6 +61,17 @@ LRESULT HomeForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandle
     return __super::OnClose(uMsg, wParam, lParam, bHandled);
 }
 
+std::string getRandomText() {
+    int loopCount = rand() % 100 + 1;
+    std::string str = "";
+
+    for (int i = 0; i < loopCount; ++i) {
+        str += "hello world,";
+    }
+
+    return str;
+}
+
 // 选中某一个会话，显示历史消息
 bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
     box_default_tips_->SetVisible(false);
@@ -90,7 +101,7 @@ bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
         // 添加测试消息
         cim::MessageModel m = {};
         m.msg_type = kCIM_MSG_TYPE_TEXT;
-        m.msg_data = "hello world";
+        m.msg_data = getRandomText();
         m.from_user_id = cim::core::Client::getInstance()->GetUserId() + 1;
         box->AddMsg(m);
 
@@ -100,8 +111,14 @@ bool HomeForm::onSelectSessionItem(ui::EventArgs* e) {
         m.from_user_id = 0;
         box->AddMsg(m);
 
+        // 未知消息
+        m.msg_type = kCIM_MSG_TYPE_UNKNOWN;
+        m.msg_data = "{'msgid':'asdf1-sdf324-dgsagd-gdsdf-23123'}";
+        m.from_user_id = 0;
+        box->AddMsg(m);
+
         m.msg_type = kCIM_MSG_TYPE_TEXT;
-        m.msg_data = "hello world";
+        m.msg_data = getRandomText();
         m.from_user_id = cim::core::Client::getInstance()->GetUserId();
         box->AddMsg(m);
 #endif

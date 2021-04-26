@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window>
-    <Box bordersize="1" borderround="2,2" bkcolor="bk_msg_bubble_color" height="30" width="82" padding="8,8,7,7">
-        <RichEdit name="text" font="system_12" normaltextcolor="black" menu="true" 
+    <Box bordersize="1" borderround="2,2" bkcolor="bk_msg_bubble_color" height="auto" width="auto" padding="8,8,7,7">
+        <RichEdit name="text" font="system_12" height="auto" width="auto" maxwidth="300" normaltextcolor="black" menu="true" 
                   readonly="true" multiline="true" vscrollbar="false" autovscroll="false"/>
     </Box>
 </Window>
