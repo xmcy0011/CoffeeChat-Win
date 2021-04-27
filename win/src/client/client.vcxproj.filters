@@ -63,6 +63,15 @@
     <ClInclude Include="gui\session\session_box.h">
       <Filter>gui\session</Filter>
     </ClInclude>
+    <ClInclude Include="gui\session\control\bubble_item.h">
+      <Filter>gui\session\control</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\session\control\bubble_tips_item_box.h">
+      <Filter>gui\session\control</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\session\control\bubble_text_item_box.h">
+      <Filter>gui\session\control</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -88,6 +97,15 @@
     </ClCompile>
     <ClCompile Include="gui\session\session_box.cpp">
       <Filter>gui\session</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\session\control\bubble_item.cpp">
+      <Filter>gui\session\control</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\session\control\bubble_text_item_box.cpp">
+      <Filter>gui\session\control</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\session\control\bubble_tips_item_box.cpp">
+      <Filter>gui\session\control</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

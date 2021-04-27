@@ -181,6 +181,9 @@
     <ClInclude Include="gui\home\home_form.h" />
     <ClInclude Include="gui\login\login_form.h" />
     <ClInclude Include="gui\login\login_setting_form.h" />
+    <ClInclude Include="gui\session\control\bubble_item.h" />
+    <ClInclude Include="gui\session\control\bubble_text_item_box.h" />
+    <ClInclude Include="gui\session\control\bubble_tips_item_box.h" />
     <ClInclude Include="gui\session\session_box.h" />
     <ClInclude Include="gui\session\session_item.h" />
     <ClInclude Include="helper\config.h" />
@@ -193,6 +196,9 @@
     <ClCompile Include="gui\home\home_form.cpp" />
     <ClCompile Include="gui\login\login_form.cpp" />
     <ClCompile Include="gui\login\login_setting_form.cpp" />
+    <ClCompile Include="gui\session\control\bubble_item.cpp" />
+    <ClCompile Include="gui\session\control\bubble_text_item_box.cpp" />
+    <ClCompile Include="gui\session\control\bubble_tips_item_box.cpp" />
     <ClCompile Include="gui\session\session_box.cpp" />
     <ClCompile Include="gui\session\session_item.cpp" />
     <ClCompile Include="helper\config.cpp" />
